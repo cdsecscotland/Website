@@ -1,0 +1,99 @@
+"use client"
+
+import { useState, useEffect } from "react"
+import Image from "next/image"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { ArrowRight, Play } from "lucide-react"
+import { useLanguage } from "@/lib/language-context"
+import ScrollAnimation from "./scroll-animation"
+
+export default function Hero() {
+  const { t } = useLanguage()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return null
+
+  return (
+    <section className="relative min-h-[60vh] flex items-center justify-center pt-8 pb-8 overflow-hidden bg-gradient-to-br from-cream via-white to-paleyellow/30 dark:from-charcoal dark:via-charcoal/95 dark:to-charcoal">
+      {/* Background Elements */}
+      <div className="container relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <ScrollAnimation animation="slide-right">
+            <div className="text-center lg:text-left">
+              <h1 className="text-responsive-5xl md:text-responsive-7xl font-bold text-charcoal dark:text-white mb-6 leading-tight">
+                <span className="block">Security Locked In,</span>
+                <span className="block text-transparent bg-gradient-to-r from-brandyellow via-brightyellow to-brandyellow bg-clip-text">
+                  Threats Locked Out
+                </span>
+              </h1>
+
+              <p className="text-responsive-xl md:text-responsive-2xl text-charcoal/80 dark:text-white/80 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                {t("hero.subtitle")}
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-charcoal dark:bg-brandyellow hover:bg-charcoal/90 dark:hover:bg-brightyellow text-white dark:text-charcoal font-semibold px-8 py-4 text-lg group shadow-xl hover:shadow-2xl transition-all duration-300"
+                >
+                  <Link href="/build-pentest">
+                    {t("hero.cta1")}
+                    <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-charcoal dark:border-white text-charcoal dark:text-white hover:bg-charcoal hover:text-white dark:hover:bg-white dark:hover:text-charcoal font-semibold px-8 py-4 text-lg group shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  <Link href="#services">
+                    {t("hero.cta2")}
+                    <Play className="ml-2 h-6 w-6 group-hover:scale-110 transition-transform" />
+                  </Link>
+                </Button>
+              </div>
+
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-8 text-center lg:text-left">
+                <div>
+                  <div className="text-3xl md:text-4xl font-bold text-charcoal dark:text-white mb-2">500+</div>
+                  <div className="text-sm text-charcoal/70 dark:text-white/70">Security Assessments</div>
+                </div>
+                <div>
+                  <div className="text-3xl md:text-4xl font-bold text-charcoal dark:text-white mb-2">98%</div>
+                  <div className="text-sm text-charcoal/70 dark:text-white/70">Client Satisfaction</div>
+                </div>
+                <div>
+                  <div className="text-3xl md:text-4xl font-bold text-charcoal dark:text-white mb-2">24/7</div>
+                  <div className="text-sm text-charcoal/70 dark:text-white/70">Expert Support</div>
+                </div>
+              </div>
+            </div>
+          </ScrollAnimation>
+
+          <ScrollAnimation animation="slide-left" delay={0.2}>
+            <div className="relative">
+              <div className="bg-white/90 dark:bg-charcoal/90 backdrop-blur-sm p-8 rounded-3xl shadow-2xl">
+                <Image
+                  src="/images/insights-tablet-demo.png"
+                  width={800}
+                  height={600}
+                  alt="Closed Door Security Insights Platform"
+                  className="rounded-2xl shadow-lg"
+                />
+              </div>
+              {/* Floating Elements */}
+            </div>
+          </ScrollAnimation>
+        </div>
+      </div>
+    </section>
+  )
+}

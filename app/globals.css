@@ -1,0 +1,236 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 45 100% 51%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 48 100% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 45 100% 51%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 83%;
+    --input: 0 0% 83%;
+    --ring: 45 100% 51%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Brand-specific patterns */
+.brand-gradient {
+  background: linear-gradient(135deg, #ffd700 0%, #ffc107 50%, #a9a9a9 100%);
+}
+
+.geometric-pattern {
+  background-image: linear-gradient(45deg, rgba(255, 215, 0, 0.1) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255, 215, 0, 0.1) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(169, 169, 169, 0.1) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(169, 169, 169, 0.1) 75%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+}
+
+.dotted-circle-pattern {
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Arabic RTL Support */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .flex {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .space-x-4 > * + * {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+/* Professional animations */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out;
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Enhanced text readability */
+.text-enhanced {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.dark .text-enhanced {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Background overlays for better readability */
+.content-overlay {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .content-overlay {
+  background: rgba(47, 47, 47, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-rotate-slow,
+  .animate-pulse-glow {
+    animation: none;
+  }
+}
+
+/* Responsive Typography */
+.text-responsive-xs {
+  font-size: clamp(0.75rem, 0.5vw + 0.5rem, 0.875rem);
+}
+
+.text-responsive-sm {
+  font-size: clamp(0.875rem, 0.5vw + 0.625rem, 1rem);
+}
+
+.text-responsive-base {
+  font-size: clamp(1rem, 0.75vw + 0.75rem, 1.125rem);
+}
+
+.text-responsive-lg {
+  font-size: clamp(1.125rem, 1vw + 0.875rem, 1.25rem);
+}
+
+.text-responsive-xl {
+  font-size: clamp(1.25rem, 1.25vw + 1rem, 1.5rem);
+}
+
+.text-responsive-2xl {
+  font-size: clamp(1.5rem, 1.5vw + 1.25rem, 1.875rem);
+}
+
+.text-responsive-3xl {
+  font-size: clamp(1.875rem, 2vw + 1.5rem, 2.25rem);
+}
+
+.text-responsive-4xl {
+  font-size: clamp(2.25rem, 2.5vw + 1.875rem, 3rem);
+}
+
+.text-responsive-5xl {
+  font-size: clamp(3rem, 3vw + 2.25rem, 3.75rem);
+}
+
+.text-responsive-6xl {
+  font-size: clamp(3.75rem, 4vw + 2.75rem, 4.5rem);
+}
+
+.text-responsive-7xl {
+  font-size: clamp(4.5rem, 5vw + 3.25rem, 6rem);
+}
+
+/* Apply responsive typography to common elements */
+body {
+  font-size: clamp(1rem, 0.75vw + 0.75rem, 1.125rem);
+}
+
+h1 {
+  font-size: clamp(2.25rem, 2.5vw + 1.875rem, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.875rem, 2vw + 1.5rem, 2.25rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 1.5vw + 1.25rem, 1.875rem);
+}
+
+h4 {
+  font-size: clamp(1.25rem, 1.25vw + 1rem, 1.5rem);
+}
+
+p {
+  font-size: clamp(1rem, 0.75vw + 0.75rem, 1.125rem);
+}
+
+/* Button responsive sizing */
+.btn-responsive {
+  font-size: clamp(0.875rem, 0.75vw + 0.625rem, 1rem);
+  padding: clamp(0.5rem, 0.5vw + 0.375rem, 0.75rem) clamp(1rem, 1vw + 0.75rem, 1.5rem);
+}
+
+.btn-responsive-lg {
+  font-size: clamp(1rem, 1vw + 0.75rem, 1.25rem);
+  padding: clamp(0.75rem, 0.75vw + 0.5rem, 1rem) clamp(1.5rem, 1.5vw + 1rem, 2rem);
+}
