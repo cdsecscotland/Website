@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Mona_Sans as FontSans, Noto_Sans_Arabic } from "next/font/google"
+import { Inter, Noto_Sans_Arabic } from "next/font/google"
 import "./globals.css"
 import { cn } from "@/lib/utils"
 import Header from "@/components/header"
@@ -9,7 +9,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { LanguageProvider } from "@/lib/language-context"
 import ParticleNetwork from "@/components/particle-network"
 
-const fontSans = FontSans({
+const fontSans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
 })
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   title: "Closed Door Security | Cyber Security Experts You Can Trust",
   description:
     "Scotland's only Chartered Penetration Tester providing comprehensive security testing and compliance services",
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({

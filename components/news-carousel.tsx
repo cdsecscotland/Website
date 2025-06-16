@@ -10,61 +10,61 @@ const newsOutlets = [
   {
     name: "BBC News",
     logo: "/images/logos/bbc-news.png",
-    url: "#",
+    url: "https://www.bbc.com/news/articles/cdxnkg7rln2o",
     description: "Featured in BBC News for cybersecurity expertise",
   },
   {
     name: "Forbes",
     logo: "/images/logos/forbes.png",
-    url: "#",
+    url: "https://www.forbes.com/sites/emmawoollacott/2023/12/08/worldwide-sting-busts-cyber-scam-centers-manned-by-human-trafficking-victims/?sh=1054e6c14394",
     description: "Recognized by Forbes for innovative security solutions",
   },
   {
     name: "Yahoo Finance",
     logo: "/images/logos/yahoo-finance.png",
-    url: "#",
+    url: "https://www.investing.com/news/stock-market-news/boeing-confirms-cyberattack-lockbit-claims-responsibility-93CH-3218071",
     description: "Yahoo Finance coverage of our security insights",
   },
   {
     name: "AOL",
     logo: "/images/logos/aol.png",
-    url: "#",
+    url: "https://www.investing.com/news/stock-market-news/boeing-confirms-cyberattack-lockbit-claims-responsibility-93CH-3218071",
     description: "AOL features our cybersecurity leadership",
   },
   {
     name: "Cyber News",
-    logo: "/images/logos/cyber-news.png",
-    url: "#",
+    logo: "/images/logos/cybernews.png",
+    url: "https://cybernews.com/security/leicester-england-cyberattack-british-gov-ransomware-report/",
     description: "Cyber News highlights our threat intelligence",
   },
   {
     name: "Investing.com",
     logo: "/images/logos/investing.png",
-    url: "#",
+    url: "https://www.investing.com/news/stock-market-news/boeing-confirms-cyberattack-lockbit-claims-responsibility-93CH-3218071",
     description: "Investing.com covers our market insights",
   },
   {
     name: "Independent",
     logo: "/images/logos/independent.png",
-    url: "#",
+    url: "https://www.independent.co.uk/travel/news-and-advice/tfl-cyber-attack-trains-staff-b2606121.html",
     description: "The Independent reports on our security research",
   },
   {
     name: "Infosecurity Magazine",
     logo: "/images/logos/infosecurity-magazine.png",
-    url: "#",
+    url: "https://www.infosecurity-magazine.com/news/ukraine-russian-sandworm-kyivstar/",
     description: "Infosecurity Magazine features our expertise",
   },
   {
     name: "The Scotsman",
     logo: "/images/logos/the-scotsman.png",
-    url: "#",
+    url: "https://www.scotsman.com/business/if-i-can-hack-you-then-black-hats-can-do-it-too-william-wright-4573115",
     description: "The Scotsman covers our Scottish operations",
   },
   {
     name: "SOS/SIG",
     logo: "/images/logos/sos-sig.png",
-    url: "#",
+    url: "https://securityonscreen.com/tfl-cyber-attack-closed-door-security/",
     description: "SOS/SIG highlights our industry contributions",
   },
 ]
@@ -140,11 +140,11 @@ export default function NewsCarousel() {
                           <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white/90 dark:bg-charcoal/90 backdrop-blur-sm border-0 shadow-lg">
                             <CardContent className="p-6 text-center">
                               <div className="h-16 flex items-center justify-center mb-4">
-                                <div className="w-full h-full bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center">
-                                  <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">
-                                    {outlet.name}
-                                  </span>
-                                </div>
+                                <img
+                                  src={outlet.logo || "/placeholder.svg"}
+                                  alt={`${outlet.name} logo`}
+                                  className="max-h-full max-w-full object-contain"
+                                />
                               </div>
                               <h3 className="font-semibold text-charcoal dark:text-white mb-2 group-hover:text-brandyellow transition-colors">
                                 {outlet.name}
