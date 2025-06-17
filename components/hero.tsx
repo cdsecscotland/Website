@@ -19,7 +19,7 @@ export default function Hero() {
   if (!mounted) return null
 
   return (
-    <section className="relative min-h-[60vh] flex items-center justify-center pt-8 md:pt-12 pb-8 overflow-hidden bg-gradient-to-br from-cream via-white to-paleyellow/30 dark:from-charcoal dark:via-charcoal/95 dark:to-charcoal">
+    <section className="relative min-h-[60vh] flex items-center justify-center pt-20 md:pt-12 pb-8 overflow-hidden bg-gradient-to-br from-cream via-white to-paleyellow/30 dark:from-charcoal dark:via-charcoal/95 dark:to-charcoal">
       {/* Background Elements */}
       <div className="container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

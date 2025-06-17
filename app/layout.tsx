@@ -45,7 +45,7 @@ export default function RootLayout({
             <div className="relative flex min-h-screen flex-col">
               <ParticleNetwork />
               <Header />
-              <div className="flex-1 relative z-10 pt-20">{children}</div>
+              <div className="flex-1 relative z-10 pt-20 md:pt-20">{children}</div>
               <Footer />
             </div>
           </LanguageProvider>
