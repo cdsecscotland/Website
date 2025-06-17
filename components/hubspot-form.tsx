@@ -14,13 +14,14 @@ export default function HubSpotForm({ portalId, formId, className = "" }: HubSpo
   useEffect(() => {
     // Load HubSpot script
     const script = document.createElement("script")
-    script.src = "//js.hsforms.net/forms/embed/v2.js"
+    script.src = "//js-eu1.hsforms.net/forms/embed/v2.js"
     script.async = true
     document.body.appendChild(script)
 
     script.onload = () => {
       if (window.hbspt && formRef.current) {
         window.hbspt.forms.create({
+          region: "eu1",
           portalId: portalId,
           formId: formId,
           target: `#hubspot-form-${formId}`,

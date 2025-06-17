@@ -48,7 +48,7 @@ export default function ContactSection() {
               <CardTitle className="text-2xl text-gray-900">{t("contact.form.title")}</CardTitle>
             </CardHeader>
             <CardContent>
-              <HubSpotForm portalId="YOUR_PORTAL_ID" formId="YOUR_FORM_ID" className="hubspot-contact-form" />
+              <HubSpotForm portalId="144330761" formId="1cb05ab1-3bb5-4624-a0a3-b60813086a24" className="hubspot-contact-form" />
             </CardContent>
           </Card>
 
