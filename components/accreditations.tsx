@@ -32,8 +32,8 @@ const certificationBadges = [
     category: "Advisory",
   },
   {
-    name: "CREST",
-    description: "Council of Registered Ethical Security Testers",
+    name: "CREST - Penetration Testing",
+    description: "Prestegious Penetration Testing Accreditation",
     category: "Professional",
   },
   {
