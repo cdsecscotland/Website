@@ -38,6 +38,7 @@ export default function Header() {
         "fixed top-0 w-full z-50 transition-all duration-500",
         isScrolled ? "bg-white/90 dark:bg-charcoal/90 backdrop-blur-md shadow-lg py-2" : "bg-transparent py-4",
       )}
+      style={{ overflow: 'visible' }}
     >
       <div className="container flex items-center justify-between">
         <Link href="/" className="flex items-center">
