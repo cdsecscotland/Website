@@ -63,16 +63,16 @@ export default function Hero() {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-4 sm:gap-8 text-center lg:text-left">
                 <div>
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-charcoal dark:text-white mb-1 sm:mb-2">500+</div>
-                  <div className="text-xs sm:text-sm text-charcoal/70 dark:text-white/70">Security Assessments</div>
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-charcoal dark:text-white mb-1 sm:mb-2">550+</div>
+                  <div className="text-xs sm:text-sm text-charcoal/70 dark:text-white/70">Projects Delivered</div>
                 </div>
                 <div>
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-charcoal dark:text-white mb-1 sm:mb-2">98%</div>
-                  <div className="text-xs sm:text-sm text-charcoal/70 dark:text-white/70">Client Satisfaction</div>
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-charcoal dark:text-white mb-1 sm:mb-2">160+</div>
+                  <div className="text-xs sm:text-sm text-charcoal/70 dark:text-white/70">Customers</div>
                 </div>
                 <div>
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-charcoal dark:text-white mb-1 sm:mb-2">24/7</div>
-                  <div className="text-xs sm:text-sm text-charcoal/70 dark:text-white/70">Expert Support</div>
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-charcoal dark:text-white mb-1 sm:mb-2">380+</div>
+                  <div className="text-xs sm:text-sm text-charcoal/70 dark:text-white/70">Featured Publications</div>
                 </div>
               </div>
             </div>
