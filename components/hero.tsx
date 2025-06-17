@@ -24,19 +24,19 @@ export default function Hero() {
       <div className="container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <ScrollAnimation animation="slide-right">
-            <div className="text-center lg:text-left">
-              <h1 className="text-responsive-5xl md:text-responsive-7xl font-bold text-charcoal dark:text-white mb-6 leading-tight">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-charcoal dark:text-white mb-6 leading-tight">
                 <span className="block break-words">Security Locked In,</span>
                 <span className="block break-words text-transparent bg-gradient-to-r from-brandyellow via-brightyellow to-brandyellow bg-clip-text">
                   Threats Locked Out
                 </span>
               </h1>
 
-              <p className="text-responsive-xl md:text-responsive-2xl text-charcoal/80 dark:text-white/80 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              <p className="text-lg md:text-xl lg:text-2xl text-charcoal/80 dark:text-white/80 mb-8 leading-relaxed max-w-2xl mx-auto">
                 {t("hero.subtitle")}
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 w-full">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 w-full">
                 <Button
                   asChild
                   size="lg"
@@ -61,7 +61,7 @@ export default function Hero() {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-4 sm:gap-8 text-center lg:text-left">
+              <div className="grid grid-cols-3 gap-4 sm:gap-8 text-center">
                 <div>
                   <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-charcoal dark:text-white mb-1 sm:mb-2">550+</div>
                   <div className="text-xs sm:text-sm text-charcoal/70 dark:text-white/70">Projects Delivered</div>
