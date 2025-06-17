@@ -37,7 +37,7 @@ const certificationBadges = [
     category: "Professional",
   },
   {
-    name: "UAE Electronic Security Center",
+    name: "Dubai Electronic Security Center",
     description: "Certified cybersecurity provider in the UAE",
     category: "Government",
   },
