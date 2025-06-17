@@ -89,8 +89,8 @@ export default function Accreditations() {
               <Image
                 src="/images/accreditations-top.png"
                 alt="Additional Cybersecurity Accreditations"
-                width={800}
-                height={200}
+                width={600}
+                height={120}
                 className="mx-auto"
               />
             </div>
