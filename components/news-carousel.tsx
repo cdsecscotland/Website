@@ -7,6 +7,7 @@ import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react"
 import ScrollAnimation from "./scroll-animation"
 
 const newsOutlets = [
+  // First slide (positions 0-3)
   {
     name: "AOL",
     logo: "/images/logos/aol.png",
@@ -31,6 +32,7 @@ const newsOutlets = [
     url: "https://www.infosecurity-magazine.com/news/ukraine-russian-sandworm-kyivstar/",
     description: "Infosecurity Magazine features our expertise",
   },
+  // Second slide (positions 4-7) - BBC, Forbes, Yahoo Finance, Investing.com
   {
     name: "BBC News",
     logo: "/images/logos/bbc-news.png",
@@ -44,17 +46,18 @@ const newsOutlets = [
     description: "Recognized by Forbes for innovative security solutions",
   },
   {
-    name: "Independent",
-    logo: "/images/logos/independent.png",
-    url: "https://www.independent.co.uk/travel/news-and-advice/tfl-cyber-attack-trains-staff-b2606121.html",
-    description: "The Independent reports on our security research",
+    name: "Yahoo Finance",
+    logo: "/images/logos/yahoo-finance.png",
+    url: "https://www.investing.com/news/stock-market-news/boeing-confirms-cyberattack-lockbit-claims-responsibility-93CH-3218071",
+    description: "Yahoo Finance coverage of our security insights",
   },
   {
-    name: "Infosecurity Magazine",
-    logo: "/images/logos/infosecurity-magazine.png",
-    url: "https://www.infosecurity-magazine.com/news/ukraine-russian-sandworm-kyivstar/",
-    description: "Infosecurity Magazine features our expertise",
+    name: "Investing.com",
+    logo: "/images/logos/investing.png",
+    url: "https://www.investing.com/news/stock-market-news/boeing-confirms-cyberattack-lockbit-claims-responsibility-93CH-3218071",
+    description: "Investing.com covers our market insights",
   },
+  // Third slide (positions 8-9)
   {
     name: "The Scotsman",
     logo: "/images/logos/the-scotsman.png",
