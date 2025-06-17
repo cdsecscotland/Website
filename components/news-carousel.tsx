@@ -8,24 +8,6 @@ import ScrollAnimation from "./scroll-animation"
 
 const newsOutlets = [
   {
-    name: "BBC News",
-    logo: "/images/logos/bbc-news.png",
-    url: "https://www.bbc.com/news/articles/cdxnkg7rln2o",
-    description: "Featured in BBC News for cybersecurity expertise",
-  },
-  {
-    name: "Forbes",
-    logo: "/images/logos/forbes.png",
-    url: "https://www.forbes.com/sites/emmawoollacott/2023/12/08/worldwide-sting-busts-cyber-scam-centers-manned-by-human-trafficking-victims/?sh=1054e6c14394",
-    description: "Recognized by Forbes for innovative security solutions",
-  },
-  {
-    name: "Yahoo Finance",
-    logo: "/images/logos/yahoo-finance.png",
-    url: "https://www.investing.com/news/stock-market-news/boeing-confirms-cyberattack-lockbit-claims-responsibility-93CH-3218071",
-    description: "Yahoo Finance coverage of our security insights",
-  },
-  {
     name: "AOL",
     logo: "/images/logos/aol.png",
     url: "https://www.investing.com/news/stock-market-news/boeing-confirms-cyberattack-lockbit-claims-responsibility-93CH-3218071",
@@ -38,10 +20,28 @@ const newsOutlets = [
     description: "Cyber News highlights our threat intelligence",
   },
   {
-    name: "Investing.com",
-    logo: "/images/logos/investing.png",
-    url: "https://www.investing.com/news/stock-market-news/boeing-confirms-cyberattack-lockbit-claims-responsibility-93CH-3218071",
-    description: "Investing.com covers our market insights",
+    name: "Independent",
+    logo: "/images/logos/independent.png",
+    url: "https://www.independent.co.uk/travel/news-and-advice/tfl-cyber-attack-trains-staff-b2606121.html",
+    description: "The Independent reports on our security research",
+  },
+  {
+    name: "Infosecurity Magazine",
+    logo: "/images/logos/infosecurity-magazine.png",
+    url: "https://www.infosecurity-magazine.com/news/ukraine-russian-sandworm-kyivstar/",
+    description: "Infosecurity Magazine features our expertise",
+  },
+  {
+    name: "BBC News",
+    logo: "/images/logos/bbc-news.png",
+    url: "https://www.bbc.com/news/articles/cdxnkg7rln2o",
+    description: "Featured in BBC News for cybersecurity expertise",
+  },
+  {
+    name: "Forbes",
+    logo: "/images/logos/forbes.png",
+    url: "https://www.forbes.com/sites/emmawoollacott/2023/12/08/worldwide-sting-busts-cyber-scam-centers-manned-by-human-trafficking-victims/?sh=1054e6c14394",
+    description: "Recognized by Forbes for innovative security solutions",
   },
   {
     name: "Independent",
