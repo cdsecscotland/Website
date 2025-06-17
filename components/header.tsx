@@ -40,7 +40,7 @@ export default function Header() {
       )}
       style={{ overflow: 'visible' }}
     >
-      <div className="container flex items-center justify-between">
+      <div className="container flex items-center justify-between" style={{ overflow: 'visible' }}>
         <Link href="/" className="flex items-center">
           <div className="relative h-12 w-48">
             <Image
@@ -53,7 +53,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <NavigationMenu className="hidden lg:flex">
+        <NavigationMenu className="hidden lg:flex" style={{ overflow: 'visible' }}>
           <NavigationMenuList>
             <NavigationMenuItem>
               <Link href="/" legacyBehavior passHref>

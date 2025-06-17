@@ -239,6 +239,24 @@ p {
   overflow-x: hidden;
 }
 
+/* Fix navigation menu dropdown positioning */
+header {
+  overflow: visible !important;
+}
+
+header .container {
+  overflow: visible !important;
+}
+
+[data-radix-navigation-menu-viewport] {
+  z-index: 9999 !important;
+  position: absolute !important;
+}
+
+.radix-navigation-menu-root {
+  overflow: visible !important;
+}
+
 /* Prevent horizontal overflow on all sections */
 section {
   overflow-x: hidden;
