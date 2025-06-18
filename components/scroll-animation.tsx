@@ -3,6 +3,7 @@
 import { useEffect, type ReactNode } from "react"
 import { useInView } from "react-intersection-observer"
 import { motion, useAnimation } from "framer-motion"
+import { useAnimationPreferences } from "@/hooks/use-animation-preferences"
 
 interface ScrollAnimationProps {
   children: ReactNode
@@ -11,6 +12,7 @@ interface ScrollAnimationProps {
   duration?: number
   threshold?: number
   className?: string
+  forceAnimation?: boolean // Override mobile detection if needed
 }
 
 export default function ScrollAnimation({
@@ -20,9 +22,14 @@ export default function ScrollAnimation({
   duration = 0.5,
   threshold = 0.1,
   className = "",
+  forceAnimation = false,
 }: ScrollAnimationProps) {
   const controls = useAnimation()
   const { ref, inView } = useInView({ threshold, triggerOnce: true })
+  const { disableAnimations } = useAnimationPreferences()
+
+  // Override animation preferences if forceAnimation is true
+  const shouldDisableAnimations = disableAnimations && !forceAnimation
 
   useEffect(() => {
     if (inView) {
@@ -32,17 +39,17 @@ export default function ScrollAnimation({
 
   const variants = {
     hidden: {
-      opacity: 0,
-      y: animation === "slide-up" ? 50 : 0,
-      x: animation === "slide-left" ? 50 : animation === "slide-right" ? -50 : 0,
-      scale: animation === "zoom" ? 0.8 : 1,
+      opacity: shouldDisableAnimations ? 1 : 0,
+      y: shouldDisableAnimations ? 0 : (animation === "slide-up" ? 50 : 0),
+      x: shouldDisableAnimations ? 0 : (animation === "slide-left" ? 50 : animation === "slide-right" ? -50 : 0),
+      scale: shouldDisableAnimations ? 1 : (animation === "zoom" ? 0.8 : 1),
     },
     visible: {
       opacity: 1,
       y: 0,
       x: 0,
       scale: 1,
-      transition: {
+      transition: shouldDisableAnimations ? { duration: 0 } : {
         duration,
         delay,
         ease: "easeOut",
@@ -50,8 +57,9 @@ export default function ScrollAnimation({
     },
   }
 
-  if (animation === "none") {
-    return <div className={className}>{children}</div>
+  // If animations should be disabled or animation is set to "none", return static content
+  if (animation === "none" || shouldDisableAnimations) {
+    return <div ref={ref} className={className}>{children}</div>
   }
 
   return (

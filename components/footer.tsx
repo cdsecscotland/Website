@@ -1,7 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
 
 export default function Footer() {
   return (
@@ -94,14 +93,29 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-bold mb-4">Certifications</h3>
-            <div className="flex flex-wrap gap-2">
-              <Badge className="bg-white/10 text-white hover:bg-white/20 border border-white/20">CREST</Badge>
-              <Badge className="bg-white/10 text-white hover:bg-white/20 border border-white/20">NCSC</Badge>
-              <Badge className="bg-white/10 text-white hover:bg-white/20 border border-white/20">Cyber Scheme</Badge>
-              <Badge className="bg-white/10 text-white hover:bg-white/20 border border-white/20">OSCP</Badge>
-              <Badge className="bg-white/10 text-white hover:bg-white/20 border border-white/20">CISSP</Badge>
-            </div>
+            <h3 className="text-lg font-bold mb-4">Resources</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/blog" className="text-white/70 hover:text-paleyellow transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-white/70 hover:text-paleyellow transition-colors">
+                  Security Tips
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-white/70 hover:text-paleyellow transition-colors">
+                  Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-white/70 hover:text-paleyellow transition-colors">
+                  Downloads
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
 

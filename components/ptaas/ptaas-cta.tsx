@@ -22,7 +22,7 @@ export default function PTaaSCTA() {
                   remediation support through the Insights platform.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <div className="flex justify-center mb-8">
                   <Button
                     asChild
                     size="lg"
@@ -32,14 +32,6 @@ export default function PTaaSCTA() {
                       Request Platform Access
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
-                  </Button>
-                  <Button
-                    asChild
-                    size="lg"
-                    variant="outline"
-                    className="border-2 border-white text-white hover:bg-white hover:text-charcoal font-semibold px-8 py-4 text-lg"
-                  >
-                    <Link href="#contact">Schedule Consultation</Link>
                   </Button>
                 </div>
 

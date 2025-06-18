@@ -6,8 +6,6 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { useLanguage } from "@/lib/language-context"
-import LanguageSwitcher from "./language-switcher"
 import { ThemeToggle } from "./theme-toggle"
 import {
   NavigationMenu,
@@ -21,7 +19,6 @@ import {
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const { t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,14 +55,14 @@ export default function Header() {
             <NavigationMenuItem>
               <Link href="/" legacyBehavior passHref>
                 <NavigationMenuLink className="group inline-flex h-12 w-max items-center justify-center rounded-md bg-background px-6 py-3 text-base font-medium transition-colors hover:bg-brandyellow/10 hover:text-charcoal focus:bg-brandyellow/10 focus:text-charcoal focus:outline-none">
-                  {t("nav.home")}
+                  Home
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
               <NavigationMenuTrigger className="hover:bg-brandyellow/10 hover:text-charcoal h-12 px-6 py-3 text-base">
-                {t("nav.services")}
+                Services
               </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <div className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -85,7 +82,7 @@ export default function Header() {
                   <div className="grid gap-2">
                     <NavigationMenuLink asChild>
                       <Link
-                        href="#services"
+                        href="/penetration-testing"
                         className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-brandyellow/10 hover:text-charcoal"
                       >
                         <div className="text-sm font-medium leading-none">Penetration Testing</div>
@@ -140,7 +137,7 @@ export default function Header() {
             <NavigationMenuItem>
               <Link href="#about" legacyBehavior passHref>
                 <NavigationMenuLink className="group inline-flex h-12 w-max items-center justify-center rounded-md bg-background px-6 py-3 text-base font-medium transition-colors hover:bg-brandyellow/10 hover:text-charcoal focus:bg-brandyellow/10 focus:text-charcoal focus:outline-none">
-                  {t("nav.about")}
+                  About
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
@@ -148,7 +145,7 @@ export default function Header() {
             <NavigationMenuItem>
               <Link href="#contact" legacyBehavior passHref>
                 <NavigationMenuLink className="group inline-flex h-12 w-max items-center justify-center rounded-md bg-background px-6 py-3 text-base font-medium transition-colors hover:bg-brandyellow/10 hover:text-charcoal focus:bg-brandyellow/10 focus:text-charcoal focus:outline-none">
-                  {t("nav.contact")}
+                  Contact
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
@@ -156,8 +153,15 @@ export default function Header() {
         </NavigationMenu>
 
         <div className="flex items-center space-x-2">
-          <LanguageSwitcher />
           <ThemeToggle />
+
+          <Button
+            asChild
+            variant="outline"
+            className="hidden md:flex border-brandyellow text-brandyellow hover:bg-brandyellow hover:text-charcoal font-medium px-4 py-2 text-sm"
+          >
+            <Link href="https://insights.cdsec.co.uk/" target="_blank" rel="noopener noreferrer">Customer Login</Link>
+          </Button>
 
           <Button
             asChild
@@ -185,7 +189,7 @@ export default function Header() {
               className="text-charcoal dark:text-white hover:text-brandyellow dark:hover:text-brandyellow font-medium py-3 text-lg"
               onClick={() => setMobileMenuOpen(false)}
             >
-              {t("nav.home")}
+              Home
             </Link>
             <Link
               href="/ptaas"
@@ -206,23 +210,30 @@ export default function Header() {
               className="text-charcoal dark:text-white hover:text-brandyellow dark:hover:text-brandyellow font-medium py-3 text-lg"
               onClick={() => setMobileMenuOpen(false)}
             >
-              {t("nav.services")}
+              Services
             </Link>
             <Link
               href="#about"
               className="text-charcoal dark:text-white hover:text-brandyellow dark:hover:text-brandyellow font-medium py-3 text-lg"
               onClick={() => setMobileMenuOpen(false)}
             >
-              {t("nav.about")}
+              About
             </Link>
             <Link
               href="#contact"
               className="text-charcoal dark:text-white hover:text-brandyellow dark:hover:text-brandyellow font-medium py-3 text-lg"
               onClick={() => setMobileMenuOpen(false)}
             >
-              {t("nav.contact")}
+              Contact
             </Link>
             <div className="flex flex-col space-y-2 pt-4 border-t border-gray-200 dark:border-gray-700">
+              <Button
+                asChild
+                variant="outline"
+                className="border-brandyellow text-brandyellow hover:bg-brandyellow hover:text-charcoal font-medium px-4 py-2 text-sm"
+              >
+                <Link href="https://insights.cdsec.co.uk/" target="_blank" rel="noopener noreferrer">Customer Login</Link>
+              </Button>
               <Button
                 asChild
                 className="bg-brandyellow hover:bg-brightyellow text-charcoal font-semibold px-6 py-3 text-base"

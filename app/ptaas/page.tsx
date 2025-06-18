@@ -4,6 +4,7 @@ import PTaaSFeatures from "@/components/ptaas/ptaas-features"
 import PTaaSIntegration from "@/components/ptaas/ptaas-integration"
 import PTaaSSupport from "@/components/ptaas/ptaas-support"
 import PTaaSCTA from "@/components/ptaas/ptaas-cta"
+import ContactSection from "@/components/contact-section"
 
 export default function PTaaSPage() {
   return (
@@ -14,6 +15,7 @@ export default function PTaaSPage() {
       <PTaaSIntegration />
       <PTaaSSupport />
       <PTaaSCTA />
+      <ContactSection />
     </main>
   )
 }

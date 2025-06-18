@@ -6,8 +6,9 @@ import { cn } from "@/lib/utils"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { ThemeProvider } from "@/components/theme-provider"
-import { LanguageProvider } from "@/lib/language-context"
+import { AnimationProvider } from "@/hooks/use-animation-preferences"
 import ParticleNetwork from "@/components/particle-network"
+import MobilePerformanceOptimizer from "@/components/mobile-performance-optimizer"
 
 const fontSans = Inter({
   subsets: ["latin"],
@@ -41,14 +42,15 @@ export default function RootLayout({
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <LanguageProvider>
+          <AnimationProvider>
+            <MobilePerformanceOptimizer />
             <div className="relative flex min-h-screen flex-col">
               <ParticleNetwork />
               <Header />
               <div className="flex-1 relative z-10 pt-20 md:pt-20">{children}</div>
               <Footer />
             </div>
-          </LanguageProvider>
+          </AnimationProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -155,9 +155,62 @@
 @media (prefers-reduced-motion: reduce) {
   .animate-float,
   .animate-rotate-slow,
-  .animate-pulse-glow {
+  .animate-pulse-glow,
+  .animate-slide-in-left,
+  .animate-slide-in-right {
     animation: none;
   }
+}
+
+/* Disable animations on mobile devices for better performance */
+@media (max-width: 767px) {
+  .animate-float,
+  .animate-rotate-slow,
+  .animate-pulse-glow,
+  .animate-slide-in-left,
+  .animate-slide-in-right {
+    animation: none !important;
+  }
+  
+  /* Disable all CSS transitions on mobile for performance */
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Additional mobile performance optimizations */
+.mobile-performance-mode {
+  /* Disable transforms and filters that trigger layout/paint */
+  transform: none !important;
+  filter: none !important;
+  
+  /* Optimize GPU usage */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+}
+
+.mobile-performance-mode * {
+  /* Disable animations globally when in mobile performance mode */
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+}
+
+.mobile-performance-mode img,
+.mobile-performance-mode video {
+  /* Optimize image and video rendering on mobile */
+  image-rendering: auto;
+  -webkit-optimize-contrast: auto;
+}
+
+/* Use CSS custom property to conditionally disable animations */
+:root[style*="--mobile-animations: disabled"] * {
+  animation-play-state: paused !important;
 }
 
 /* Responsive Typography */

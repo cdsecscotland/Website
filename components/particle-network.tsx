@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 import { useTheme } from "next-themes"
+import { useDisableAnimations } from "@/hooks/use-animation-preferences"
 
 interface Particle {
   x: number
@@ -25,6 +26,12 @@ export default function ParticleNetwork() {
   const connectionsRef = useRef<Connection[]>([])
   const animationRef = useRef<number>(0)
   const { theme } = useTheme()
+  const disableAnimations = useDisableAnimations()
+
+  // Don't render particles on mobile or when animations are disabled
+  if (disableAnimations) {
+    return null
+  }
 
   // Much more subtle colors with very low opacity
   const isDark = theme === "dark"
