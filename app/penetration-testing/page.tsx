@@ -91,9 +91,6 @@ export default function PenetrationTestingPage() {
         <div className="container relative z-10">
           <ScrollAnimation animation="fade">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge className="mb-6 bg-brandyellow/20 text-brandyellow border-brandyellow/30">
-                CREST Certified Penetration Testing
-              </Badge>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Professional Penetration Testing Services
               </h1>
