@@ -1,4 +1,4 @@
-import Hero from "@/components/hero"
+import HeadlessHero from "@/components/headless-hero"
 import NewsCarousel from "@/components/news-carousel"
 import Accreditations from "@/components/accreditations"
 import InsightsPlatform from "@/components/insights-platform"
@@ -11,7 +11,7 @@ import HeadlessContact from "@/components/headless-contact"
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <Hero />
+      <HeadlessHero />
       <NewsCarousel />
       <Accreditations />
       <InsightsPlatform />

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import ScrollAnimation from "@/components/scroll-animation"
-import ContactSection from "@/components/contact-section"
+import HeadlessContact from "@/components/headless-contact"
 
 export const metadata: Metadata = {
   title: "Penetration Testing Services | CREST Certified | Closed Door Security",
@@ -241,7 +241,7 @@ export default function PenetrationTestingPage() {
       </section>
 
       {/* Contact Section */}
-      <ContactSection />
+      <HeadlessContact />
     </main>
   )
 }

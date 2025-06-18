@@ -95,6 +95,15 @@ const config = {
           "0%, 100%": { opacity: "0.4" },
           "50%": { opacity: "0.8" },
         },
+        "gradient-x": {
+          "0%, 100%": { "background-position": "0% 50%" },
+          "50%": { "background-position": "100% 50%" },
+        },
+        "float-path": {
+          "0%, 100%": { transform: "translateX(0) translateY(0)" },
+          "33%": { transform: "translateX(30px) translateY(-30px)" },
+          "66%": { transform: "translateX(-20px) translateY(20px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -103,6 +112,8 @@ const config = {
         "slide-diagonal": "slide-diagonal 20s linear infinite",
         "rotate-slow": "rotate-slow 30s linear infinite",
         "pulse-glow": "pulse-glow 3s ease-in-out infinite",
+        "gradient-x": "gradient-x 3s ease infinite",
+        "float-path": "float-path 20s ease-in-out infinite",
       },
     },
   },
