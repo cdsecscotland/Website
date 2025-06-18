@@ -93,7 +93,7 @@ export default function Header() {
                     </NavigationMenuLink>
                     <NavigationMenuLink asChild>
                       <Link
-                        href="#services"
+                        href="/compliance-auditing"
                         className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-brandyellow/10 hover:text-charcoal"
                       >
                         <div className="text-sm font-medium leading-none">Compliance & Auditing</div>
