@@ -2,11 +2,11 @@ import Hero from "@/components/hero"
 import NewsCarousel from "@/components/news-carousel"
 import Accreditations from "@/components/accreditations"
 import InsightsPlatform from "@/components/insights-platform"
-import Services from "@/components/services"
+import HeadlessServices from "@/components/headless-services"
 import About from "@/components/about"
 import GlobalOffices from "@/components/global-offices"
 import TrustIndicators from "@/components/trust-indicators"
-import ContactSection from "@/components/contact-section"
+import HeadlessContact from "@/components/headless-contact"
 
 export default function Home() {
   return (
@@ -15,11 +15,11 @@ export default function Home() {
       <NewsCarousel />
       <Accreditations />
       <InsightsPlatform />
-      <Services />
+      <HeadlessServices />
       <TrustIndicators />
       <About />
       <GlobalOffices />
-      <ContactSection />
+      <HeadlessContact />
     </main>
   )
 }

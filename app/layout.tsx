@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { Inter, Noto_Sans_Arabic } from "next/font/google"
 import "./globals.css"
 import { cn } from "@/lib/utils"
-import Header from "@/components/header"
+import HeadlessHeader from "@/components/headless-header"
 import Footer from "@/components/footer"
 import { ThemeProvider } from "@/components/theme-provider"
 import { AnimationProvider } from "@/hooks/use-animation-preferences"
@@ -46,7 +46,7 @@ export default function RootLayout({
             <MobilePerformanceOptimizer />
             <div className="relative flex min-h-screen flex-col">
               <ParticleNetwork />
-              <Header />
+              <HeadlessHeader />
               <div className="flex-1 relative z-10 pt-20 md:pt-20">{children}</div>
               <Footer />
             </div>

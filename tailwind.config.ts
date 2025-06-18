@@ -106,7 +106,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@headlessui/tailwindcss")],
 } satisfies Config
 
 export default config
