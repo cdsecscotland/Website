@@ -3,7 +3,6 @@
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
-import { useLanguage } from "@/lib/language-context"
 import { MapPin, Award, Users, Calendar } from "lucide-react"
 
 const teamMembers = [
@@ -51,16 +50,14 @@ const stats = [
 ]
 
 export default function About() {
-  const { t } = useLanguage()
-
   return (
     <section id="about" className="py-16 bg-white/95 dark:bg-charcoal/95 backdrop-blur-sm">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 text-enhanced">
-            {t("about.title")}
+            About Closed Door Security
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t("about.subtitle")}</p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">Leading cyber security consultancy protecting businesses from evolving digital threats</p>
         </div>
 
         {/* Company Stats */}
@@ -109,7 +106,7 @@ export default function About() {
 
         {/* Certifications */}
         <div className="bg-gray-50 rounded-2xl p-8">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">{t("about.certifications")}</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Industry Certifications</h3>
           <div className="flex flex-wrap justify-center gap-3">
             {certifications.map((cert, index) => (
               <Badge key={index} className="bg-lightblue text-white hover:bg-darkblue text-sm py-2 px-4 font-medium">

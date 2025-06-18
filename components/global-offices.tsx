@@ -2,28 +2,27 @@
 
 import { MapPin, Globe } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { useLanguage } from "@/lib/language-context"
 import ScrollAnimation from "./scroll-animation"
 import Image from "next/image"
 
 const offices = [
   {
-    country: "offices.uk",
-    location: "offices.uk.location",
+    country: "United Kingdom",
+    location: "Edinburgh, Scotland",
     flag: "🇬🇧",
     timezone: "GMT",
     image: "/images/office-uk.png",
   },
   {
-    country: "offices.usa",
-    location: "offices.usa.location",
+    country: "United States",
+    location: "Chicago, Illinois",
     flag: "🇺🇸",
     timezone: "CST",
     image: "/images/office-usa.png",
   },
   {
-    country: "offices.uae",
-    location: "offices.uae.location",
+    country: "United Arab Emirates",
+    location: "Dubai, UAE",
     flag: "🇦🇪",
     timezone: "GST",
     image: "/images/office-uae.jpg",
@@ -31,7 +30,6 @@ const offices = [
 ]
 
 export default function GlobalOffices() {
-  const { t } = useLanguage()
 
   return (
     <section className="py-16 bg-charcoal dark:bg-black relative">
@@ -40,7 +38,7 @@ export default function GlobalOffices() {
           <div className="text-center mb-12">
             <div className="flex items-center justify-center mb-4">
               <Globe className="w-8 h-8 text-brandyellow mr-3" />
-              <h2 className="text-3xl md:text-4xl font-bold text-white">{t("offices.title")}</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Global Presence</h2>
             </div>
             <p className="text-lg text-white/90 max-w-2xl mx-auto">
               Serving clients worldwide with local expertise and global reach
@@ -55,7 +53,7 @@ export default function GlobalOffices() {
                 <div className="relative h-48 w-full">
                   <Image
                     src={office.image || "/placeholder.svg"}
-                    alt={`${t(office.country)} Office`}
+                    alt={`${office.country} Office`}
                     fill
                     className="object-cover"
                   />
@@ -63,12 +61,12 @@ export default function GlobalOffices() {
                   <div className="absolute top-4 right-4 text-4xl">{office.flag}</div>
                 </div>
                 <CardHeader className="text-center pb-2">
-                  <CardTitle className="text-xl text-charcoal dark:text-white">{t(office.country)}</CardTitle>
+                  <CardTitle className="text-xl text-charcoal dark:text-white">{office.country}</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
                   <div className="flex items-center justify-center mb-2">
                     <MapPin className="w-4 h-4 text-brandyellow mr-2" />
-                    <p className="text-charcoal/70 dark:text-white/70">{t(office.location)}</p>
+                    <p className="text-charcoal/70 dark:text-white/70">{office.location}</p>
                   </div>
                   <p className="text-sm text-charcoal/50 dark:text-white/50 bg-brandyellow/10 px-3 py-1 rounded-full inline-block">
                     {office.timezone}

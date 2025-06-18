@@ -3,7 +3,6 @@
 import { Shield, Target, Users, AlertTriangle, FileCheck, Search, Lock, Eye } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { useLanguage } from "@/lib/language-context"
 import ScrollAnimation from "./scroll-animation"
 
 const mainServices = [
@@ -86,7 +85,6 @@ const additionalServices = [
 ]
 
 export default function Services() {
-  const { t } = useLanguage()
 
   return (
     <section id="services" className="py-16 bg-white/95 dark:bg-charcoal/95 relative backdrop-blur-sm">

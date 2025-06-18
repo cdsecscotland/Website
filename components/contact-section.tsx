@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Calendar, Mail, Phone, MapPin, Clock } from "lucide-react"
-import { useLanguage } from "@/lib/language-context"
 import HubSpotForm from "./hubspot-form"
 
 const offices = [
@@ -31,21 +30,19 @@ const offices = [
 ]
 
 export default function ContactSection() {
-  const { t } = useLanguage()
-
   return (
     <section id="contact" className="py-16 bg-gray-50/95 dark:bg-charcoal/95 backdrop-blur-sm">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{t("contact.title")}</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t("contact.subtitle")}</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">Ready to secure your business? Contact our team of certified experts today.</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
           {/* HubSpot Contact Form */}
           <Card className="shadow-xl border-0 bg-white dark:bg-charcoal/90">
             <CardHeader>
-              <CardTitle className="text-2xl text-gray-900">{t("contact.form.title")}</CardTitle>
+              <CardTitle className="text-2xl text-gray-900">Contact Form</CardTitle>
             </CardHeader>
             <CardContent>
               <HubSpotForm portalId="144330761" formId="1cb05ab1-3bb5-4624-a0a3-b60813086a24" className="hubspot-contact-form" />
@@ -63,7 +60,7 @@ export default function ContactSection() {
                       <Phone className="w-6 h-6 text-orange" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">{t("contact.phone")}</h4>
+                      <h4 className="font-semibold text-gray-900">Phone</h4>
                       <p className="text-gray-600">+44 (0) 1851 123456</p>
                     </div>
                   </div>
@@ -72,7 +69,7 @@ export default function ContactSection() {
                       <Mail className="w-6 h-6 text-orange" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">{t("contact.email")}</h4>
+                      <h4 className="font-semibold text-gray-900">Email</h4>
                       <p className="text-gray-600">info@cdsec.co.uk</p>
                     </div>
                   </div>
@@ -81,14 +78,14 @@ export default function ContactSection() {
                       <Calendar className="w-6 h-6 text-orange" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900">{t("contact.schedule")}</h4>
+                      <h4 className="font-semibold text-gray-900">Schedule a Meeting</h4>
                       <a
                         href="https://meetings.hubspot.com/your-meeting-link"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-orange hover:text-deeporange underline"
                       >
-                        {t("contact.book")}
+                        Book a consultation
                       </a>
                     </div>
                   </div>

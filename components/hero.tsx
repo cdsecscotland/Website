@@ -5,11 +5,9 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Play } from "lucide-react"
-import { useLanguage } from "@/lib/language-context"
 import ScrollAnimation from "./scroll-animation"
 
 export default function Hero() {
-  const { t } = useLanguage()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -33,7 +31,7 @@ export default function Hero() {
               </h1>
 
               <p className="text-lg md:text-xl lg:text-2xl text-charcoal/80 dark:text-white/80 mb-8 leading-relaxed max-w-2xl mx-auto">
-                {t("hero.subtitle")}
+                Professional cyber security services that protect your business from evolving threats with comprehensive penetration testing and security assessments.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 w-full">
@@ -43,7 +41,7 @@ export default function Hero() {
                   className="bg-charcoal dark:bg-brandyellow hover:bg-charcoal/90 dark:hover:bg-brightyellow text-white dark:text-charcoal font-semibold px-4 sm:px-8 py-4 text-base sm:text-lg group shadow-xl hover:shadow-2xl transition-all duration-300 w-full sm:w-auto"
                 >
                   <Link href="/build-pentest">
-                    {t("hero.cta1")}
+                    Build a Pentest
                     <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
@@ -54,7 +52,7 @@ export default function Hero() {
                   className="border-2 border-charcoal dark:border-white text-charcoal dark:text-white hover:bg-charcoal hover:text-white dark:hover:bg-white dark:hover:text-charcoal font-semibold px-4 sm:px-8 py-4 text-base sm:text-lg group shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto"
                 >
                   <Link href="#services">
-                    {t("hero.cta2")}
+                    View Services
                     <Play className="ml-2 h-5 w-5 sm:h-6 sm:w-6 group-hover:scale-110 transition-transform" />
                   </Link>
                 </Button>
