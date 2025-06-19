@@ -21,10 +21,34 @@ const fontArabic = Noto_Sans_Arabic({
 })
 
 export const metadata: Metadata = {
-  title: "Closed Door Security | Cyber Security Experts You Can Trust",
+  title: "Closed Door Security | Penetration Testing & Cybersecurity Experts",
   description:
-    "Scotland's only Chartered Penetration Tester providing comprehensive security testing and compliance services",
-  generator: "v0.dev",
+    "Leading cybersecurity consultancy providing penetration testing, security assessments, and compliance services. Founded 2019 in Scotland with global reach. CREST certified experts.",
+  keywords: "penetration testing, cybersecurity, security assessment, compliance auditing, vulnerability management, red teaming, CREST certified, cybersecurity consultancy, cyber security experts, security testing",
+  authors: [{ name: "Closed Door Security" }],
+  creator: "Closed Door Security",
+  publisher: "Closed Door Security",
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: "https://www.cdsec.co.uk",
+    siteName: "Closed Door Security",
+    title: "Closed Door Security | Penetration Testing & Cybersecurity Experts",
+    description: "Leading cybersecurity consultancy providing penetration testing, security assessments, and compliance services. Founded 2019 in Scotland with global reach.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@closeddoorsec",
+    title: "Closed Door Security | Penetration Testing & Cybersecurity Experts",
+    description: "Leading cybersecurity consultancy providing penetration testing, security assessments, and compliance services.",
+  },
+  verification: {
+    google: "google-site-verification=your-verification-code",
+  },
+  alternates: {
+    canonical: "https://www.cdsec.co.uk",
+  },
 }
 
 export default function RootLayout({

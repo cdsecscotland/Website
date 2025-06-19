@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# SEO-optimized pages for specific search terms (unlisted but crawlable)
+Allow: /security-assessment-services
+Allow: /crest-certified-penetration-testing
+Allow: /vulnerability-management-scotland
+Allow: /compliance-auditing-uk
+Allow: /cybersecurity-consultancy-edinburgh
+
+Sitemap: https://www.cdsec.co.uk/sitemap.xml
+
+# Disallow admin and development paths
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /api/
+
+# Allow important assets
+Allow: /images/
+Allow: /icons/
+Allow: /*.css
+Allow: /*.js
