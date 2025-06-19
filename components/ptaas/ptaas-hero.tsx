@@ -11,68 +11,79 @@ export default function PTaaSHero() {
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
       <div className="container relative z-10">
         <ScrollAnimation animation="fade" duration={0.8}>
-          <div className="max-w-6xl mx-auto text-center">
+          <div className="max-w-7xl mx-auto">
             <div className="bg-white/90 dark:bg-charcoal/90 backdrop-blur-sm rounded-2xl p-8 md:p-12">
 
-              <ScrollAnimation animation="slide-up" delay={0.4}>
-                <h1 className="text-responsive-4xl md:text-responsive-5xl lg:text-responsive-6xl font-bold mb-6 leading-tight text-charcoal dark:text-white">
-                  Welcome To Insights, The Real-Time Penetration Testing Platform
-                </h1>
-              </ScrollAnimation>
+              {/* Header Content */}
+              <div className="text-center mb-12">
+                <ScrollAnimation animation="slide-up" delay={0.4}>
+                  <h1 className="text-responsive-4xl md:text-responsive-5xl lg:text-responsive-6xl font-bold mb-6 leading-tight text-charcoal dark:text-white">
+                    Welcome To Insights, The Real-Time Penetration Testing Platform
+                  </h1>
+                </ScrollAnimation>
+              </div>
 
-              <ScrollAnimation animation="slide-up" delay={0.6}>
-                <p className="text-responsive-xl md:text-responsive-2xl mb-8 text-charcoal/80 dark:text-white/80 leading-relaxed max-w-4xl mx-auto">
-                  Throughout the project, you'll have the chance to use our Penetration Testing As A Service platform,
-                  Insights, to view discovered vulnerabilities in real time, review reports, and to book in new tests.
-                  This will allow you to track the progress of your penetration test as it happens, and address any
-                  critical finds immediately.
-                </p>
-              </ScrollAnimation>
+              {/* Main Content - Side by Side */}
+              <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+                {/* Left Side - Text Content */}
+                <div className="lg:text-left text-center">
+                  <ScrollAnimation animation="slide-right" delay={0.6}>
+                    <p className="text-responsive-xl md:text-responsive-2xl mb-8 text-charcoal/80 dark:text-white/80 leading-relaxed">
+                      Throughout the project, you'll have the chance to use our Penetration Testing As A Service platform,
+                      Insights, to view discovered vulnerabilities in real time, review reports, and to book in new tests.
+                      This will allow you to track the progress of your penetration test as it happens, and address any
+                      critical finds immediately.
+                    </p>
+                  </ScrollAnimation>
 
-              <ScrollAnimation animation="slide-up" delay={0.8}>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                  <Button
-                    asChild
-                    size="lg"
-                    className="bg-charcoal dark:bg-brandyellow hover:bg-charcoal/90 dark:hover:bg-brightyellow text-white dark:text-charcoal font-semibold px-8 py-4 text-lg shadow-xl"
-                  >
-                    <Link href="#contact">Request Consultation</Link>
-                  </Button>
-                  <Button
-                    asChild
-                    size="lg"
-                    variant="outline"
-                    className="border-2 border-charcoal dark:border-white text-charcoal dark:text-white hover:bg-charcoal hover:text-white dark:hover:bg-white dark:hover:text-charcoal font-semibold px-8 py-4 text-lg"
-                  >
-                    <Link href="#dashboard">View Platform Features</Link>
-                  </Button>
+                  <ScrollAnimation animation="slide-right" delay={0.8}>
+                    <div className="flex flex-col sm:flex-row gap-4 lg:justify-start justify-center">
+                      <Button
+                        asChild
+                        size="lg"
+                        className="bg-charcoal dark:bg-brandyellow hover:bg-charcoal/90 dark:hover:bg-brightyellow text-white dark:text-charcoal font-semibold px-8 py-4 text-lg shadow-xl"
+                      >
+                        <Link href="#contact">Request Consultation</Link>
+                      </Button>
+                      <Button
+                        asChild
+                        size="lg"
+                        variant="outline"
+                        className="border-2 border-charcoal dark:border-white text-charcoal dark:text-white hover:bg-charcoal hover:text-white dark:hover:bg-white dark:hover:text-charcoal font-semibold px-8 py-4 text-lg"
+                      >
+                        <Link href="#dashboard">View Platform Features</Link>
+                      </Button>
+                    </div>
+                  </ScrollAnimation>
                 </div>
-              </ScrollAnimation>
 
-              {/* Dashboard Image */}
-              <ScrollAnimation animation="slide-up" delay={1.0}>
-                <div className="relative max-w-5xl mx-auto mb-12">
-                  <div className="relative rounded-xl overflow-hidden shadow-2xl bg-gradient-to-br from-charcoal/10 to-charcoal/20 p-4">
-                    <Image
-                      src="/images/insights-dashboard.png"
-                      alt="Insights PTaaS Dashboard - Real-time vulnerability tracking and reporting platform"
-                      width={1200}
-                      height={800}
-                      className="w-full h-auto rounded-lg shadow-lg"
-                      priority
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-lg pointer-events-none" />
-                  </div>
-                  
-                  {/* Dashboard Labels */}
-                  <div className="absolute top-8 left-8 bg-brandyellow text-charcoal px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
-                    Live Dashboard
-                  </div>
-                  <div className="absolute bottom-8 right-8 bg-white/90 backdrop-blur-sm text-charcoal px-4 py-2 rounded-lg text-sm font-medium shadow-lg">
-                    Real-time Vulnerability Tracking
-                  </div>
+                {/* Right Side - Dashboard Image */}
+                <div className="lg:order-2 order-1">
+                  <ScrollAnimation animation="slide-left" delay={1.0}>
+                    <div className="relative">
+                      <div className="relative rounded-xl overflow-hidden shadow-2xl bg-gradient-to-br from-charcoal/10 to-charcoal/20 p-4">
+                        <Image
+                          src="/images/insights-dashboard.png"
+                          alt="Insights PTaaS Dashboard - Real-time vulnerability tracking and reporting platform"
+                          width={1200}
+                          height={800}
+                          className="w-full h-auto rounded-lg shadow-lg"
+                          priority
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-lg pointer-events-none" />
+                      </div>
+                      
+                      {/* Dashboard Labels */}
+                      <div className="absolute top-8 left-8 bg-brandyellow text-charcoal px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
+                        Live Dashboard
+                      </div>
+                      <div className="absolute bottom-8 right-8 bg-white/90 backdrop-blur-sm text-charcoal px-4 py-2 rounded-lg text-sm font-medium shadow-lg">
+                        Real-time Vulnerability Tracking
+                      </div>
+                    </div>
+                  </ScrollAnimation>
                 </div>
-              </ScrollAnimation>
+              </div>
 
               {/* Key Benefits */}
               <ScrollAnimation animation="fade" delay={1.2}>
