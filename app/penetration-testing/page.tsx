@@ -21,6 +21,13 @@ const testingTypes = [
     features: ["Industry-Specific Threat Modelling", "Advanced Persistent Threat Simulation", "Supply Chain Attack Scenarios", "Targeted Social Engineering", "Zero-Day Vulnerability Research"]
   },
   {
+    icon: AlertTriangle,
+    title: "Red Team Exercises",
+    description: "Advanced adversarial simulation testing detection, response capabilities, and security maturity using real-world attack scenarios.",
+    methodology: "MITRE ATT&CK framework-based methodology simulating advanced persistent threats (APTs), multi-stage attacks, persistence mechanisms, and testing incident response capabilities with realistic attack scenarios.",
+    features: ["APT Simulation Testing", "Multi-Stage Attack Scenarios", "Persistence & Stealth Testing", "Incident Response Testing", "Security Maturity Assessment"],
+  },
+  {
     icon: Globe,
     title: "Web Application Penetration Testing",
     description: "Comprehensive security testing of web applications using OWASP methodology to identify vulnerabilities before attackers do.",
@@ -28,7 +35,7 @@ const testingTypes = [
     features: ["SQL Injection & NoSQL Testing", "Cross-Site Scripting (XSS)", "Authentication & Session Management", "Business Logic Flaw Assessment", "API Security Testing"],
   },
   {
-    icon: Target,
+    icon: Shield,
     title: "Network Penetration Testing",
     description: "External and internal network security assessments following NIST and PTES methodologies to identify infrastructure vulnerabilities.",
     methodology: "PTES (Penetration Testing Execution Standard) methodology including reconnaissance, scanning, enumeration, vulnerability assessment, exploitation, and post-exploitation activities with detailed network mapping.",
@@ -50,10 +57,10 @@ const testingTypes = [
   },
   {
     icon: Database,
-    title: "Database Security Assessment",
-    description: "Comprehensive database security testing covering SQL Server, Oracle, MySQL, PostgreSQL, and NoSQL databases.",
-    methodology: "Database-specific security testing methodology including configuration review, privilege escalation testing, data exposure assessment, encryption validation, and SQL injection testing across different database platforms.",
-    features: ["Database Configuration Review", "Privilege Escalation Testing", "Data Encryption Assessment", "Access Control Validation", "Backup & Recovery Security"],
+    title: "Infrastructure Security Testing",
+    description: "Comprehensive security assessment of critical infrastructure including servers, databases, and operational technology (OT) systems.",
+    methodology: "Multi-layered infrastructure testing approach covering server hardening, database security, virtualisation platforms, and industrial control systems using NIST frameworks and industry-specific standards.",
+    features: ["Server Hardening Assessment", "Database Security Testing", "Virtualisation Security", "OT/ICS Security Testing", "Critical Infrastructure Protection"],
   },
   {
     icon: Wifi,
@@ -77,11 +84,18 @@ const testingTypes = [
     features: ["Email Phishing Campaigns", "Voice & SMS Phishing", "Physical Security Assessment", "Social Media Intelligence", "Security Awareness Testing"],
   },
   {
-    icon: AlertTriangle,
-    title: "Red Team Exercises",
-    description: "Advanced adversarial simulation testing detection, response capabilities, and security maturity using real-world attack scenarios.",
-    methodology: "MITRE ATT&CK framework-based methodology simulating advanced persistent threats (APTs), multi-stage attacks, persistence mechanisms, and testing incident response capabilities with realistic attack scenarios.",
-    features: ["APT Simulation Testing", "Multi-Stage Attack Scenarios", "Persistence & Stealth Testing", "Incident Response Testing", "Security Maturity Assessment"],
+    icon: FileCheck,
+    title: "Purple Team Exercises",
+    description: "Collaborative security testing combining red team attack simulation with blue team defence to improve detection and response capabilities.",
+    methodology: "Collaborative approach where red team attackers work alongside blue team defenders to test, validate, and improve security controls, detection rules, and incident response procedures in real-time.",
+    features: ["Real-Time Attack & Defence", "Detection Rule Validation", "Security Control Testing", "Incident Response Improvement", "Knowledge Transfer Sessions"],
+  },
+  {
+    icon: Search,
+    title: "Supply Chain Security Assessment",
+    description: "Comprehensive security evaluation of third-party vendors, software dependencies, and supply chain attack vectors.",
+    methodology: "End-to-end supply chain risk assessment including vendor security posture evaluation, software composition analysis, dependency scanning, and third-party integration security testing.",
+    features: ["Vendor Risk Assessment", "Software Composition Analysis", "Third-Party Integration Testing", "Dependency Vulnerability Scanning", "Supply Chain Attack Simulation"],
   }
 ]
 
@@ -177,7 +191,7 @@ export default function PenetrationTestingPage() {
                 Threat Led Penetration Testing
               </h1>
               <p className="text-xl text-white/80 mb-8 max-w-3xl mx-auto">
-                Comprehensive, threat led, penetration testing to provide actionable and accurate results to ensure your cyber security investments are targeted and relevant.
+                Transform your security posture with intelligence-driven penetration testing that mirrors real-world attacks. Our threat-led approach delivers precise, actionable insights that align your cybersecurity investments with actual risks, not theoretical vulnerabilities.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="bg-brandyellow hover:bg-brightyellow text-charcoal font-semibold px-8 py-4">
