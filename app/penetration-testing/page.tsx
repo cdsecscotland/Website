@@ -19,8 +19,6 @@ const testingTypes = [
     description: "Comprehensive security testing of web applications using OWASP methodology to identify vulnerabilities before attackers do.",
     methodology: "OWASP Testing Guide, ASVS verification, automated scanning combined with manual testing techniques including authentication bypass, session management flaws, injection attacks, and business logic vulnerabilities.",
     features: ["SQL Injection & NoSQL Testing", "Cross-Site Scripting (XSS)", "Authentication & Session Management", "Business Logic Flaw Assessment", "API Security Testing"],
-    duration: "5-10 days",
-    complexity: "Medium to High"
   },
   {
     icon: Target,
@@ -28,8 +26,6 @@ const testingTypes = [
     description: "External and internal network security assessments following NIST and PTES methodologies to identify infrastructure vulnerabilities.",
     methodology: "PTES (Penetration Testing Execution Standard) methodology including reconnaissance, scanning, enumeration, vulnerability assessment, exploitation, and post-exploitation activities with detailed network mapping.",
     features: ["External Perimeter Testing", "Internal Network Segmentation", "Privilege Escalation Testing", "Lateral Movement Assessment", "Network Device Configuration Review"],
-    duration: "7-14 days", 
-    complexity: "Medium to High"
   },
   {
     icon: Smartphone,
@@ -37,8 +33,6 @@ const testingTypes = [
     description: "Comprehensive security assessment of iOS and Android applications following OWASP Mobile Security Testing Guide (MSTG).",
     methodology: "OWASP MSTG framework covering static and dynamic analysis, runtime testing, binary analysis, network communication assessment, and platform-specific security controls validation.",
     features: ["Static & Dynamic Code Analysis", "Runtime Application Self-Protection", "Data Storage Security", "Network Communication Security", "Authentication & Cryptography"],
-    duration: "10-15 days",
-    complexity: "High"
   },
   {
     icon: Cloud,
@@ -46,8 +40,6 @@ const testingTypes = [
     description: "Multi-cloud security assessment covering AWS, Azure, and GCP using cloud-specific security frameworks and best practices.",
     methodology: "Cloud Security Alliance (CSA) framework, NIST Cloud Computing Security, provider-specific security benchmarks (CIS), configuration review, identity and access management assessment, and serverless security analysis.",
     features: ["Multi-Cloud Environment Assessment", "IAM & Access Control Review", "Container & Kubernetes Security", "Serverless Security Testing", "Cloud Storage Security Assessment"],
-    duration: "7-12 days",
-    complexity: "High"
   },
   {
     icon: Database,
@@ -55,8 +47,6 @@ const testingTypes = [
     description: "Comprehensive database security testing covering SQL Server, Oracle, MySQL, PostgreSQL, and NoSQL databases.",
     methodology: "Database-specific security testing methodology including configuration review, privilege escalation testing, data exposure assessment, encryption validation, and SQL injection testing across different database platforms.",
     features: ["Database Configuration Review", "Privilege Escalation Testing", "Data Encryption Assessment", "Access Control Validation", "Backup & Recovery Security"],
-    duration: "5-8 days",
-    complexity: "Medium"
   },
   {
     icon: Wifi,
@@ -64,8 +54,6 @@ const testingTypes = [
     description: "Comprehensive wireless network security testing including WiFi, Bluetooth, and IoT device security assessment.",
     methodology: "802.11 security testing methodology covering WPA/WPA2/WPA3 security, enterprise wireless assessment, rogue access point detection, and wireless client security testing using specialized tools and techniques.",
     features: ["Enterprise Wireless Security", "Guest Network Assessment", "Rogue Access Point Detection", "Wireless Client Security", "IoT Device Security Testing"],
-    duration: "3-7 days",
-    complexity: "Medium"
   },
   {
     icon: Lock,
@@ -73,8 +61,6 @@ const testingTypes = [
     description: "Specialized security testing of REST, GraphQL, and SOAP APIs following OWASP API Security Top 10 methodology.",
     methodology: "OWASP API Security Testing methodology including authentication testing, authorization bypass, input validation, rate limiting, error handling assessment, and API-specific business logic testing.",
     features: ["REST API Security Assessment", "GraphQL Security Testing", "Authentication & Authorization", "Rate Limiting & Throttling", "API Gateway Security"],
-    duration: "3-6 days",
-    complexity: "Medium"
   },
   {
     icon: Eye,
@@ -82,8 +68,6 @@ const testingTypes = [
     description: "Human element security testing including phishing campaigns, physical security assessment, and social engineering awareness testing.",
     methodology: "Multi-vector social engineering methodology including email phishing, vishing (voice phishing), smishing (SMS phishing), physical security testing, and social media reconnaissance to test human security controls.",
     features: ["Email Phishing Campaigns", "Voice & SMS Phishing", "Physical Security Assessment", "Social Media Intelligence", "Security Awareness Testing"],
-    duration: "5-10 days",
-    complexity: "Medium"
   },
   {
     icon: AlertTriangle,
@@ -91,8 +75,6 @@ const testingTypes = [
     description: "Advanced adversarial simulation testing detection, response capabilities, and security maturity using real-world attack scenarios.",
     methodology: "MITRE ATT&CK framework-based methodology simulating advanced persistent threats (APTs), multi-stage attacks, persistence mechanisms, and testing incident response capabilities with realistic attack scenarios.",
     features: ["APT Simulation Testing", "Multi-Stage Attack Scenarios", "Persistence & Stealth Testing", "Incident Response Testing", "Security Maturity Assessment"],
-    duration: "14-28 days",
-    complexity: "Very High"
   }
 ]
 
@@ -228,10 +210,6 @@ export default function PenetrationTestingPage() {
                       </div>
                       <div className="flex-1">
                         <CardTitle className="text-lg leading-tight">{type.title}</CardTitle>
-                        <div className="flex gap-2 mt-2">
-                          <Badge variant="secondary" className="text-xs">{type.duration}</Badge>
-                          <Badge variant="outline" className="text-xs">{type.complexity}</Badge>
-                        </div>
                       </div>
                     </div>
                     <CardDescription className="text-sm mb-4">{type.description}</CardDescription>

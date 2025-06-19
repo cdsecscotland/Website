@@ -19,8 +19,6 @@ const primaryCertifications = [
     description: "UK government-backed scheme providing baseline cybersecurity certification for organisations of all sizes.",
     methodology: "Five key security controls assessment: boundary firewalls, secure configuration, access control, malware protection, and patch management. Self-assessment questionnaire with external validation of security policies and procedures.",
     features: ["Security Controls Assessment", "Policy Documentation Review", "Self-Assessment Support", "External Validation", "Annual Certification"],
-    duration: "2-4 weeks",
-    complexity: "Low to Medium",
     governmentBacked: true
   },
   {
@@ -29,8 +27,6 @@ const primaryCertifications = [
     description: "Enhanced UK cybersecurity certification including hands-on technical verification of security controls implementation.",
     methodology: "Comprehensive technical testing including vulnerability scanning, configuration review, penetration testing of key controls, and detailed technical validation of all five security control areas with evidence-based assessment.",
     features: ["Technical Vulnerability Testing", "Hands-on Security Verification", "Configuration Assessment", "Penetration Testing", "Enhanced Certification"],
-    duration: "3-6 weeks",
-    complexity: "Medium",
     governmentBacked: true
   },
   {
@@ -39,8 +35,6 @@ const primaryCertifications = [
     description: "International standard for information security management systems (ISMS) providing comprehensive security framework.",
     methodology: "ISMS implementation following ISO 27001:2022 standard including risk assessment, security controls selection from Annex A, management system documentation, internal audits, and management review processes.",
     features: ["ISMS Implementation", "Risk Assessment & Treatment", "Security Controls Implementation", "Management System Documentation", "Internal Audit Programme"],
-    duration: "6-12 months",
-    complexity: "High",
     governmentBacked: false
   },
   {
@@ -49,8 +43,6 @@ const primaryCertifications = [
     description: "Payment Card Industry Data Security Standard for organisations handling cardholder data and payment processing.",
     methodology: "PCI DSS v4.0 compliance assessment covering 12 requirements across 6 categories: secure network, protect cardholder data, vulnerability management, access controls, monitoring, and information security policy.",
     features: ["Cardholder Data Environment Assessment", "Network Security Testing", "Access Control Validation", "Monitoring & Logging Review", "Policy & Procedure Assessment"],
-    duration: "2-4 months",
-    complexity: "Medium to High",
     governmentBacked: false
   },
   {
@@ -59,8 +51,6 @@ const primaryCertifications = [
     description: "Service Organization Control 2 compliance for service providers, focusing on security, availability, and confidentiality.",
     methodology: "SOC 2 Type I and Type II assessments covering five trust service criteria: security, availability, processing integrity, confidentiality, and privacy. Control design evaluation and operating effectiveness testing.",
     features: ["Trust Service Criteria Assessment", "Control Design Evaluation", "Operating Effectiveness Testing", "Type I & Type II Reports", "Continuous Monitoring"],
-    duration: "4-8 months",
-    complexity: "High",
     governmentBacked: false
   },
   {
@@ -69,8 +59,6 @@ const primaryCertifications = [
     description: "General Data Protection Regulation compliance assessment and implementation for data protection and privacy.",
     methodology: "GDPR Article-by-Article compliance assessment including lawful basis evaluation, data mapping, privacy impact assessments, data subject rights implementation, and breach notification procedures.",
     features: ["Data Protection Impact Assessment", "Data Mapping & Classification", "Privacy Policy Development", "Data Subject Rights Implementation", "Breach Response Planning"],
-    duration: "2-6 months",
-    complexity: "Medium to High",
     governmentBacked: false
   }
 ]
@@ -254,10 +242,6 @@ export default function ComplianceAuditingPage() {
                           {cert.governmentBacked && (
                             <Badge variant="default" className="bg-blue-100 text-blue-800 text-xs">UK Gov</Badge>
                           )}
-                        </div>
-                        <div className="flex gap-2 mt-2">
-                          <Badge variant="secondary" className="text-xs">{cert.duration}</Badge>
-                          <Badge variant="outline" className="text-xs">{cert.complexity}</Badge>
                         </div>
                       </div>
                     </div>
