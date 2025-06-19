@@ -1,22 +1,58 @@
+# Closed Door Security - Robots.txt
+# Professional Cybersecurity Services
+
 User-agent: *
 Allow: /
 
-# SEO-optimized pages for specific search terms (unlisted but crawlable)
+# Core service pages - high priority crawling
+Allow: /penetration-testing
+Allow: /compliance-auditing
+Allow: /ptaas
+Allow: /build-pentest
+Allow: /about
+
+# SEO-optimized landing pages (unlisted but crawlable)
 Allow: /security-assessment-services
 Allow: /crest-certified-penetration-testing
 Allow: /vulnerability-management-scotland
-Allow: /compliance-auditing-uk
-Allow: /cybersecurity-consultancy-edinburgh
+Allow: /cybersecurity-consultancy
+Allow: /incident-response
 
+# XML Sitemap
 Sitemap: https://www.cdsec.co.uk/sitemap.xml
 
-# Disallow admin and development paths
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow admin, development, and sensitive paths
 Disallow: /admin/
 Disallow: /_next/
 Disallow: /api/
+Disallow: /.well-known/
+Disallow: /tmp/
+Disallow: /cache/
 
-# Allow important assets
+# Allow important assets and resources
 Allow: /images/
 Allow: /icons/
-Allow: /*.css
-Allow: /*.js
+Allow: /assets/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.ico$
+Allow: /*.pdf$
+
+# Block specific bot types that may consume excessive resources
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
+
+User-agent: DotBot
+Crawl-delay: 10

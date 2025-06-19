@@ -1,8 +1,10 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
 import { MapPin, Award, Users, Calendar } from "lucide-react"
 
 const teamMembers = [
@@ -45,7 +47,15 @@ export default function About() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 text-enhanced">
             About Closed Door Security
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">Leading cyber security consultancy protecting businesses from evolving digital threats</p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">Leading cyber security consultancy protecting businesses from evolving digital threats since 2019</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild variant="outline" size="lg">
+              <Link href="/penetration-testing">Our Testing Services</Link>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <Link href="/compliance-auditing">Compliance Services</Link>
+            </Button>
+          </div>
         </div>
 
         {/* Company Stats */}

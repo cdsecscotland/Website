@@ -128,14 +128,15 @@ export default function HeadlessHero() {
               {/* Floating Card Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-brandyellow/20 to-brightyellow/20 rounded-3xl blur-3xl animate-pulse-glow" />
               
-              <div className="relative bg-white/90 dark:bg-charcoal/90 backdrop-blur-sm p-6 lg:p-8 rounded-3xl shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
+              <div className="relative bg-white/90 dark:bg-charcoal/90 backdrop-blur-sm p-6 lg:p-8 rounded-3xl shadow-2xl transform hover:scale-[1.02] transition-transform duration-500 overflow-hidden">
                 <div className="relative rounded-2xl overflow-hidden shadow-lg">
                   <Image
                     src="/images/insights-tablet-demo.png"
                     width={800}
                     height={600}
                     alt="Closed Door Security Insights Platform"
-                    className="w-full h-auto"
+                    className="w-full h-auto object-cover"
+                    style={{ maxHeight: '400px' }}
                   />
                   
                   {/* Overlay with live indicators */}
