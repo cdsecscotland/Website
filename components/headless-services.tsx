@@ -48,7 +48,7 @@ const serviceCategories = [
     ]
   },
   {
-    name: "Management Services",
+    name: "Security Consultancy",
     services: [
       {
         icon: AlertTriangle,

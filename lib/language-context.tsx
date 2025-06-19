@@ -48,7 +48,7 @@ const translations = {
     // About
     "about.title": "About Us",
     "about.subtitle":
-      "Founded in 2021 in the Outer Hebrides of Scotland, we bring world-class cyber security expertise to organizations globally with offices in the UK, USA, and UAE.",
+      "Founded in 2019 in the Outer Hebrides of Scotland, we bring world-class cyber security expertise to organisations globally with offices in the UK, USA, and UAE.",
     "about.certifications": "Our Certifications",
 
     // Global Offices
@@ -107,7 +107,7 @@ const translations = {
     // About
     "about.title": "من نحن",
     "about.subtitle":
-      "تأسست في عام 2021 في جزر هبريدس الخارجية في اسكتلندا، نحن نقدم خبرة الأمن السيبراني عالمية المستوى للمؤسسات حول العالم مع مكاتب في المملكة المتحدة والولايات المتحدة الأمريكية والإمارات العربية المتحدة.",
+      "تأسست في عام 2019 في جزر هبريدس الخارجية في اسكتلندا، نحن نقدم خبرة الأمن السيبراني عالمية المستوى للمؤسسات حول العالم مع مكاتب في المملكة المتحدة والولايات المتحدة الأمريكية والإمارات العربية المتحدة.",
     "about.certifications": "شهاداتنا",
 
     // Global Offices

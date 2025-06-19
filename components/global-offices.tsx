@@ -15,7 +15,7 @@ const offices = [
   },
   {
     country: "United States",
-    location: "Chicago, Illinois",
+    location: "Des Moines, Iowa",
     flag: "🇺🇸",
     timezone: "CST",
     image: "/images/office-usa.jpg",

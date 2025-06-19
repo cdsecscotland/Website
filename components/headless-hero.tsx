@@ -25,7 +25,7 @@ export default function HeadlessHero() {
   if (!mounted) return null
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-cream via-white to-paleyellow/30 dark:from-charcoal dark:via-charcoal/95 dark:to-charcoal">
+    <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-cream via-white to-paleyellow/30 dark:from-charcoal dark:via-charcoal/95 dark:to-charcoal pt-20">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {floatingElements.map((element, index) => (
@@ -157,17 +157,6 @@ export default function HeadlessHero() {
                   </div>
                 </div>
 
-                {/* Feature pills */}
-                <div className="flex flex-wrap gap-2 mt-6">
-                  {["AI-Powered", "Real-time Alerts", "Compliance Ready", "24/7 Support"].map((feature, index) => (
-                    <div
-                      key={index}
-                      className="px-3 py-1 bg-brandyellow/10 text-charcoal dark:text-white text-sm rounded-full border border-brandyellow/20 hover:bg-brandyellow/20 transition-colors duration-200"
-                    >
-                      {feature}
-                    </div>
-                  ))}
-                </div>
               </div>
             </div>
           </ScrollAnimation>

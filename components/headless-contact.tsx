@@ -32,7 +32,7 @@ const contactMethods = [
     value: "Book a consultation",
     description: "30-minute strategy session with our team",
     gradient: "from-purple-500 to-indigo-500",
-    available: "Same Day Booking",
+    available: "Flexible Scheduling",
     href: "https://app.apollo.io/meetings/william-wright"
   }
 ]

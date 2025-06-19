@@ -31,7 +31,7 @@ const teamMembers = [
 
 
 const stats = [
-  { icon: Calendar, label: "Founded", value: "2021" },
+  { icon: Calendar, label: "Founded", value: "2019" },
   { icon: Users, label: "Team Members", value: "15+" },
   { icon: Award, label: "Certifications", value: "25+" },
   { icon: MapPin, label: "Global Offices", value: "3" },

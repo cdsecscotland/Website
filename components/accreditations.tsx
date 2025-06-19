@@ -46,6 +46,11 @@ const certificationBadges = [
     description: "Elite cybersecurity force certification",
     category: "Professional",
   },
+  {
+    name: "ISO 27001",
+    description: "International information security management standard",
+    category: "Standards",
+  },
 ]
 
 export default function Accreditations() {
