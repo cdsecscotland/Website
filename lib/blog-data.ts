@@ -155,43 +155,63 @@ const mockPosts: BlogPost[] = [
 ]
 
 export async function getBlogPosts(page = 1, limit = 6, category?: string): Promise<BlogPost[]> {
-  // Simulate API delay
-  await new Promise((resolve) => setTimeout(resolve, 500))
-
+  // Only import on server side
+  if (typeof window === 'undefined') {
+    const { getPaginatedBlogPosts } = await import('./markdown-blog')
+    return getPaginatedBlogPosts(page, limit, category)
+  }
+  
+  // Return mock data on client side for now
   let filteredPosts = mockPosts
-
   if (category) {
     filteredPosts = mockPosts.filter((post) => post.category === category)
   }
-
   const startIndex = (page - 1) * limit
   const endIndex = startIndex + limit
-
   return filteredPosts.slice(startIndex, endIndex)
 }
 
 export async function getBlogPost(slug: string): Promise<BlogPost | null> {
-  // Simulate API delay
-  await new Promise((resolve) => setTimeout(resolve, 300))
-
+  // Only import on server side
+  if (typeof window === 'undefined') {
+    const { getBlogPostBySlug } = await import('./markdown-blog')
+    return getBlogPostBySlug(slug)
+  }
+  
+  // Return mock data on client side
   return mockPosts.find((post) => post.slug === slug) || null
 }
 
 export async function getBlogPostsByCategory(category: string): Promise<BlogPost[]> {
-  // Simulate API delay
-  await new Promise((resolve) => setTimeout(resolve, 400))
-
+  // Only import on server side
+  if (typeof window === 'undefined') {
+    const { getBlogPostsByCategory } = await import('./markdown-blog')
+    return getBlogPostsByCategory(category)
+  }
+  
+  // Return mock data on client side
   return mockPosts.filter((post) => post.category === category)
 }
 
-export async function getRelatedPosts(currentPostId: string, category: string, limit = 3): Promise<BlogPost[]> {
-  // Simulate API delay
-  await new Promise((resolve) => setTimeout(resolve, 300))
-
-  return mockPosts.filter((post) => post.id !== currentPostId && post.category === category).slice(0, limit)
+export async function getRelatedPosts(currentSlug: string, category: string, limit = 3): Promise<BlogPost[]> {
+  // Only import on server side
+  if (typeof window === 'undefined') {
+    const { getRelatedBlogPosts } = await import('./markdown-blog')
+    return getRelatedBlogPosts(currentSlug, category, limit)
+  }
+  
+  // Return mock data on client side
+  return mockPosts.filter((post) => post.slug !== currentSlug && post.category === category).slice(0, limit)
 }
 
 export async function getAllBlogSlugs(): Promise<string[]> {
+  // Only import on server side
+  if (typeof window === 'undefined') {
+    const { getAllBlogSlugs } = await import('./markdown-blog')
+    return getAllBlogSlugs()
+  }
+  
+  // Return mock data on client side
   return mockPosts.map((post) => post.slug)
 }
 

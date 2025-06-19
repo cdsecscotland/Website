@@ -17,7 +17,8 @@ export async function generateStaticParams() {
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = await getBlogPost(params.slug)
+  const { slug } = await params
+  const post = await getBlogPost(slug)
 
   if (!post) {
     notFound()
@@ -26,7 +27,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <main className="min-h-screen pt-20">
       <BlogPost post={post} />
-      <RelatedPosts currentPostId={post.id} category={post.category} />
+      <RelatedPosts currentPostSlug={post.slug} category={post.category} />
     </main>
   )
 }

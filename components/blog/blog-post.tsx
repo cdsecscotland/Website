@@ -2,6 +2,9 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import rehypeRaw from 'rehype-raw'
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Calendar, Clock, User, Share2, ArrowLeft, Tag } from "lucide-react"
@@ -95,7 +98,36 @@ export default function BlogPost({ post }: BlogPostProps) {
               {post.excerpt}
             </div>
 
-            <div className="blog-content" dangerouslySetInnerHTML={{ __html: post.content }} />
+            <div className="blog-content">
+              <ReactMarkdown 
+                remarkPlugins={[remarkGfm]}
+                rehypePlugins={[rehypeRaw]}
+                components={{
+                img: ({ node, ...props }) => (
+                  <Image
+                    {...props}
+                    src={props.src || '/placeholder.svg'}
+                    alt={props.alt || ''}
+                    width={800}
+                    height={400}
+                    className="rounded-lg my-8 w-full h-auto"
+                  />
+                ),
+                a: ({ node, ...props }) => (
+                  <Link
+                    href={props.href || '#'}
+                    className="text-brandyellow hover:text-brightyellow underline"
+                    target={props.href?.startsWith('http') ? '_blank' : '_self'}
+                    rel={props.href?.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  >
+                    {props.children}
+                  </Link>
+                ),
+              }}
+              >
+                {post.content}
+              </ReactMarkdown>
+            </div>
           </div>
         </ScrollAnimation>
 

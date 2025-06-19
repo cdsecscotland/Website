@@ -10,18 +10,18 @@ import ScrollAnimation from "../scroll-animation"
 import { getRelatedPosts, type BlogPost } from "@/lib/blog-data"
 
 interface RelatedPostsProps {
-  currentPostId: string
+  currentPostSlug: string
   category: string
 }
 
-export default function RelatedPosts({ currentPostId, category }: RelatedPostsProps) {
+export default function RelatedPosts({ currentPostSlug, category }: RelatedPostsProps) {
   const [posts, setPosts] = useState<BlogPost[]>([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const loadRelatedPosts = async () => {
       try {
-        const relatedPosts = await getRelatedPosts(currentPostId, category, 3)
+        const relatedPosts = await getRelatedPosts(currentPostSlug, category, 3)
         setPosts(relatedPosts)
       } catch (error) {
         console.error("Failed to load related posts:", error)
@@ -31,7 +31,7 @@ export default function RelatedPosts({ currentPostId, category }: RelatedPostsPr
     }
 
     loadRelatedPosts()
-  }, [currentPostId, category])
+  }, [currentPostSlug, category])
 
   if (loading || posts.length === 0) {
     return null
