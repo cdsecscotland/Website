@@ -11,14 +11,14 @@ const offices = [
     location: "Edinburgh, Scotland",
     flag: "🇬🇧",
     timezone: "GMT",
-    image: "/images/office-uk.png",
+    image: "/images/office-uk.jpg",
   },
   {
     country: "United States",
     location: "Chicago, Illinois",
     flag: "🇺🇸",
     timezone: "CST",
-    image: "/images/office-usa.png",
+    image: "/images/office-usa.jpg",
   },
   {
     country: "United Arab Emirates",

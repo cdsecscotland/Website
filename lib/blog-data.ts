@@ -62,7 +62,7 @@ const mockPosts: BlogPost[] = [
     updatedAt: "2024-01-15T10:00:00Z",
     category: "threat-intelligence",
     tags: ["AI", "Machine Learning", "Cyber Threats", "Defense Strategy"],
-    featuredImage: "/images/ai-cyber-attacks.png",
+    featuredImage: "/images/cyber-security-team.jpg",
     featured: true,
     readTime: 8,
   },
