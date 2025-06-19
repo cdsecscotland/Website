@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { Shield, Target, Users, AlertTriangle, FileCheck, Search, Lock, Eye } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -12,6 +13,7 @@ const mainServices = [
     description:
       "Comprehensive security assessments conducted by CREST certified professionals to identify vulnerabilities before attackers do.",
     features: ["Web Application Testing", "Network Penetration Testing", "Mobile App Security", "API Security Testing"],
+    link: "/penetration-testing",
     gradient: "from-blue-500 to-cyan-500",
     iconColor: "text-white",
     bgColor: "bg-gradient-to-br from-blue-500/10 to-cyan-500/10",
@@ -28,6 +30,7 @@ const mainServices = [
       "Custom Attack Scenarios",
       "Threat Intelligence Integration",
     ],
+    link: "/penetration-testing",
     gradient: "from-red-500 to-orange-500",
     iconColor: "text-white",
     bgColor: "bg-gradient-to-br from-red-500/10 to-orange-500/10",
@@ -39,6 +42,7 @@ const mainServices = [
     description:
       "Full-scale adversarial simulations testing your organization's detection and response capabilities against sophisticated attacks.",
     features: ["Multi-Vector Attacks", "Social Engineering", "Physical Security Testing", "Purple Team Exercises"],
+    link: "/penetration-testing",
     gradient: "from-purple-500 to-indigo-500",
     iconColor: "text-white",
     bgColor: "bg-gradient-to-br from-purple-500/10 to-indigo-500/10",
@@ -50,6 +54,7 @@ const mainServices = [
     description:
       "Continuous monitoring and management of security vulnerabilities with expert-guided remediation strategies.",
     features: ["Continuous Monitoring", "Risk-Based Prioritization", "Patch Management", "Threat Intelligence"],
+    link: "/vulnerability-management-scotland",
     gradient: "from-emerald-500 to-teal-500",
     iconColor: "text-white",
     bgColor: "bg-gradient-to-br from-emerald-500/10 to-teal-500/10",
@@ -62,24 +67,28 @@ const additionalServices = [
     icon: FileCheck,
     title: "Compliance & Auditing",
     description: "Expert guidance for ISO 27001, SOC 2, GDPR, and PCI DSS compliance requirements.",
+    link: "/compliance-auditing",
     gradient: "from-violet-500 to-purple-500",
   },
   {
     icon: Search,
     title: "Security Consulting",
     description: "Strategic security advice and implementation support to strengthen your overall security posture.",
+    link: "/security-assessment-services",
     gradient: "from-green-500 to-emerald-500",
   },
   {
     icon: Lock,
     title: "Secure Development",
     description: "DevSecOps integration and secure coding practices for your development lifecycle.",
+    link: "/security-assessment-services",
     gradient: "from-blue-500 to-indigo-500",
   },
   {
     icon: Eye,
     title: "Security Code Review",
     description: "Static and dynamic code analysis to identify security vulnerabilities in your applications.",
+    link: "/security-assessment-services",
     gradient: "from-yellow-500 to-orange-500",
   },
 ]
@@ -105,9 +114,10 @@ export default function Services() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {mainServices.map((service, index) => (
             <ScrollAnimation key={index} animation="slide-up" delay={0.2 * index}>
-              <Card
-                className={`group hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border-0 shadow-lg ${service.bgColor} ${service.borderColor} border h-full relative overflow-hidden`}
-              >
+              <Link href={service.link} className="block h-full">
+                <Card
+                  className={`group hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border-0 shadow-lg cursor-pointer ${service.bgColor} ${service.borderColor} border h-full relative overflow-hidden`}
+                >
                 {/* Gradient overlay on hover */}
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
@@ -149,6 +159,7 @@ export default function Services() {
                   </Button>
                 </CardContent>
               </Card>
+              </Link>
             </ScrollAnimation>
           ))}
         </div>
@@ -167,7 +178,8 @@ export default function Services() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
               {additionalServices.map((service, index) => (
                 <ScrollAnimation key={index} animation="slide-up" delay={0.8 + index * 0.1}>
-                  <div className="text-center group cursor-pointer">
+                  <Link href={service.link} className="block">
+                    <div className="text-center group cursor-pointer">
                     <div
                       className={`w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-xl relative`}
                     >
@@ -184,6 +196,7 @@ export default function Services() {
                       {service.description}
                     </p>
                   </div>
+                  </Link>
                 </ScrollAnimation>
               ))}
             </div>

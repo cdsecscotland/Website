@@ -30,6 +30,7 @@ const serviceCategories = [
         title: "Threat Led Penetration Testing",
         description: "Advanced testing methodologies that simulate real-world attack scenarios specific to your industry and threat landscape.",
         features: ["APT Simulation", "Industry-Specific Threats", "Custom Attack Scenarios", "Threat Intelligence Integration"],
+        link: "/penetration-testing",
         gradient: "from-red-500 to-orange-500",
         iconColor: "text-white",
         bgColor: "bg-gradient-to-br from-red-500/10 to-orange-500/10",
@@ -41,6 +42,7 @@ const serviceCategories = [
         title: "Red Teaming",
         description: "Full-scale adversarial simulations testing your organisation's detection and response capabilities against sophisticated attacks.",
         features: ["Multi-Vector Attacks", "Social Engineering", "Physical Security Testing", "Purple Team Exercises"],
+        link: "/penetration-testing",
         gradient: "from-purple-500 to-indigo-500",
         iconColor: "text-white",
         bgColor: "bg-gradient-to-br from-purple-500/10 to-indigo-500/10",
@@ -57,6 +59,7 @@ const serviceCategories = [
         title: "Vulnerability Management",
         description: "Continuous monitoring and management of security vulnerabilities with expert-guided remediation strategies.",
         features: ["Continuous Monitoring", "Risk-Based Prioritization", "Patch Management", "Threat Intelligence"],
+        link: "/vulnerability-management-scotland",
         gradient: "from-emerald-500 to-teal-500",
         iconColor: "text-white",
         bgColor: "bg-gradient-to-br from-emerald-500/10 to-teal-500/10",
@@ -85,6 +88,7 @@ const serviceCategories = [
         borderColor: "border-green-200 dark:border-green-800",
         glowColor: "shadow-green-500/25",
         features: ["Security Strategy", "Risk Assessment", "Architecture Review", "Implementation Support"],
+        link: "/security-assessment-services",
       },
     ]
   }

@@ -17,13 +17,15 @@ interface BlogPostProps {
 
 export default function BlogPost({ post }: BlogPostProps) {
   const handleShare = () => {
-    if (navigator.share) {
+    if (typeof window === 'undefined') return
+    
+    if (navigator?.share) {
       navigator.share({
         title: post.title,
         text: post.excerpt,
         url: window.location.href,
       })
-    } else {
+    } else if (navigator?.clipboard) {
       navigator.clipboard.writeText(window.location.href)
     }
   }

@@ -157,7 +157,11 @@ export default function NewsCarousel() {
                                 variant="outline"
                                 size="sm"
                                 className="group-hover:bg-brandyellow group-hover:text-charcoal group-hover:border-brandyellow transition-all duration-300"
-                                onClick={() => window.open(outlet.url, "_blank")}
+                                onClick={() => {
+                                  if (typeof window !== 'undefined') {
+                                    window.open(outlet.url, "_blank")
+                                  }
+                                }}
                               >
                                 Read Article
                                 <ExternalLink className="ml-2 h-3 w-3" />

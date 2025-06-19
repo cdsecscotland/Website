@@ -68,7 +68,7 @@ export default function PTaaSDashboard() {
             <div className="relative">
               <div className="bg-white dark:bg-charcoal/80 p-4 rounded-2xl shadow-2xl">
                 <Image
-                  src="/images/insights-dashboard.png"
+                  src="/images/insights-findings-desktop.png"
                   width={700}
                   height={500}
                   alt="Insights Dashboard - Real-time Findings Overview"

@@ -114,27 +114,22 @@ export default function InsightsPlatform() {
           </ScrollAnimation>
 
           <ScrollAnimation animation="slide-left" delay={0.4}>
-            <div className="relative">
-              <div className="bg-white dark:bg-charcoal/80 p-4 rounded-2xl shadow-2xl">
+            <div className="relative max-w-lg mx-auto">
+              <div className="bg-white dark:bg-charcoal/80 p-4 rounded-2xl shadow-xl">
                 <Image
                   src="/images/insights-tablet-demo.png"
                   width={800}
                   height={600}
                   alt="Insights Platform Dashboard"
-                  className="rounded-xl"
+                  className="rounded-xl w-full h-auto"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-br from-brandyellow to-orange-500 rounded-full opacity-30 animate-pulse blur-sm"></div>
-              <div
-                className="absolute -top-6 -left-6 w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full opacity-40 animate-pulse blur-sm"
-                style={{ animationDelay: "1s" }}
-              ></div>
             </div>
           </ScrollAnimation>
         </div>
 
         <ScrollAnimation animation="fade" delay={0.6}>
-          <div className="text-center bg-white/80 dark:bg-charcoal/80 backdrop-blur-sm rounded-2xl p-8">
+          <div className="text-center bg-white/80 dark:bg-charcoal/80 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-charcoal dark:text-white mb-4">
               Ready to Elevate Your Security Posture?
             </h3>

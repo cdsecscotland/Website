@@ -11,7 +11,7 @@ export default function PTaaSHero() {
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
       <div className="container relative z-10">
         <ScrollAnimation animation="fade" duration={0.8}>
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="bg-white/90 dark:bg-charcoal/90 backdrop-blur-sm rounded-2xl p-8 md:p-12">
 
               {/* Header Content */}

@@ -16,13 +16,6 @@ const floatingElements = [
 ]
 
 export default function HeadlessHero() {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) return null
 
   return (
     <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-cream via-white to-paleyellow/30 dark:from-charcoal dark:via-charcoal/95 dark:to-charcoal pt-20">
@@ -47,9 +40,6 @@ export default function HeadlessHero() {
         ))}
       </div>
 
-      {/* Gradient Orbs */}
-      <div className="absolute top-1/4 -left-48 w-96 h-96 bg-gradient-to-r from-brandyellow/20 to-transparent rounded-full blur-3xl animate-pulse-glow" />
-      <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-transparent rounded-full blur-3xl animate-pulse-glow animation-delay-2000" />
 
       <div className="container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -125,10 +115,9 @@ export default function HeadlessHero() {
 
           <ScrollAnimation animation="slide-left" delay={0.2}>
             <div className="relative">
-              {/* Floating Card Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-brandyellow/20 to-brightyellow/20 rounded-3xl blur-3xl animate-pulse-glow" />
+              {/* Floating Card Effect - removed decorative background */}
               
-              <div className="relative bg-white/90 dark:bg-charcoal/90 backdrop-blur-sm p-6 lg:p-8 rounded-3xl shadow-2xl transform hover:scale-[1.02] transition-transform duration-500 overflow-hidden">
+              <div className="relative bg-white/90 dark:bg-charcoal/90 backdrop-blur-sm p-4 lg:p-6 rounded-2xl shadow-xl transform hover:scale-[1.01] transition-transform duration-500 overflow-hidden max-w-lg mx-auto">
                 <div className="relative rounded-2xl overflow-hidden shadow-lg">
                   <Image
                     src="/images/insights-tablet-demo.png"

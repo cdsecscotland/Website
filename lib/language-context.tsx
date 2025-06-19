@@ -142,6 +142,8 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguage] = useState<Language>("en")
 
   useEffect(() => {
+    if (typeof window === 'undefined') return
+    
     const savedLanguage = localStorage.getItem("language") as Language
     if (savedLanguage && (savedLanguage === "en" || savedLanguage === "ar")) {
       setLanguage(savedLanguage)
@@ -149,6 +151,8 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   }, [])
 
   useEffect(() => {
+    if (typeof window === 'undefined') return
+    
     localStorage.setItem("language", language)
     document.documentElement.setAttribute("dir", language === "ar" ? "rtl" : "ltr")
     document.documentElement.setAttribute("lang", language)
