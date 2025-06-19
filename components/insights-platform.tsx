@@ -138,7 +138,7 @@ export default function InsightsPlatform() {
               enterprise-grade security testing today.
             </p>
             <Button asChild size="lg" className="bg-brandyellow hover:bg-brightyellow text-charcoal font-semibold">
-              <Link href="#contact">Request Demo</Link>
+              <Link href="/contact">Request Demo</Link>
             </Button>
           </div>
         </ScrollAnimation>

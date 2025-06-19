@@ -205,7 +205,7 @@ export default function ComplianceAuditingPage() {
                   <Link href="/build-pentest">Get Started</Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-charcoal font-semibold">
-                  <Link href="#contact">Speak to an Expert</Link>
+                  <Link href="/contact">Speak to an Expert</Link>
                 </Button>
               </div>
             </div>

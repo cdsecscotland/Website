@@ -250,7 +250,7 @@ export default function AboutPage() {
                 Want to learn more about our work? We'd be happy to discuss how we can help protect your organisation.
               </p>
               <Button asChild size="lg" className="bg-brandyellow hover:bg-brightyellow text-charcoal font-semibold">
-                <a href="#contact">
+                <a href="/contact">
                   Get In Touch
                   <ExternalLink className="ml-2 h-5 w-5" />
                 </a>

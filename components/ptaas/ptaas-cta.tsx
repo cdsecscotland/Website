@@ -28,7 +28,7 @@ export default function PTaaSCTA() {
                     size="lg"
                     className="bg-brandyellow hover:bg-brightyellow text-charcoal font-semibold px-8 py-4 text-lg shadow-xl"
                   >
-                    <Link href="#contact">
+                    <Link href="/contact">
                       Request Platform Access
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>

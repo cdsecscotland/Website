@@ -69,7 +69,7 @@ export default function SecurityAssessmentServices() {
                 <Link href="/build-pentest">Get Security Assessment Quote</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-charcoal text-charcoal hover:bg-charcoal hover:text-white">
-                <Link href="#contact">Speak to Security Expert</Link>
+                <Link href="/contact">Speak to Security Expert</Link>
               </Button>
             </div>
           </ScrollAnimation>

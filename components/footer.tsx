@@ -70,7 +70,7 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-4">Company</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#about" className="text-white/70 hover:text-paleyellow transition-colors">
+                <Link href="/about" className="text-white/70 hover:text-paleyellow transition-colors">
                   About Us
                 </Link>
               </li>
@@ -85,7 +85,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#contact" className="text-white/70 hover:text-paleyellow transition-colors">
+                <Link href="/contact" className="text-white/70 hover:text-paleyellow transition-colors">
                   Contact
                 </Link>
               </li>

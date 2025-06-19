@@ -143,13 +143,13 @@ export default function HeadlessHeader() {
             Blog
           </Link>
           <Link 
-            href="#about" 
+            href="/about" 
             className="px-6 py-3 text-base font-medium transition-colors hover:bg-brandyellow/10 hover:text-charcoal rounded-md"
           >
             About
           </Link>
           <Link 
-            href="#contact" 
+            href="/contact" 
             className="px-6 py-3 text-base font-medium transition-colors hover:bg-brandyellow/10 hover:text-charcoal rounded-md"
           >
             Contact
@@ -256,14 +256,14 @@ export default function HeadlessHeader() {
                 Blog
               </Link>
               <Link
-                href="#about"
+                href="/about"
                 className="text-charcoal dark:text-white hover:text-brandyellow dark:hover:text-brandyellow font-medium py-3 text-lg transition-colors rounded-md hover:bg-brandyellow/10 px-4"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
               </Link>
               <Link
-                href="#contact"
+                href="/contact"
                 className="text-charcoal dark:text-white hover:text-brandyellow dark:hover:text-brandyellow font-medium py-3 text-lg transition-colors rounded-md hover:bg-brandyellow/10 px-4"
                 onClick={() => setMobileMenuOpen(false)}
               >

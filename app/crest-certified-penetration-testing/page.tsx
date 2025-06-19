@@ -68,7 +68,7 @@ export default function CrestCertifiedPenetrationTesting() {
                 <Link href="/build-pentest">Get CREST Pentest Quote</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-charcoal text-charcoal hover:bg-charcoal hover:text-white">
-                <Link href="#contact">Speak to CREST Expert</Link>
+                <Link href="/contact">Speak to CREST Expert</Link>
               </Button>
             </div>
           </ScrollAnimation>

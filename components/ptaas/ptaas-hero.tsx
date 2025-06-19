@@ -43,7 +43,7 @@ export default function PTaaSHero() {
                         size="lg"
                         className="bg-charcoal dark:bg-brandyellow hover:bg-charcoal/90 dark:hover:bg-brightyellow text-white dark:text-charcoal font-semibold px-8 py-4 text-lg shadow-xl"
                       >
-                        <Link href="#contact">Request Consultation</Link>
+                        <Link href="/contact">Request Consultation</Link>
                       </Button>
                       <Button
                         asChild

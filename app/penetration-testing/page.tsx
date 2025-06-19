@@ -212,7 +212,7 @@ export default function PenetrationTestingPage() {
                   <Link href="/build-pentest">Get a Quote</Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="border-white hover:border-brandyellow text-white hover:bg-brandyellow hover:text-charcoal font-semibold">
-                  <Link href="#contact">Speak to an Expert</Link>
+                  <Link href="/contact">Speak to an Expert</Link>
                 </Button>
               </div>
             </div>
