@@ -103,27 +103,27 @@ export default function BlogPost({ post }: BlogPostProps) {
                 remarkPlugins={[remarkGfm]}
                 rehypePlugins={[rehypeRaw]}
                 components={{
-                img: ({ node, ...props }) => (
-                  <Image
-                    {...props}
-                    src={props.src || '/placeholder.svg'}
-                    alt={props.alt || ''}
-                    width={800}
-                    height={400}
-                    className="rounded-lg my-8 w-full h-auto"
-                  />
-                ),
-                a: ({ node, ...props }) => (
-                  <Link
-                    href={props.href || '#'}
-                    className="text-brandyellow hover:text-brightyellow underline"
-                    target={props.href?.startsWith('http') ? '_blank' : '_self'}
-                    rel={props.href?.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  >
-                    {props.children}
-                  </Link>
-                ),
-              }}
+                  img: ({ node, ...props }) => (
+                    <Image
+                      {...props}
+                      src={props.src || '/placeholder.svg'}
+                      alt={props.alt || ''}
+                      width={800}
+                      height={400}
+                      className="rounded-lg my-8 w-full h-auto"
+                    />
+                  ),
+                  a: ({ node, ...props }) => (
+                    <Link
+                      href={props.href || '#'}
+                      className="text-brandyellow hover:text-brightyellow underline"
+                      target={props.href?.startsWith('http') ? '_blank' : '_self'}
+                      rel={props.href?.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    >
+                      {props.children}
+                    </Link>
+                  ),
+                }}
               >
                 {post.content}
               </ReactMarkdown>

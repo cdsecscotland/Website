@@ -1,0 +1,33 @@
+
+> my-v0-project@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.2.4
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.119.130:3000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 6.3s
+ ○ Compiling /blog/[slug] ...
+ ✓ Compiled /blog/[slug] in 9.5s (2832 modules)
+ ✓ Compiled in 1046ms (1305 modules)
+ ✓ Compiled in 451ms (1305 modules)
+ GET /blog/understanding-malware-what-it-is-how-it-works-and-how-to-protect-yourself 200 in 12547ms
+ ✓ Compiled in 1647ms (1305 modules)
+ ✓ Compiled in 426ms (1305 modules)
+ ✓ Compiled in 390ms (1305 modules)
+ ✓ Compiled in 483ms (1305 modules)
+ ✓ Compiled in 409ms (1305 modules)
+ ✓ Compiled in 485ms (1305 modules)
+ ✓ Compiled in 338ms (1305 modules)
+ ✓ Compiled in 376ms (1305 modules)
+ ✓ Compiled in 423ms (1305 modules)
+ ✓ Compiled in 379ms (1305 modules)
+ ✓ Compiled in 362ms (1305 modules)
+ ✓ Compiled in 409ms (1305 modules)
+ ✓ Compiled in 379ms (1305 modules)
+ ✓ Compiled in 416ms (1305 modules)
+ ✓ Compiled in 393ms (1305 modules)
+ ✓ Compiled in 406ms (1305 modules)
+ ✓ Compiled in 366ms (1305 modules)
