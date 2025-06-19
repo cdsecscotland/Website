@@ -19,9 +19,7 @@ export default function InsightsPlatform() {
               Real-Time Penetration Testing Platform
             </h2>
             <p className="text-responsive-xl md:text-responsive-2xl text-charcoal/80 dark:text-white/80 max-w-4xl mx-auto leading-relaxed">
-              Experience premium cybersecurity with our cloud-based Insights platform. Continuous vulnerability
-              assessments, real-time reporting, and expert remediation guidance—delivered through an intuitive dashboard
-              built for security professionals.
+              Track vulnerabilities, monitor progress, and coordinate fixes through our Insights platform. Get instant visibility into your security posture with automated scanning and expert analyst support whenever you need it.
             </p>
           </div>
         </ScrollAnimation>
@@ -145,7 +143,7 @@ export default function InsightsPlatform() {
               enterprise-grade security testing today.
             </p>
             <Button asChild size="lg" className="bg-brandyellow hover:bg-brightyellow text-charcoal font-semibold">
-              <Link href="/ptaas">Request Demo</Link>
+              <Link href="#contact">Request Demo</Link>
             </Button>
           </div>
         </ScrollAnimation>

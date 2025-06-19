@@ -113,7 +113,7 @@ export default function NewsCarousel() {
   }
 
   return (
-    <section className="py-12 bg-gradient-to-br from-cream/50 to-white dark:from-charcoal/95 dark:to-charcoal relative">
+    <section className="py-6 bg-gradient-to-br from-cream/50 to-white dark:from-charcoal/95 dark:to-charcoal relative">
       <div className="container">
         <ScrollAnimation animation="fade">
           <div className="text-center mb-10">

@@ -1,19 +1,13 @@
 "use client"
 
-import { useState, useEffect, Fragment } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Play, Shield, Lock, Eye, ChevronRight } from "lucide-react"
-import { Transition } from "@headlessui/react"
+import { ArrowRight, Play, ChevronRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 import ScrollAnimation from "./scroll-animation"
 
-const features = [
-  { icon: Shield, text: "CREST Certified", gradient: "from-blue-500 to-cyan-500" },
-  { icon: Lock, text: "SOC 2 Compliant", gradient: "from-purple-500 to-indigo-500" },
-  { icon: Eye, text: "24/7 Monitoring", gradient: "from-emerald-500 to-teal-500" }
-]
 
 const floatingElements = [
   { delay: 0, duration: 20, path: "M50,10 Q90,50 50,90 T50,10", color: "text-brandyellow/20" },
@@ -23,14 +17,9 @@ const floatingElements = [
 
 export default function HeadlessHero() {
   const [mounted, setMounted] = useState(false)
-  const [activeFeature, setActiveFeature] = useState(0)
 
   useEffect(() => {
     setMounted(true)
-    const interval = setInterval(() => {
-      setActiveFeature((prev) => (prev + 1) % features.length)
-    }, 3000)
-    return () => clearInterval(interval)
   }, [])
 
   if (!mounted) return null
@@ -66,31 +55,6 @@ export default function HeadlessHero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <ScrollAnimation animation="slide-right">
             <div className="text-center lg:text-left">
-              {/* Dynamic Feature Badges */}
-              <div className="mb-6 h-12">
-                {features.map((feature, index) => (
-                  <Transition
-                    key={index}
-                    show={activeFeature === index}
-                    as={Fragment}
-                    enter="transform transition duration-500"
-                    enterFrom="opacity-0 translate-y-4"
-                    enterTo="opacity-100 translate-y-0"
-                    leave="transform transition duration-500"
-                    leaveFrom="opacity-100 translate-y-0"
-                    leaveTo="opacity-0 -translate-y-4"
-                  >
-                    <div className={cn(
-                      "inline-flex items-center px-4 py-2 rounded-full",
-                      "bg-gradient-to-r shadow-lg",
-                      feature.gradient
-                    )}>
-                      <feature.icon className="w-4 h-4 text-white mr-2" />
-                      <span className="text-white font-medium text-sm">{feature.text}</span>
-                    </div>
-                  </Transition>
-                ))}
-              </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 <span className="block text-charcoal dark:text-white">
@@ -178,7 +142,7 @@ export default function HeadlessHero() {
                   <div className="absolute top-4 right-4 flex items-center space-x-2">
                     <div className="flex items-center px-3 py-1 bg-green-500/90 backdrop-blur-sm rounded-full">
                       <div className="w-2 h-2 bg-white rounded-full animate-pulse mr-2" />
-                      <span className="text-white text-sm font-medium">Live Monitoring</span>
+                      <span className="text-white text-sm font-medium">Live Security Results</span>
                     </div>
                   </div>
                   

@@ -69,7 +69,7 @@ export default function Accreditations() {
         <ScrollAnimation animation="slide-up" delay={0.2}>
           <div className="bg-white/60 dark:bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/30 dark:border-white/10 shadow-lg">
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-charcoal dark:text-white mb-2">Professional Certifications</h3>
+              <h3 className="text-2xl font-bold text-charcoal dark:text-white mb-2">Industry accreditations</h3>
               <p className="text-charcoal/70 dark:text-white/70">
                 Recognized by leading cybersecurity organizations worldwide
               </p>
@@ -96,7 +96,7 @@ export default function Accreditations() {
             </div>
 
             {/* Certification Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {certificationBadges.map((cert, index) => (
                 <ScrollAnimation key={index} animation="fade" delay={0.4 + index * 0.05}>
                   <div className="flex items-start p-4 bg-white/70 dark:bg-white/10 backdrop-blur-sm rounded-lg hover:shadow-md transition-all duration-300 border border-white/40 dark:border-white/20">
