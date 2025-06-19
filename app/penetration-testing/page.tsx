@@ -103,30 +103,46 @@ const regulatedTesting = [
   {
     title: "DORA (Digital Operational Resilience Act)",
     region: "European Union",
-    description: "EU regulation requiring financial entities to conduct penetration testing as part of their ICT risk management framework.",
-    requirements: "Annual penetration testing, threat-led testing scenarios, comprehensive ICT risk assessment, and third-party ICT service provider risk management.",
-    scope: "Financial institutions, payment service providers, insurance companies, and critical ICT third-party service providers within the EU."
+    logo: "🇪🇺",
+    effectiveDate: "January 2025",
+    description: "Comprehensive EU regulation mandating operational resilience requirements for financial entities, including mandatory penetration testing and third-party risk management.",
+    requirements: "Annual penetration testing with threat-led scenarios, comprehensive ICT risk assessment, incident reporting within 4 hours, and stringent third-party ICT service provider oversight with contractual arrangements.",
+    scope: "All EU financial institutions including banks, insurance companies, investment firms, payment institutions, e-money institutions, crypto-asset service providers, and critical ICT third-party service providers.",
+    penalties: "Up to 1% of annual turnover or €1 million",
+    keyRequirements: ["Threat-Led Penetration Testing (TLPT)", "ICT Risk Management Framework", "Incident Reporting (4hr)", "Third-Party Risk Assessment", "Business Continuity Planning"]
   },
   {
-    title: "TIBER-EU (Threat Intelligence-based Ethernet Red Team)",
+    title: "TIBER-EU (Threat Intelligence-based Ethical Red Team)",
     region: "European Union",
-    description: "European Central Bank framework for controlled cyber attack simulations against critical financial market infrastructure.",
-    requirements: "Threat intelligence-based red team testing, realistic attack scenarios based on current threat landscape, comprehensive testing of detection and response capabilities.",
-    scope: "Systemically important financial institutions, financial market infrastructures, and critical service providers in the EU financial sector."
+    logo: "🏦",
+    authority: "European Central Bank (ECB)",
+    description: "ECB-developed framework for controlled, bespoke, intelligence-led cyber attack simulations against live production systems of systemically important financial institutions.",
+    requirements: "Multi-phase testing including threat intelligence gathering, scenario development, red team attack simulation, and blue team response evaluation with real-time monitoring and controlled environment testing.",
+    scope: "Systemically important financial institutions, financial market infrastructures, central banks, and critical service providers supporting EU financial sector operations.",
+    phases: ["Threat Intelligence Build-up", "Red Team Test", "Closure"],
+    keyRequirements: ["Intelligence-Led Attack Scenarios", "Live Production Testing", "Multi-Stakeholder Coordination", "Real-Time Blue Team Response", "Comprehensive Remediation"]
   },
   {
     title: "VARA (Virtual Assets Regulation Authority)",
     region: "United Arab Emirates",
-    description: "UAE regulatory framework requiring comprehensive cybersecurity assessments for virtual asset service providers.",
-    requirements: "Regular penetration testing, security architecture review, incident response testing, and continuous security monitoring for virtual asset platforms.",
-    scope: "Cryptocurrency exchanges, wallet providers, token issuers, and other virtual asset service providers operating in or from the UAE."
+    logo: "🇦🇪",
+    jurisdiction: "Abu Dhabi Global Market (ADGM)",
+    description: "Comprehensive regulatory framework for virtual asset service providers operating in Abu Dhabi, requiring robust cybersecurity measures and regular security assessments.",
+    requirements: "Quarterly penetration testing, comprehensive security architecture reviews, mandatory incident response testing, continuous security monitoring, and detailed risk assessments for virtual asset platforms and custody solutions.",
+    scope: "Cryptocurrency exchanges, digital wallet providers, token issuers, virtual asset custodians, and other virtual asset service providers operating in or from the ADGM special economic zone.",
+    compliance: "Mandatory for VARA licence holders",
+    keyRequirements: ["Quarterly Penetration Testing", "Custody Security Assessment", "Incident Response Testing", "Continuous Monitoring", "Risk Management Framework"]
   },
   {
     title: "DFSA (Dubai Financial Services Authority)",
     region: "United Arab Emirates",
-    description: "Dubai regulatory framework requiring financial institutions to conduct regular cybersecurity assessments and penetration testing.",
-    requirements: "Annual cybersecurity assessments, penetration testing of critical systems, third-party security assessments, and incident response capability testing.",
-    scope: "Financial institutions, insurance companies, and financial service providers operating in the Dubai International Financial Centre (DIFC)."
+    logo: "🏗️",
+    jurisdiction: "Dubai International Financial Centre (DIFC)",
+    description: "Regulatory framework governing financial institutions in DIFC, mandating comprehensive cybersecurity risk management and regular penetration testing for operational resilience.",
+    requirements: "Annual comprehensive cybersecurity assessments, penetration testing of all critical systems, third-party security assessments, incident response capability testing, and ongoing security monitoring programmes.",
+    scope: "Banks, insurance companies, asset managers, capital market institutions, and all other financial service providers operating within the Dubai International Financial Centre jurisdiction.",
+    standards: "Aligned with international standards",
+    keyRequirements: ["Annual Cybersecurity Assessment", "Critical Systems Testing", "Third-Party Risk Assessment", "Incident Response Testing", "Regulatory Reporting"]
   }
 ]
 
@@ -276,9 +292,17 @@ export default function PenetrationTestingPage() {
                 <Card className="h-full hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="flex items-start justify-between mb-3">
-                      <div>
-                        <CardTitle className="text-xl text-brandyellow">{regulation.title}</CardTitle>
-                        <Badge variant="outline" className="mt-1">{regulation.region}</Badge>
+                      <div className="flex items-center gap-3">
+                        <div className="text-3xl">{regulation.logo}</div>
+                        <div>
+                          <CardTitle className="text-xl text-brandyellow">{regulation.title}</CardTitle>
+                          <div className="flex gap-2 mt-1">
+                            <Badge variant="outline">{regulation.region}</Badge>
+                            {regulation.effectiveDate && <Badge variant="secondary" className="bg-green-100 text-green-800">{regulation.effectiveDate}</Badge>}
+                            {regulation.authority && <Badge variant="secondary">{regulation.authority}</Badge>}
+                            {regulation.jurisdiction && <Badge variant="secondary">{regulation.jurisdiction}</Badge>}
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <CardDescription className="text-base mb-4">{regulation.description}</CardDescription>
@@ -286,18 +310,35 @@ export default function PenetrationTestingPage() {
                   <CardContent>
                     <div className="space-y-4">
                       <div>
-                        <h4 className="font-semibold text-sm text-charcoal dark:text-white mb-2">Requirements:</h4>
-                        <p className="text-sm text-charcoal/70 dark:text-white/70">{regulation.requirements}</p>
+                        <h4 className="font-semibold text-sm text-charcoal dark:text-white mb-2">Key Requirements:</h4>
+                        <div className="grid grid-cols-1 gap-1 mb-3">
+                          {regulation.keyRequirements.map((req, idx) => (
+                            <div key={idx} className="flex items-center text-xs">
+                              <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+                              {req}
+                            </div>
+                          ))}
+                        </div>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-sm text-charcoal dark:text-white mb-2">Scope:</h4>
+                        <h4 className="font-semibold text-sm text-charcoal dark:text-white mb-2">Testing Requirements:</h4>
+                        <p className="text-sm text-charcoal/70 dark:text-white/70 mb-3">{regulation.requirements}</p>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-sm text-charcoal dark:text-white mb-2">Scope & Coverage:</h4>
                         <p className="text-sm text-charcoal/70 dark:text-white/70">{regulation.scope}</p>
                       </div>
+                      {regulation.penalties && (
+                        <div className="bg-red-50 dark:bg-red-900/20 p-3 rounded-lg">
+                          <h4 className="font-semibold text-sm text-red-800 dark:text-red-300 mb-1">Penalties:</h4>
+                          <p className="text-sm text-red-700 dark:text-red-400">{regulation.penalties}</p>
+                        </div>
+                      )}
                     </div>
                   </CardContent>
                 </Card>
               </ScrollAnimation>
-            ))}
+            ))
           </div>
         </div>
       </section>
