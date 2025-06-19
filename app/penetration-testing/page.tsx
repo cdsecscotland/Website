@@ -103,18 +103,18 @@ const regulatedTesting = [
   {
     title: "DORA (Digital Operational Resilience Act)",
     region: "European Union",
-    logo: "🇪🇺",
+    logo: "EU",
     effectiveDate: "January 2025",
     description: "Comprehensive EU regulation mandating operational resilience requirements for financial entities, including mandatory penetration testing and third-party risk management.",
     requirements: "Annual penetration testing with threat-led scenarios, comprehensive ICT risk assessment, incident reporting within 4 hours, and stringent third-party ICT service provider oversight with contractual arrangements.",
     scope: "All EU financial institutions including banks, insurance companies, investment firms, payment institutions, e-money institutions, crypto-asset service providers, and critical ICT third-party service providers.",
-    penalties: "Up to 1% of annual turnover or €1 million",
+    penalties: "Up to 1% of annual turnover or EUR 1 million",
     keyRequirements: ["Threat-Led Penetration Testing (TLPT)", "ICT Risk Management Framework", "Incident Reporting (4hr)", "Third-Party Risk Assessment", "Business Continuity Planning"]
   },
   {
     title: "TIBER-EU (Threat Intelligence-based Ethical Red Team)",
     region: "European Union",
-    logo: "🏦",
+    logo: "ECB",
     authority: "European Central Bank (ECB)",
     description: "ECB-developed framework for controlled, bespoke, intelligence-led cyber attack simulations against live production systems of systemically important financial institutions.",
     requirements: "Multi-phase testing including threat intelligence gathering, scenario development, red team attack simulation, and blue team response evaluation with real-time monitoring and controlled environment testing.",
@@ -125,7 +125,7 @@ const regulatedTesting = [
   {
     title: "VARA (Virtual Assets Regulation Authority)",
     region: "United Arab Emirates",
-    logo: "🇦🇪",
+    logo: "UAE",
     jurisdiction: "Abu Dhabi Global Market (ADGM)",
     description: "Comprehensive regulatory framework for virtual asset service providers operating in Abu Dhabi, requiring robust cybersecurity measures and regular security assessments.",
     requirements: "Quarterly penetration testing, comprehensive security architecture reviews, mandatory incident response testing, continuous security monitoring, and detailed risk assessments for virtual asset platforms and custody solutions.",
@@ -136,7 +136,7 @@ const regulatedTesting = [
   {
     title: "DFSA (Dubai Financial Services Authority)",
     region: "United Arab Emirates",
-    logo: "🏗️",
+    logo: "DIFC",
     jurisdiction: "Dubai International Financial Centre (DIFC)",
     description: "Regulatory framework governing financial institutions in DIFC, mandating comprehensive cybersecurity risk management and regular penetration testing for operational resilience.",
     requirements: "Annual comprehensive cybersecurity assessments, penetration testing of all critical systems, third-party security assessments, incident response capability testing, and ongoing security monitoring programmes.",
@@ -190,7 +190,6 @@ const certifications = [
   "NCSC Assured Service Provider",
   "Cyber Scheme Certified Professional",
   "OSCP - Offensive Security Certified Professional",
-  "CISSP - Certified Information Systems Security Professional",
   "CISSP - Certified Information Systems Security Professional",
   "SANS GIAC Security Certifications"
 ]
