@@ -45,8 +45,8 @@ export default function BlogGrid({ initialPosts, category }: BlogGridProps) {
   }
 
   const loadMore = () => {
-    setPage((prev) => prev + 1)
-    loadPosts()
+    // Disabled for now - pagination should be handled server-side
+    console.log("Load more disabled - pagination should be server-side")
   }
 
   if (loading && posts.length === 0) {
@@ -140,15 +140,15 @@ export default function BlogGrid({ initialPosts, category }: BlogGridProps) {
           ))}
         </div>
 
-        {hasMore && (
+        {hasMore && posts.length > 0 && (
           <div className="text-center">
             <Button
               onClick={loadMore}
-              disabled={loading}
+              disabled={true}
               size="lg"
-              className="bg-charcoal dark:bg-brandyellow hover:bg-charcoal/90 dark:hover:bg-brightyellow text-white dark:text-charcoal"
+              className="bg-charcoal dark:bg-brandyellow hover:bg-charcoal/90 dark:hover:bg-brightyellow text-white dark:text-charcoal opacity-50 cursor-not-allowed"
             >
-              {loading ? "Loading..." : "Load More Articles"}
+              Load More Articles (Coming Soon)
             </Button>
           </div>
         )}
