@@ -10,24 +10,24 @@ import { MapPin, Award, Users, Calendar } from "lucide-react"
 const teamMembers = [
   {
     name: "William Wright",
-    role: "Founder & Lead Penetration Tester",
+    role: "Chief Executive Officer",
     description: "Scotland's First Chartered Cyber Security Professional with over 15 years of experience",
     image: "/images/team-member-1.jpg",
-    certifications: ["CREST CRT", "OSCP", "CISSP"],
+    certifications: [],
   },
   {
     name: "Cassius Edison",
-    role: "Senior Security Consultant",
+    role: "Chief Operating Officer",
     description: "Internationally recognised cyber expert specialising in advanced persistent threats",
     image: "/images/team-member-2.jpg",
-    certifications: ["CEH", "GCIH", "SANS"],
+    certifications: [],
   },
   {
     name: "Conor Agnew",
-    role: "Compliance & Risk Specialist",
+    role: "Head of Compliance",
     description: "Expert in regulatory compliance and risk management frameworks",
     image: "/images/team-member-3.jpg",
-    certifications: ["CISA", "CRISC", "ISO 27001"],
+    certifications: [],
   },
 ]
 
@@ -73,7 +73,7 @@ export default function About() {
 
         {/* Team Section */}
         <div className="mb-12">
-          <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Expert Team</h3>
+          <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Leadership Team</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">

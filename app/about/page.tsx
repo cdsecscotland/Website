@@ -8,24 +8,24 @@ import ScrollAnimation from "@/components/scroll-animation"
 const teamMembers = [
   {
     name: "William Wright",
-    role: "CEO & Lead Security Consultant",
+    role: "Chief Executive Officer",
     bio: "Over 15 years of experience in cybersecurity with expertise in penetration testing, threat intelligence, and enterprise security architecture.",
     image: "/images/team-member-1.jpg",
-    certifications: ["CREST CRT", "OSCP", "CISSP"]
+    certifications: []
   },
   {
-    name: "Security Team Lead",
-    role: "Senior Penetration Tester",
-    bio: "Specialises in web application security, network penetration testing, and social engineering assessments.",
+    name: "Cassius Edison",
+    role: "Chief Operating Officer",
+    bio: "Internationally recognised cyber expert specialising in advanced persistent threats and security operations.",
     image: "/images/team-member-2.jpg",
-    certifications: ["CREST CRT", "CEH", "SANS GPEN"]
+    certifications: []
   },
   {
-    name: "Technical Director",
-    role: "Infrastructure Security Specialist",
-    bio: "Expert in cloud security, DevSecOps, and enterprise infrastructure hardening across multiple platforms.",
+    name: "Conor Agnew",
+    role: "Head of Compliance",
+    bio: "Expert in regulatory compliance, risk management frameworks, and enterprise security governance.",
     image: "/images/team-member-3.jpg",
-    certifications: ["CISSP", "CCSP", "AWS Security"]
+    certifications: []
   }
 ]
 
