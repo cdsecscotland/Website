@@ -211,7 +211,7 @@ export default function PenetrationTestingPage() {
                 <Button asChild size="lg" className="bg-brandyellow hover:bg-brightyellow text-charcoal font-semibold px-8 py-4">
                   <Link href="/build-pentest">Get a Quote</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-charcoal font-semibold">
+                <Button asChild size="lg" variant="outline" className="border-white hover:border-brandyellow text-white hover:bg-brandyellow hover:text-charcoal font-semibold">
                   <Link href="#contact">Speak to an Expert</Link>
                 </Button>
               </div>
@@ -369,54 +369,6 @@ export default function PenetrationTestingPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50 dark:bg-charcoal/50">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <ScrollAnimation animation="slide-left">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-charcoal dark:text-white mb-6">
-                  Industry-Leading Credentials
-                </h2>
-                <p className="text-lg text-charcoal/70 dark:text-white/70 mb-8">
-                  Our team holds the most respected certifications in cybersecurity, ensuring you receive 
-                  the highest quality penetration testing services available with deep expertise in both offensive security and regulatory compliance.
-                </p>
-                <ul className="space-y-3">
-                  {certifications.map((cert, index) => (
-                    <li key={index} className="flex items-center">
-                      <Award className="w-5 h-5 text-brandyellow mr-3" />
-                      <span className="text-charcoal dark:text-white">{cert}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </ScrollAnimation>
-
-            <ScrollAnimation animation="slide-right">
-              <Card className="p-8 bg-gradient-to-br from-brandyellow/10 to-brandyellow/5">
-                <div className="grid grid-cols-2 gap-8 text-center">
-                  <div>
-                    <div className="text-3xl font-bold text-brandyellow mb-2">500+</div>
-                    <div className="text-sm text-charcoal/70 dark:text-white/70">Tests Completed</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold text-brandyellow mb-2">99%</div>
-                    <div className="text-sm text-charcoal/70 dark:text-white/70">Client Satisfaction</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold text-brandyellow mb-2">48hr</div>
-                    <div className="text-sm text-charcoal/70 dark:text-white/70">Report Delivery</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold text-brandyellow mb-2">90 days</div>
-                    <div className="text-sm text-charcoal/70 dark:text-white/70">Support Period</div>
-                  </div>
-                </div>
-              </Card>
-            </ScrollAnimation>
-          </div>
-        </div>
-      </section>
 
       <HeadlessContact />
     </main>
