@@ -197,7 +197,6 @@ const certifications = [
 export default function PenetrationTestingPage() {
   return (
     <main className="min-h-screen">
-      {/* Hero Section */}
       <section className="relative py-20 md:py-32 bg-gradient-to-br from-charcoal via-charcoal/95 to-charcoal/90 overflow-hidden">
         <div className="container relative z-10">
           <ScrollAnimation animation="fade">
@@ -221,7 +220,6 @@ export default function PenetrationTestingPage() {
         </div>
       </section>
 
-      {/* Testing Types */}
       <section className="py-20 bg-white dark:bg-charcoal">
         <div className="container">
           <ScrollAnimation animation="fade">
@@ -271,7 +269,6 @@ export default function PenetrationTestingPage() {
         </div>
       </section>
 
-      {/* Regulated Testing */}
       <section className="py-20 bg-gray-50 dark:bg-charcoal/50">
         <div className="container">
           <ScrollAnimation animation="fade">
@@ -338,11 +335,11 @@ export default function PenetrationTestingPage() {
                 </Card>
               </ScrollAnimation>
             ))
+          }
           </div>
         </div>
       </section>
 
-      {/* Methodology */}
       <section className="py-20 bg-white dark:bg-charcoal">
         <div className="container">
           <ScrollAnimation animation="fade">
@@ -372,7 +369,6 @@ export default function PenetrationTestingPage() {
         </div>
       </section>
 
-      {/* Certifications & Credentials */}
       <section className="py-20 bg-gray-50 dark:bg-charcoal/50">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -422,7 +418,6 @@ export default function PenetrationTestingPage() {
         </div>
       </section>
 
-      {/* Contact Section */}
       <HeadlessContact />
     </main>
   )
