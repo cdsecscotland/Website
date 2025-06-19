@@ -191,7 +191,6 @@ const certifications = [
   "Cyber Scheme Certified Professional",
   "OSCP - Offensive Security Certified Professional",
   "CISSP - Certified Information Systems Security Professional",
-  "CISSP - Certified Information Systems Security Professional",
   "SANS GIAC Security Certifications"
 ]
 
