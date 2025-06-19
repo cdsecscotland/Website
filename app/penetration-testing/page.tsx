@@ -14,6 +14,13 @@ export const metadata: Metadata = {
 
 const testingTypes = [
   {
+    icon: Target,
+    title: "Threat Led Penetration Testing",
+    description: "Advanced testing methodology that simulates real-world attack scenarios specific to your industry threat landscape and business context.",
+    methodology: "Intelligence-driven testing approach combining threat actor profiling, attack path modelling, and scenario-based testing. Utilises current threat intelligence to simulate techniques, tactics and procedures (TTPs) used by threat actors targeting your industry.",
+    features: ["Industry-Specific Threat Modelling", "Advanced Persistent Threat Simulation", "Supply Chain Attack Scenarios", "Targeted Social Engineering", "Zero-Day Vulnerability Research"]
+  },
+  {
     icon: Globe,
     title: "Web Application Penetration Testing",
     description: "Comprehensive security testing of web applications using OWASP methodology to identify vulnerabilities before attackers do.",
@@ -167,10 +174,10 @@ export default function PenetrationTestingPage() {
           <ScrollAnimation animation="fade">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Professional Penetration Testing Services
+                Threat Led Penetration Testing
               </h1>
               <p className="text-xl text-white/80 mb-8 max-w-3xl mx-auto">
-                Comprehensive security assessments by CREST certified professionals. Identify vulnerabilities before attackers do with our thorough penetration testing services covering web applications, networks, mobile apps, cloud infrastructure, and specialized regulatory compliance testing.
+                Comprehensive, threat led, penetration testing to provide actionable and accurate results to ensure your cyber security investments are targeted and relevant.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="bg-brandyellow hover:bg-brightyellow text-charcoal font-semibold px-8 py-4">
