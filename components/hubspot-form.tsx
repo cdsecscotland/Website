@@ -16,62 +16,77 @@ export default function HubSpotForm({ portalId, formId, className = "" }: HubSpo
     const script = document.createElement("script")
     script.src = "//js-eu1.hsforms.net/forms/embed/v2.js"
     script.async = true
-    document.body.appendChild(script)
-
+    
     script.onload = () => {
-      if (window.hbspt && formRef.current) {
-        window.hbspt.forms.create({
-          region: "eu1",
-          portalId: portalId,
-          formId: formId,
-          target: `#hubspot-form-${formId}`,
-          css: `
-            .hs-form-field label {
-              font-weight: 500;
-              color: #374151;
-              margin-bottom: 0.5rem;
-              display: block;
-            }
-            .hs-form-field input,
-            .hs-form-field textarea,
-            .hs-form-field select {
-              width: 100%;
-              padding: 0.75rem;
-              border: 1px solid #d1d5db;
-              border-radius: 0.375rem;
-              font-size: 1rem;
-              transition: border-color 0.15s ease-in-out;
-            }
-            .hs-form-field input:focus,
-            .hs-form-field textarea:focus,
-            .hs-form-field select:focus {
-              outline: none;
-              border-color: #ffd700;
-              box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
-            }
-            .hs-submit input {
-              background-color: #ffd700;
-              color: #000;
-              font-weight: 600;
-              padding: 0.75rem 2rem;
-              border: none;
-              border-radius: 0.375rem;
-              cursor: pointer;
-              transition: background-color 0.15s ease-in-out;
-            }
-            .hs-submit input:hover {
-              background-color: #ffc107;
-            }
-            .hs-form-field {
-              margin-bottom: 1rem;
-            }
-          `,
-        })
+      try {
+        if (window.hbspt && formRef.current) {
+          window.hbspt.forms.create({
+            region: "eu1",
+            portalId: portalId,
+            formId: formId,
+            target: `#hubspot-form-${formId}`,
+            css: `
+              .hs-form-field label {
+                font-weight: 500;
+                color: #374151;
+                margin-bottom: 0.5rem;
+                display: block;
+              }
+              .hs-form-field input,
+              .hs-form-field textarea,
+              .hs-form-field select {
+                width: 100%;
+                padding: 0.75rem;
+                border: 1px solid #d1d5db;
+                border-radius: 0.375rem;
+                font-size: 1rem;
+                transition: border-color 0.15s ease-in-out;
+              }
+              .hs-form-field input:focus,
+              .hs-form-field textarea:focus,
+              .hs-form-field select:focus {
+                outline: none;
+                border-color: #ffd700;
+                box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+              }
+              .hs-submit input {
+                background-color: #ffd700;
+                color: #000;
+                font-weight: 600;
+                padding: 0.75rem 2rem;
+                border: none;
+                border-radius: 0.375rem;
+                cursor: pointer;
+                transition: background-color 0.15s ease-in-out;
+              }
+              .hs-submit input:hover {
+                background-color: #ffc107;
+              }
+              .hs-form-field {
+                margin-bottom: 1rem;
+              }
+            `,
+          })
+        }
+      } catch (error) {
+        console.warn('HubSpot form failed to load:', error)
       }
     }
 
+    script.onerror = () => {
+      console.warn('Failed to load HubSpot script')
+    }
+
+    document.body.appendChild(script)
+
     return () => {
-      document.body.removeChild(script)
+      try {
+        if (document.body.contains(script)) {
+          document.body.removeChild(script)
+        }
+      } catch (error) {
+        console.warn('Error removing HubSpot script:', error)
+      }
     }
   }, [portalId, formId])
 

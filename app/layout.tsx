@@ -9,6 +9,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { AnimationProvider } from "@/hooks/use-animation-preferences"
 import ParticleNetwork from "@/components/particle-network"
 import MobilePerformanceOptimizer from "@/components/mobile-performance-optimizer"
+import { ErrorBoundary } from "@/components/error-boundary"
+import ErrorHandler from "@/components/error-handler"
 
 const fontSans = Inter({
   subsets: ["latin"],
@@ -63,10 +65,14 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-2Y57B5BNBN');
+              try {
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-2Y57B5BNBN');
+              } catch (error) {
+                console.warn('Google Analytics failed to initialize:', error);
+              }
             `,
           }}
         />
@@ -78,17 +84,22 @@ export default function RootLayout({
           fontArabic.variable,
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <AnimationProvider>
-            <MobilePerformanceOptimizer />
-            <div className="relative flex min-h-screen flex-col">
-              <ParticleNetwork />
-              <HeadlessHeader />
-              <div className="flex-1 relative z-10 pt-20 md:pt-20">{children}</div>
-              <Footer />
-            </div>
-          </AnimationProvider>
-        </ThemeProvider>
+        <ErrorBoundary>
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+            <AnimationProvider>
+              <ErrorHandler />
+              <MobilePerformanceOptimizer />
+              <div className="relative flex min-h-screen flex-col">
+                <ErrorBoundary fallback={<div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0" />}>
+                  <ParticleNetwork />
+                </ErrorBoundary>
+                <HeadlessHeader />
+                <div className="flex-1 relative z-10 pt-20 md:pt-20">{children}</div>
+                <Footer />
+              </div>
+            </AnimationProvider>
+          </ThemeProvider>
+        </ErrorBoundary>
       </body>
     </html>
   )

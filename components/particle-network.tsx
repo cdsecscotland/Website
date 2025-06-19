@@ -131,14 +131,25 @@ export default function ParticleNetwork() {
     window.addEventListener("resize", handleResize)
 
     // Also update when the document height might change
-    const resizeObserver = new ResizeObserver(() => {
-      handleResize()
-    })
-    resizeObserver.observe(document.body)
+    let resizeObserver: ResizeObserver | null = null
+    
+    // Check if ResizeObserver is supported
+    if (typeof ResizeObserver !== 'undefined') {
+      try {
+        resizeObserver = new ResizeObserver(() => {
+          handleResize()
+        })
+        resizeObserver.observe(document.body)
+      } catch (error) {
+        console.warn('ResizeObserver not supported or failed to initialize:', error)
+      }
+    }
 
     return () => {
       window.removeEventListener("resize", handleResize)
-      resizeObserver.disconnect()
+      if (resizeObserver) {
+        resizeObserver.disconnect()
+      }
       cancelAnimationFrame(animationRef.current)
     }
   }, [theme])
