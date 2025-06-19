@@ -30,7 +30,10 @@ export default function BlogGrid({ initialPosts, category }: BlogGridProps) {
   const loadPosts = async () => {
     setLoading(true)
     try {
-      const newPosts = await getBlogPosts(page, 6, category)
+      // For client-side pagination, we need an API route
+      const response = await fetch(`/api/blog?page=${page}&limit=6${category ? `&category=${category}` : ''}`)
+      const newPosts = await response.json()
+      
       if (page === 1) {
         setPosts(newPosts)
       } else {
@@ -45,9 +48,14 @@ export default function BlogGrid({ initialPosts, category }: BlogGridProps) {
   }
 
   const loadMore = () => {
-    // Disabled for now - pagination should be handled server-side
-    console.log("Load more disabled - pagination should be server-side")
+    setPage((prev) => prev + 1)
   }
+
+  useEffect(() => {
+    if (page > 1) {
+      loadPosts()
+    }
+  }, [page])
 
   if (loading && posts.length === 0) {
     return (
@@ -144,11 +152,11 @@ export default function BlogGrid({ initialPosts, category }: BlogGridProps) {
           <div className="text-center">
             <Button
               onClick={loadMore}
-              disabled={true}
+              disabled={loading}
               size="lg"
-              className="bg-charcoal dark:bg-brandyellow hover:bg-charcoal/90 dark:hover:bg-brightyellow text-white dark:text-charcoal opacity-50 cursor-not-allowed"
+              className="bg-charcoal dark:bg-brandyellow hover:bg-charcoal/90 dark:hover:bg-brightyellow text-white dark:text-charcoal"
             >
-              Load More Articles (Coming Soon)
+              {loading ? "Loading..." : "Load More Articles"}
             </Button>
           </div>
         )}
