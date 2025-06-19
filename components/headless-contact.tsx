@@ -24,7 +24,7 @@ const contactMethods = [
     value: "info@cdsec.co.uk",
     description: "Get detailed responses within 24 hours",
     gradient: "from-green-500 to-emerald-500",
-    available: "24/7 Response"
+    available: "Business Hours"
   },
   {
     icon: Calendar,
