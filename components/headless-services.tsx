@@ -37,7 +37,7 @@ const serviceCategories = [
       {
         icon: Users,
         title: "Red Teaming",
-        description: "Full-scale adversarial simulations testing your organization's detection and response capabilities against sophisticated attacks.",
+        description: "Full-scale adversarial simulations testing your organisation's detection and response capabilities against sophisticated attacks.",
         features: ["Multi-Vector Attacks", "Social Engineering", "Physical Security Testing", "Purple Team Exercises"],
         gradient: "from-purple-500 to-indigo-500",
         iconColor: "text-white",

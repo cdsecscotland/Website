@@ -121,7 +121,7 @@ export default function NewsCarousel() {
               Featured In Leading Publications
             </h2>
             <p className="text-responsive-xl text-charcoal/80 dark:text-white/80 max-w-3xl mx-auto">
-              Our cybersecurity expertise and thought leadership have been recognized by major news outlets and industry
+              Our cybersecurity expertise and thought leadership have been recognised by major news outlets and industry
               publications worldwide
             </p>
           </div>

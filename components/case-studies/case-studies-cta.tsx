@@ -18,7 +18,7 @@ export default function CaseStudiesCTA() {
                   Ready to Become Our Next Success Story?
                 </h2>
                 <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-                  Join the organizations that have strengthened their cybersecurity posture with our expert guidance.
+                  Join the organisations that have strengthened their cybersecurity posture with our expert guidance.
                   Let's discuss how we can help you achieve your security goals.
                 </p>
 

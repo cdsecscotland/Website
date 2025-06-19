@@ -61,7 +61,7 @@ export default function PTaaSTestimonials() {
               Trusted by Security Leaders
             </h2>
             <p className="text-xl text-charcoal/80 dark:text-white/80 max-w-3xl mx-auto">
-              See how organizations are transforming their security posture with our PTaaS platform.
+              See how organisations are transforming their security posture with our PTaaS platform.
             </p>
           </div>
         </ScrollAnimation>

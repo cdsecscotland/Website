@@ -13,7 +13,7 @@ export default function CaseStudiesHero() {
               Client Success Stories
             </h1>
             <p className="text-xl text-charcoal/80 dark:text-white/80 mb-8">
-              Discover how we've helped organizations across various industries strengthen their cybersecurity posture
+              Discover how we've helped organisations across various industries strengthen their cybersecurity posture
               and achieve compliance goals.
             </p>
 

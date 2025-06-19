@@ -71,7 +71,7 @@ export default function Accreditations() {
             <div className="text-center mb-6">
               <h3 className="text-2xl font-bold text-charcoal dark:text-white mb-2">Industry accreditations</h3>
               <p className="text-charcoal/70 dark:text-white/70">
-                Recognized by leading cybersecurity organizations worldwide
+                Recognised by leading cybersecurity organisations worldwide
               </p>
             </div>
 

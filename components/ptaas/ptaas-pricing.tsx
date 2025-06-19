@@ -45,7 +45,7 @@ const plans = [
     name: "Enterprise",
     price: "Custom",
     period: "pricing",
-    description: "For large organizations with complex requirements",
+    description: "For large organisations with complex requirements",
     features: [
       "Unlimited applications",
       "Continuous testing",

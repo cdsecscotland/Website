@@ -16,7 +16,7 @@ const teamMembers = [
   {
     name: "Cassius Edison",
     role: "Senior Security Consultant",
-    description: "Internationally recognised cyber expert specializing in advanced persistent threats",
+    description: "Internationally recognised cyber expert specialising in advanced persistent threats",
     image: "/images/team-member-2.jpg",
     certifications: ["CEH", "GCIH", "SANS"],
   },
