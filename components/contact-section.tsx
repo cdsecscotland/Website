@@ -9,7 +9,7 @@ const offices = [
   {
     country: "United Kingdom",
     location: "Outer Hebrides, Scotland",
-    phone: "+44 (0) 1851 123456",
+    phone: "+44131 460 4180",
     email: "uk@cdsec.co.uk",
     hours: "9:00 AM - 5:00 PM GMT",
   },
@@ -61,7 +61,7 @@ export default function ContactSection() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Phone</h4>
-                      <p className="text-gray-600">+44 (0) 1851 123456</p>
+                      <p className="text-gray-600">+44131 460 4180</p>
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -80,7 +80,7 @@ export default function ContactSection() {
                     <div>
                       <h4 className="font-semibold text-gray-900">Schedule a Meeting</h4>
                       <a
-                        href="https://meetings.hubspot.com/your-meeting-link"
+                        href="https://app.apollo.io/meetings/william-wright"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-orange hover:text-deeporange underline"
@@ -100,7 +100,7 @@ export default function ContactSection() {
                   24/7 incident response hotline for existing clients experiencing active security incidents.
                 </p>
                 <Button className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold">
-                  Emergency Hotline: +44 (0) 800 SECURITY
+                  Emergency Hotline: +44131 460 4180
                 </Button>
               </CardContent>
             </Card>

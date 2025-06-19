@@ -29,18 +29,6 @@ const teamMembers = [
   },
 ]
 
-const certifications = [
-  "CREST",
-  "NCSC",
-  "Cyber Scheme",
-  "OSCP",
-  "CISSP",
-  "CEH",
-  "SANS",
-  "ISO 27001",
-  "SOC 2",
-  "PCI DSS",
-]
 
 const stats = [
   { icon: Calendar, label: "Founded", value: "2021" },
@@ -104,17 +92,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Certifications */}
-        <div className="bg-gray-50 rounded-2xl p-8">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Industry Certifications</h3>
-          <div className="flex flex-wrap justify-center gap-3">
-            {certifications.map((cert, index) => (
-              <Badge key={index} className="bg-lightblue text-white hover:bg-darkblue text-sm py-2 px-4 font-medium">
-                {cert}
-              </Badge>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   )

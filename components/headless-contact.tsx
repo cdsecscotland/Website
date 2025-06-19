@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Calendar, Mail, Phone, MapPin, Clock, Shield, Zap } from "lucide-react"
+import { Calendar, Mail, Phone, MapPin, Clock, Shield } from "lucide-react"
 import { Tab } from "@headlessui/react"
 import { cn } from "@/lib/utils"
 import HubSpotForm from "./hubspot-form"
@@ -13,7 +13,7 @@ const contactMethods = [
   {
     icon: Phone,
     title: "Phone",
-    value: "+44 (0) 1851 123456",
+    value: "+44131 460 4180",
     description: "Speak directly with our security experts",
     gradient: "from-blue-500 to-cyan-500",
     available: "9:00 AM - 5:00 PM GMT"
@@ -33,7 +33,7 @@ const contactMethods = [
     description: "30-minute strategy session with our team",
     gradient: "from-purple-500 to-indigo-500",
     available: "Same Day Booking",
-    href: "https://meetings.hubspot.com/your-meeting-link"
+    href: "https://app.apollo.io/meetings/william-wright"
   }
 ]
 
@@ -41,7 +41,7 @@ const offices = [
   {
     country: "United Kingdom",
     location: "Outer Hebrides, Scotland",
-    phone: "+44 (0) 1851 123456",
+    phone: "+44131 460 4180",
     email: "uk@cdsec.co.uk",
     hours: "9:00 AM - 5:00 PM GMT",
     flag: "🇬🇧",
@@ -70,7 +70,6 @@ const offices = [
 const contactTabs = [
   { name: "General Inquiry", icon: Mail },
   { name: "Emergency Response", icon: Shield },
-  { name: "Quick Quote", icon: Zap },
 ]
 
 export default function HeadlessContact() {
@@ -136,15 +135,6 @@ export default function HeadlessContact() {
                         24/7 incident response for active security breaches
                       </p>
                     </Tab.Panel>
-                    <Tab.Panel>
-                      <CardTitle className="text-2xl text-charcoal dark:text-white flex items-center">
-                        <Zap className="w-6 h-6 text-brandyellow mr-2" />
-                        Quick Quote
-                      </CardTitle>
-                      <p className="text-charcoal/70 dark:text-white/70 mt-2">
-                        Get a fast quote for penetration testing services
-                      </p>
-                    </Tab.Panel>
                   </Tab.Panels>
                 </Tab.Group>
               </CardHeader>
@@ -161,7 +151,7 @@ export default function HeadlessContact() {
                       Call our emergency hotline immediately for 24/7 incident response support.
                     </p>
                     <Button className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-4 text-lg transition-all duration-200 hover:shadow-lg">
-                      Emergency Hotline: +44 (0) 800 SECURITY
+                      Emergency Hotline: +44131 460 4180
                     </Button>
                   </div>
                 ) : (

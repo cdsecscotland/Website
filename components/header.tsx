@@ -135,7 +135,7 @@ export default function Header() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <Link href="#about" legacyBehavior passHref>
+              <Link href="/about" legacyBehavior passHref>
                 <NavigationMenuLink className="group inline-flex h-12 w-max items-center justify-center rounded-md bg-background px-6 py-3 text-base font-medium transition-colors hover:bg-brandyellow/10 hover:text-charcoal focus:bg-brandyellow/10 focus:text-charcoal focus:outline-none">
                   About
                 </NavigationMenuLink>
@@ -213,7 +213,7 @@ export default function Header() {
               Services
             </Link>
             <Link
-              href="#about"
+              href="/about"
               className="text-charcoal dark:text-white hover:text-brandyellow dark:hover:text-brandyellow font-medium py-3 text-lg"
               onClick={() => setMobileMenuOpen(false)}
             >

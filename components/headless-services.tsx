@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Shield, Target, Users, AlertTriangle, FileCheck, Search, Lock, Eye } from "lucide-react"
+import { Shield, Target, Users, AlertTriangle, FileCheck, Search } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Tab } from "@headlessui/react"
@@ -82,33 +82,6 @@ const serviceCategories = [
         borderColor: "border-green-200 dark:border-green-800",
         glowColor: "shadow-green-500/25",
         features: ["Security Strategy", "Risk Assessment", "Architecture Review", "Implementation Support"],
-      },
-    ]
-  },
-  {
-    name: "Development Services",
-    services: [
-      {
-        icon: Lock,
-        title: "Secure Development",
-        description: "DevSecOps integration and secure coding practices for your development lifecycle.",
-        gradient: "from-blue-500 to-indigo-500",
-        iconColor: "text-white",
-        bgColor: "bg-gradient-to-br from-blue-500/10 to-indigo-500/10",
-        borderColor: "border-blue-200 dark:border-blue-800",
-        glowColor: "shadow-blue-500/25",
-        features: ["DevSecOps Integration", "Secure Code Training", "SAST/DAST Implementation", "Security Automation"],
-      },
-      {
-        icon: Eye,
-        title: "Security Code Review",
-        description: "Static and dynamic code analysis to identify security vulnerabilities in your applications.",
-        gradient: "from-yellow-500 to-orange-500",
-        iconColor: "text-white",
-        bgColor: "bg-gradient-to-br from-yellow-500/10 to-orange-500/10",
-        borderColor: "border-yellow-200 dark:border-yellow-800",
-        glowColor: "shadow-yellow-500/25",
-        features: ["Static Analysis", "Dynamic Testing", "Manual Code Review", "Remediation Guidance"],
       },
     ]
   }

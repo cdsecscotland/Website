@@ -11,13 +11,13 @@ const TrustIndicators = () => {
           </div>
           <div>
             <i className="fas fa-users text-4xl text-green-500 mb-4"></i>
-            <h3 className="text-xl font-semibold mb-2">Trusted by Thousands</h3>
-            <p className="text-gray-600">Join a community of satisfied users who rely on our services.</p>
+            <h3 className="text-xl font-semibold mb-2">Trusted by Household Names</h3>
+            <p className="text-gray-600">Recognised brands and enterprises trust our cybersecurity expertise.</p>
           </div>
           <div>
             <i className="fas fa-headset text-4xl text-purple-500 mb-4"></i>
-            <h3 className="text-xl font-semibold mb-2">24/7 Support</h3>
-            <p className="text-gray-600">Our dedicated support team is available around the clock to assist you.</p>
+            <h3 className="text-xl font-semibold mb-2">Expert Support</h3>
+            <p className="text-gray-600">Our certified security professionals provide expert guidance when you need it.</p>
           </div>
         </div>
       </div>
