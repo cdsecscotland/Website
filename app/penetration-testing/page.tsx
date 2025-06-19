@@ -28,6 +28,13 @@ const testingTypes = [
     features: ["APT Simulation Testing", "Multi-Stage Attack Scenarios", "Persistence & Stealth Testing", "Incident Response Testing", "Security Maturity Assessment"],
   },
   {
+    icon: FileCheck,
+    title: "Purple Team Exercises",
+    description: "Collaborative security testing combining red team attack simulation with blue team defence to improve detection and response capabilities.",
+    methodology: "Collaborative approach where red team attackers work alongside blue team defenders to test, validate, and improve security controls, detection rules, and incident response procedures in real-time.",
+    features: ["Real-Time Attack & Defence", "Detection Rule Validation", "Security Control Testing", "Incident Response Improvement", "Knowledge Transfer Sessions"],
+  },
+  {
     icon: Globe,
     title: "Web Application Penetration Testing",
     description: "Comprehensive security testing of web applications using OWASP methodology to identify vulnerabilities before attackers do.",
@@ -82,13 +89,6 @@ const testingTypes = [
     description: "Human element security testing including phishing campaigns, physical security assessment, and social engineering awareness testing.",
     methodology: "Multi-vector social engineering methodology including email phishing, vishing (voice phishing), smishing (SMS phishing), physical security testing, and social media reconnaissance to test human security controls.",
     features: ["Email Phishing Campaigns", "Voice & SMS Phishing", "Physical Security Assessment", "Social Media Intelligence", "Security Awareness Testing"],
-  },
-  {
-    icon: FileCheck,
-    title: "Purple Team Exercises",
-    description: "Collaborative security testing combining red team attack simulation with blue team defence to improve detection and response capabilities.",
-    methodology: "Collaborative approach where red team attackers work alongside blue team defenders to test, validate, and improve security controls, detection rules, and incident response procedures in real-time.",
-    features: ["Real-Time Attack & Defence", "Detection Rule Validation", "Security Control Testing", "Incident Response Improvement", "Knowledge Transfer Sessions"],
   },
   {
     icon: Search,
