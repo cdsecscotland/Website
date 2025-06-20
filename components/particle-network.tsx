@@ -45,9 +45,16 @@ export default function ParticleNetwork() {
  const handleResize = () => {
  if (canvasRef.current) {
  const canvas = canvasRef.current
- // Use viewport height only to prevent scroll issues
+ // Get the full document height instead of just viewport height
  const width = window.innerWidth
- const height = window.innerHeight
+ const height = Math.max(
+ document.body.scrollHeight,
+ document.documentElement.scrollHeight,
+ document.body.offsetHeight,
+ document.documentElement.offsetHeight,
+ document.body.clientHeight,
+ document.documentElement.clientHeight,
+ )
 
  // Set display size (css pixels)
  canvas.style.width = width + "px"
@@ -249,7 +256,7 @@ export default function ParticleNetwork() {
  return (
  <canvas
  ref={canvasRef}
- className="fixed top-0 left-0 w-full h-screen pointer-events-none z-0"
+ className="fixed top-0 left-0 w-full h-full pointer-events-none z-0"
  style={{ opacity: 0.9 }} // Increased from 0.4
  />
  )
