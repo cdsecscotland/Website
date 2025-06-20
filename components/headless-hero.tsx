@@ -18,7 +18,7 @@ const floatingElements = [
 export default function HeadlessHero() {
 
  return (
- <section className="relative py-12 overflow-hidden bg-gradient-to-br from-cream via-white to-paleyellow/30">
+ <section className="relative pt-32 pb-16 overflow-hidden bg-gradient-to-br from-cream via-white to-paleyellow/30">
  {/* Animated Background Elements */}
  <div className="absolute inset-0 overflow-hidden">
  {floatingElements.map((element, index) => (
@@ -46,7 +46,7 @@ export default function HeadlessHero() {
  <ScrollAnimation animation="slide-right">
  <div className="text-center">
 
- <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight">
+ <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
  <span className="block text-charcoal ">
  Security Locked In,
  </span>
@@ -58,7 +58,7 @@ export default function HeadlessHero() {
  </span>
  </h1>
 
- <p className="text-base md:text-lg lg:text-xl text-charcoal/80 mb-6 leading-relaxed">
+ <p className="text-base md:text-lg lg:text-xl text-charcoal/80 mb-6 leading-relaxed max-w-3xl mx-auto">
  Professional cyber security services that protect your business from evolving threats with comprehensive penetration testing and security assessments.
  </p>
 
