@@ -17,7 +17,7 @@ export default function Hero() {
  if (!mounted) return null
 
  return (
- <section className="relative py-12 md:py-16 overflow-hidden bg-gradient-to-br from-cream via-white to-paleyellow/30 ">
+ <section className="relative pt-20 pb-8 md:pt-20 md:pb-10 overflow-hidden bg-gradient-to-br from-cream via-white to-paleyellow/30 ">
  {/* Background Elements */}
  <div className="container relative z-10">
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -30,7 +30,7 @@ export default function Hero() {
  </span>
  </h1>
 
- <p className="text-base md:text-lg lg:text-xl text-charcoal/80 mb-6 leading-relaxed max-w-2xl mx-auto">
+ <p className="text-base md:text-lg lg:text-xl text-charcoal/80 mb-6 leading-relaxed">
  Professional cyber security services that protect your business from evolving threats with comprehensive penetration testing and security assessments.
  </p>
 
