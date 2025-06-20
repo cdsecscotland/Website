@@ -43,22 +43,22 @@ export default function Footer() {
  <h3 className="text-lg font-bold mb-4">Services</h3>
  <ul className="space-y-2">
  <li>
- <Link href="#services" className="text-white/70 hover:text-paleyellow transition-colors">
+ <Link href="/penetration-testing" className="text-white/70 hover:text-paleyellow transition-colors">
  Penetration Testing
  </Link>
  </li>
  <li>
- <Link href="#services" className="text-white/70 hover:text-paleyellow transition-colors">
+ <Link href="/compliance-auditing" className="text-white/70 hover:text-paleyellow transition-colors">
  Compliance & Auditing
  </Link>
  </li>
  <li>
- <Link href="#services" className="text-white/70 hover:text-paleyellow transition-colors">
+ <Link href="/security-assessment-services" className="text-white/70 hover:text-paleyellow transition-colors">
  Security Consulting
  </Link>
  </li>
  <li>
- <Link href="#services" className="text-white/70 hover:text-paleyellow transition-colors">
+ <Link href="/vulnerability-management-scotland" className="text-white/70 hover:text-paleyellow transition-colors">
  Vulnerability Management
  </Link>
  </li>
@@ -74,12 +74,12 @@ export default function Footer() {
  </Link>
  </li>
  <li>
- <Link href="#" className="text-white/70 hover:text-paleyellow transition-colors">
+ <Link href="/about" className="text-white/70 hover:text-paleyellow transition-colors">
  Our Team
  </Link>
  </li>
  <li>
- <Link href="#" className="text-white/70 hover:text-paleyellow transition-colors">
+ <Link href="/contact" className="text-white/70 hover:text-paleyellow transition-colors">
  Careers
  </Link>
  </li>
@@ -100,18 +100,8 @@ export default function Footer() {
  </Link>
  </li>
  <li>
- <Link href="#" className="text-white/70 hover:text-paleyellow transition-colors">
- Security Tips
- </Link>
- </li>
- <li>
- <Link href="#" className="text-white/70 hover:text-paleyellow transition-colors">
+ <Link href="/case-studies" className="text-white/70 hover:text-paleyellow transition-colors">
  Case Studies
- </Link>
- </li>
- <li>
- <Link href="#" className="text-white/70 hover:text-paleyellow transition-colors">
- Downloads
  </Link>
  </li>
  </ul>

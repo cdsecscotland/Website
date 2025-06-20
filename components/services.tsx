@@ -202,6 +202,115 @@ export default function Services() {
  </div>
  </div>
  </ScrollAnimation>
+
+ {/* Channel Partners Section */}
+ <ScrollAnimation animation="fade" delay={1.0}>
+ <div className="bg-gradient-to-br from-charcoal via-charcoal/95 to-charcoal/90 rounded-2xl p-8 md:p-12 shadow-xl relative overflow-hidden">
+ {/* Background pattern */}
+ <div className="absolute inset-0 opacity-10">
+ <div className="absolute inset-0 bg-gradient-to-br from-brandyellow/20 via-transparent to-brightyellow/20" />
+ </div>
+
+ <div className="relative z-10">
+ <div className="text-center mb-12">
+ <h3 className="text-responsive-3xl md:text-responsive-4xl font-bold text-white mb-6">
+ Channel Partner Program
+ </h3>
+ <p className="text-responsive-xl text-white/80 max-w-4xl mx-auto leading-relaxed">
+ We provide our comprehensive security testing services to over 50 channel partners, allowing them to focus on what they do best without the complexities of hiring a security testing team.
+ </p>
+ </div>
+
+ <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+ <div className="text-center">
+ <div className="w-20 h-20 bg-brandyellow rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+ <span className="text-3xl font-bold text-charcoal">50+</span>
+ </div>
+ <h4 className="text-xl font-bold text-white mb-2">Active Partners</h4>
+ <p className="text-white/70">
+ Growing network of trusted channel partners across multiple industries
+ </p>
+ </div>
+
+ <div className="text-center">
+ <div className="w-20 h-20 bg-brandyellow rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+ <span className="text-3xl font-bold text-charcoal">35%</span>
+ </div>
+ <h4 className="text-xl font-bold text-white mb-2">Revenue Increase</h4>
+ <p className="text-white/70">
+ Average testing revenue increase achieved by partners within one year
+ </p>
+ </div>
+
+ <div className="text-center">
+ <div className="w-20 h-20 bg-brandyellow rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+ <span className="text-3xl font-bold text-charcoal">100%</span>
+ </div>
+ <h4 className="text-xl font-bold text-white mb-2">Accreditation Access</h4>
+ <p className="text-white/70">
+ Full access to our team's reputation and certifications - no white labelling restrictions
+ </p>
+ </div>
+ </div>
+
+ <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+ <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+ <h4 className="text-xl font-bold text-white mb-4">What We Handle</h4>
+ <ul className="space-y-3 text-white/80">
+ <li className="flex items-start">
+ <div className="w-2 h-2 bg-brandyellow rounded-full mr-3 mt-2 flex-shrink-0"></div>
+ Complete project management and delivery
+ </li>
+ <li className="flex items-start">
+ <div className="w-2 h-2 bg-brandyellow rounded-full mr-3 mt-2 flex-shrink-0"></div>
+ All client communication and reporting
+ </li>
+ <li className="flex items-start">
+ <div className="w-2 h-2 bg-brandyellow rounded-full mr-3 mt-2 flex-shrink-0"></div>
+ Technical delivery and quality assurance
+ </li>
+ <li className="flex items-start">
+ <div className="w-2 h-2 bg-brandyellow rounded-full mr-3 mt-2 flex-shrink-0"></div>
+ Certification and accreditation compliance
+ </li>
+ </ul>
+ </div>
+
+ <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+ <h4 className="text-xl font-bold text-white mb-4">Partner Benefits</h4>
+ <ul className="space-y-3 text-white/80">
+ <li className="flex items-start">
+ <div className="w-2 h-2 bg-brandyellow rounded-full mr-3 mt-2 flex-shrink-0"></div>
+ Increased revenue streams without overhead
+ </li>
+ <li className="flex items-start">
+ <div className="w-2 h-2 bg-brandyellow rounded-full mr-3 mt-2 flex-shrink-0"></div>
+ Access to CREST and industry certifications
+ </li>
+ <li className="flex items-start">
+ <div className="w-2 h-2 bg-brandyellow rounded-full mr-3 mt-2 flex-shrink-0"></div>
+ No restrictions on accreditation usage
+ </li>
+ <li className="flex items-start">
+ <div className="w-2 h-2 bg-brandyellow rounded-full mr-3 mt-2 flex-shrink-0"></div>
+ Professional reputation and credibility
+ </li>
+ </ul>
+ </div>
+ </div>
+
+ <div className="text-center mt-12">
+ <Button
+ asChild
+ size="lg"
+ className="bg-brandyellow hover:bg-brightyellow text-charcoal font-semibold px-8 py-4 text-lg shadow-xl hover:shadow-2xl transition-all duration-300"
+ >
+ <Link href="/contact">Become a Channel Partner</Link>
+ </Button>
+ </div>
+ </div>
+ </div>
+ </ScrollAnimation>
  </div>
  </section>
  )
