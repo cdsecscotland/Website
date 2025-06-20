@@ -7,15 +7,15 @@ import PTaaSCTA from "@/components/ptaas/ptaas-cta"
 import HeadlessContact from "@/components/headless-contact"
 
 export default function PTaaSPage() {
-  return (
-    <main className="min-h-screen">
-      <PTaaSHero />
-      <PTaaSDashboard />
-      <PTaaSFeatures />
-      <PTaaSIntegration />
-      <PTaaSSupport />
-      <PTaaSCTA />
-      <HeadlessContact />
-    </main>
-  )
+ return (
+ <main className="min-h-screen">
+ <PTaaSHero />
+ <PTaaSDashboard />
+ <PTaaSFeatures />
+ <PTaaSIntegration />
+ <PTaaSSupport />
+ <PTaaSCTA />
+ <HeadlessContact />
+ </main>
+ )
 }

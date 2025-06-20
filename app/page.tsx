@@ -9,17 +9,17 @@ import TrustIndicators from "@/components/trust-indicators"
 import HeadlessContact from "@/components/headless-contact"
 
 export default function Home() {
-  return (
-    <main className="min-h-screen">
-      <HeadlessHero />
-      <NewsCarousel />
-      <Accreditations />
-      <InsightsPlatform />
-      <HeadlessServices />
-      <TrustIndicators />
-      <About />
-      <GlobalOffices />
-      <HeadlessContact />
-    </main>
-  )
+ return (
+ <main className="min-h-screen">
+ <HeadlessHero />
+ <NewsCarousel />
+ <Accreditations />
+ <InsightsPlatform />
+ <HeadlessServices />
+ <TrustIndicators />
+ <About />
+ <GlobalOffices />
+ <HeadlessContact />
+ </main>
+ )
 }
