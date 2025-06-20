@@ -487,6 +487,42 @@ h6 {
   transform: translateZ(0);
 }
 
+/* Fix navigation dropdown overlay issues */
+[data-radix-navigation-menu-viewport] {
+  position: absolute !important;
+  z-index: 9999 !important;
+  overflow: visible !important;
+}
+
+.navigation-menu-container {
+  overflow: visible !important;
+  position: static !important;
+}
+
+/* Ensure navigation menu content is properly positioned */
+[data-radix-navigation-menu-content] {
+  z-index: 9999 !important;
+  position: absolute !important;
+}
+
+/* Fix Headless UI dropdown z-index issues */
+[data-headlessui-state="open"] {
+  z-index: 9999 !important;
+}
+
+/* Ensure Headless UI menus appear above other content */
+.headlessui-menu-items,
+[role="menu"] {
+  z-index: 9999 !important;
+  position: absolute !important;
+}
+
+/* Ensure header and navigation containers don't clip dropdowns */
+header nav,
+header .container {
+  overflow: visible !important;
+}
+
 /* Fix for iOS rubber band scrolling - REMOVED as it can cause issues */
 /* This was causing layout issues on mobile, commented out for now */
 /*

@@ -34,9 +34,9 @@ export default function Header() {
  "fixed top-0 w-full z-50 transition-all duration-500",
  isScrolled ? "bg-white/90 backdrop-blur-md shadow-lg py-2" : "bg-transparent py-4",
  )}
- style={{ overflow: 'visible' }}
+ style={{ overflow: 'visible', position: 'relative' }}
  >
- <div className="container flex items-center justify-between" style={{ overflow: 'visible' }}>
+ <div className="container flex items-center justify-between relative" style={{ overflow: 'visible' }}>
  <Link href="/" className="flex items-center">
  <div className="relative h-12 w-48">
  <Image
@@ -49,8 +49,8 @@ export default function Header() {
  </Link>
 
  {/* Desktop Navigation */}
- <NavigationMenu className="hidden lg:flex" style={{ overflow: 'visible' }}>
- <NavigationMenuList>
+ <NavigationMenu className="hidden lg:flex relative" style={{ overflow: 'visible', position: 'static' }}>
+ <NavigationMenuList style={{ overflow: 'visible' }}>
  <NavigationMenuItem>
  <Link href="/" legacyBehavior passHref>
  <NavigationMenuLink className="group inline-flex h-12 w-max items-center justify-center rounded-md bg-background px-6 py-3 text-base font-medium transition-colors hover:bg-brandyellow/10 hover:text-charcoal focus:bg-brandyellow/10 focus:text-charcoal focus:outline-none">

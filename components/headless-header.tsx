@@ -51,8 +51,9 @@ export default function HeadlessHeader() {
  "fixed top-0 w-full z-50 transition-all duration-500",
  isScrolled ? "bg-white/90 backdrop-blur-md shadow-lg py-2" : "bg-transparent py-4",
  )}
+ style={{ overflow: 'visible' }}
  >
- <div className="container flex items-center justify-between">
+ <div className="container flex items-center justify-between" style={{ overflow: 'visible' }}>
  <Link href="/" className="flex items-center">
  <div className="relative h-12 w-48">
  <Image
@@ -65,7 +66,7 @@ export default function HeadlessHeader() {
  </Link>
 
  {/* Desktop Navigation */}
- <nav className="hidden lg:flex items-center space-x-1">
+ <nav className="hidden lg:flex items-center space-x-1" style={{ overflow: 'visible' }}>
  <Link 
  href="/" 
  className="px-6 py-3 text-base font-medium transition-colors hover:bg-brandyellow/10 hover:text-charcoal rounded-md"
@@ -74,7 +75,7 @@ export default function HeadlessHeader() {
  </Link>
 
  {/* Services Menu with Headless UI */}
- <HeadlessMenu as="div" className="relative">
+ <HeadlessMenu as="div" className="relative" style={{ overflow: 'visible' }}>
  <HeadlessMenu.Button className="flex items-center px-6 py-3 text-base font-medium transition-colors hover:bg-brandyellow/10 hover:text-charcoal rounded-md ui-open:bg-brandyellow/10 ui-open:text-charcoal">
  Services
  </HeadlessMenu.Button>
@@ -88,7 +89,7 @@ export default function HeadlessHeader() {
  leaveFrom="opacity-100 translate-y-0"
  leaveTo="opacity-0 translate-y-1"
  >
- <HeadlessMenu.Items className="absolute left-0 mt-2 w-96 origin-top-left rounded-xl bg-white shadow-xl ring-1 ring-black ring-opacity-5 focus:outline-none overflow-hidden">
+ <HeadlessMenu.Items className="absolute left-0 mt-2 w-96 origin-top-left rounded-xl bg-white shadow-xl ring-1 ring-black ring-opacity-5 focus:outline-none overflow-hidden z-[9999]">
  <div className="p-6">
  <div className="grid gap-4">
  {services.map((service) => (
