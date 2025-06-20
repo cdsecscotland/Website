@@ -92,7 +92,7 @@ export default function RootLayout({
  <ParticleNetwork />
  </ErrorBoundary>
  <HeadlessHeader />
- <div className="flex-1 relative z-10 pt-20 md:pt-20">{children}</div>
+ <div className="flex-1 relative z-10 pt-16 md:pt-16">{children}</div>
  <Footer />
  </div>
  </AnimationProvider>

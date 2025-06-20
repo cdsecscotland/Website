@@ -17,24 +17,24 @@ export default function Hero() {
  if (!mounted) return null
 
  return (
- <section className="relative min-h-[60vh] flex items-center justify-center pt-20 md:pt-12 pb-8 overflow-hidden bg-gradient-to-br from-cream via-white to-paleyellow/30 ">
+ <section className="relative py-12 md:py-16 overflow-hidden bg-gradient-to-br from-cream via-white to-paleyellow/30 ">
  {/* Background Elements */}
  <div className="container relative z-10">
- <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+ <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
  <ScrollAnimation animation="slide-right">
  <div className="text-center">
- <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-charcoal mb-6 leading-tight">
+ <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal mb-4 leading-tight">
  <span className="block break-words">Security Locked In,</span>
  <span className="block break-words text-transparent bg-gradient-to-r from-brandyellow via-brightyellow to-brandyellow bg-clip-text">
  Threats Locked Out
  </span>
  </h1>
 
- <p className="text-lg md:text-xl lg:text-2xl text-charcoal/80 mb-8 leading-relaxed max-w-2xl mx-auto">
+ <p className="text-base md:text-lg lg:text-xl text-charcoal/80 mb-6 leading-relaxed max-w-2xl mx-auto">
  Professional cyber security services that protect your business from evolving threats with comprehensive penetration testing and security assessments.
  </p>
 
- <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 w-full">
+ <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6 w-full">
  <Button
  asChild
  size="lg"
@@ -78,7 +78,7 @@ export default function Hero() {
 
  <ScrollAnimation animation="slide-left" delay={0.2}>
  <div className="relative">
- <div className="bg-white/90 backdrop-blur-sm p-8 rounded-3xl shadow-2xl">
+ <div className="bg-white/90 backdrop-blur-sm p-4 md:p-6 rounded-3xl shadow-2xl">
  <Image
  src="/images/insights-tablet-demo.png"
  width={800}
