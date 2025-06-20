@@ -18,7 +18,7 @@ const floatingElements = [
 export default function HeadlessHero() {
 
  return (
- <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-cream via-white to-paleyellow/30 pt-20">
+ <section className="relative py-12 overflow-hidden bg-gradient-to-br from-cream via-white to-paleyellow/30">
  {/* Animated Background Elements */}
  <div className="absolute inset-0 overflow-hidden">
  {floatingElements.map((element, index) => (
@@ -42,11 +42,11 @@ export default function HeadlessHero() {
 
 
  <div className="container relative z-10">
- <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+ <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
  <ScrollAnimation animation="slide-right">
  <div className="text-center">
 
- <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+ <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight">
  <span className="block text-charcoal ">
  Security Locked In,
  </span>
@@ -58,11 +58,11 @@ export default function HeadlessHero() {
  </span>
  </h1>
 
- <p className="text-lg md:text-xl lg:text-2xl text-charcoal/80 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+ <p className="text-base md:text-lg lg:text-xl text-charcoal/80 mb-6 leading-relaxed">
  Professional cyber security services that protect your business from evolving threats with comprehensive penetration testing and security assessments.
  </p>
 
- <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+ <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
  <Button
  asChild
  size="lg"
