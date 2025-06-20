@@ -17,7 +17,7 @@ export default function Hero() {
  if (!mounted) return null
 
  return (
- <section className="relative min-h-[60vh] flex items-center justify-center pt-20 md:pt-12 pb-8 overflow-hidden bg-gradient-to-br from-cream via-white to-paleyellow/30 ">
+ <section className="relative py-16 md:py-20 overflow-hidden bg-gradient-to-br from-cream via-white to-paleyellow/30 ">
  {/* Background Elements */}
  <div className="container relative z-10">
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -77,17 +77,16 @@ export default function Hero() {
  </ScrollAnimation>
 
  <ScrollAnimation animation="slide-left" delay={0.2}>
- <div className="relative">
- <div className="bg-white/90 backdrop-blur-sm p-8 rounded-3xl shadow-2xl">
+ <div className="flex justify-center">
+ <div className="bg-white/90 backdrop-blur-sm p-6 rounded-3xl shadow-2xl max-w-md">
  <Image
  src="/images/insights-tablet-demo.png"
  width={800}
  height={600}
  alt="Closed Door Security Insights Platform"
- className="rounded-2xl shadow-lg"
+ className="rounded-2xl shadow-lg w-full h-auto"
  />
  </div>
- {/* Floating Elements */}
  </div>
  </ScrollAnimation>
  </div>

@@ -114,8 +114,8 @@ export default function InsightsPlatform() {
  </ScrollAnimation>
 
  <ScrollAnimation animation="slide-left" delay={0.4}>
- <div className="relative max-w-lg mx-auto">
- <div className="bg-white p-4 rounded-2xl shadow-xl">
+ <div className="flex justify-center">
+ <div className="bg-white p-4 rounded-2xl shadow-xl max-w-md">
  <Image
  src="/images/insights-tablet-demo.png"
  width={800}
