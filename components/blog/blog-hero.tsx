@@ -28,13 +28,14 @@ export default function BlogHero({
  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-charcoal/50 w-5 h-5" />
  <Input
  placeholder="Search articles, topics, or threats..."
- className="pl-12 pr-4 py-4 text-lg bg-white/90 border-2 border-transparent focus:border-brandyellow"
+ className="pl-12 pr-20 md:pr-24 py-4 text-lg bg-white/90 border-2 border-transparent focus:border-brandyellow"
  />
  <Button
- className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-brandyellow hover:bg-brightyellow text-charcoal"
+ className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-brandyellow hover:bg-brightyellow text-charcoal text-sm md:text-base px-3 md:px-4"
  size="sm"
  >
- Search
+ <span className="hidden sm:inline">Search</span>
+ <span className="sm:hidden">Go</span>
  </Button>
  </div>
  </div>
