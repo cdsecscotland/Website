@@ -8,7 +8,7 @@ import Image from "next/image"
 const offices = [
   {
     country: "United Kingdom",
-    location: "Edinburgh, Scotland",
+    location: "Stornoway, Scotland",
     flag: "🇬🇧",
     timezone: "GMT",
     image: "/images/office-uk.jpg",

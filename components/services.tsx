@@ -43,10 +43,10 @@ const mainServices = [
       "Full-scale adversarial simulations testing your organization's detection and response capabilities against sophisticated attacks.",
     features: ["Multi-Vector Attacks", "Social Engineering", "Physical Security Testing", "Purple Team Exercises"],
     link: "/penetration-testing",
-    gradient: "from-purple-500 to-indigo-500",
+    gradient: "from-red-600 to-red-500",
     iconColor: "text-white",
-    bgColor: "bg-gradient-to-br from-purple-500/10 to-indigo-500/10",
-    borderColor: "border-purple-200 dark:border-purple-800",
+    bgColor: "bg-gradient-to-br from-red-600/10 to-red-500/10",
+    borderColor: "border-red-200 dark:border-red-800",
   },
   {
     icon: AlertTriangle,

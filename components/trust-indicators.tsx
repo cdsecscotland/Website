@@ -6,8 +6,8 @@ const TrustIndicators = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <i className="fas fa-shield-alt text-4xl text-blue-500 mb-4"></i>
-            <h3 className="text-xl font-semibold mb-2">Secure Platform</h3>
-            <p className="text-gray-600">We prioritize your security with advanced encryption and robust measures.</p>
+            <h3 className="text-xl font-semibold mb-2">Live Reporting Platform</h3>
+            <p className="text-gray-600">Real-time vulnerability tracking and expert-driven insights for continuous security monitoring.</p>
           </div>
           <div>
             <i className="fas fa-users text-4xl text-green-500 mb-4"></i>

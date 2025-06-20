@@ -47,7 +47,7 @@ export default function About() {
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 text-enhanced">
             About Closed Door Security
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">Leading cyber security consultancy protecting businesses from evolving digital threats since 2019</p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">Expert cybersecurity consultancy delivering comprehensive security testing and compliance services globally</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild variant="outline" size="lg">
               <Link href="/penetration-testing">Our Testing Services</Link>

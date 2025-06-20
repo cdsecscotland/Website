@@ -125,7 +125,7 @@ export default function Accreditations() {
         {/* Trust Indicators */}
         <ScrollAnimation animation="fade" delay={0.6}>
           <div className="text-center mt-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-brandyellow mb-2">15+</div>
                 <div className="text-sm text-charcoal/70 dark:text-white/70">Active Certifications</div>
@@ -133,14 +133,6 @@ export default function Accreditations() {
               <div className="text-center">
                 <div className="text-3xl font-bold text-brandyellow mb-2">3</div>
                 <div className="text-sm text-charcoal/70 dark:text-white/70">Government Approvals</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-brandyellow mb-2">100%</div>
-                <div className="text-sm text-charcoal/70 dark:text-white/70">Compliance Rate</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-brandyellow mb-2">24/7</div>
-                <div className="text-sm text-charcoal/70 dark:text-white/70">Certified Support</div>
               </div>
             </div>
           </div>

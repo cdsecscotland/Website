@@ -19,7 +19,7 @@ export default function InsightsPlatform() {
               Real-Time Penetration Testing Platform
             </h2>
             <p className="text-responsive-xl md:text-responsive-2xl text-charcoal/80 dark:text-white/80 max-w-4xl mx-auto leading-relaxed">
-              Track vulnerabilities, monitor progress, and coordinate fixes through our Insights platform. Get instant visibility into your security posture with automated scanning and expert analyst support whenever you need it.
+              Track vulnerabilities, monitor progress, and coordinate fixes through our Insights platform. Get instant visibility into your security posture with real-time monitoring and expert analyst support whenever you need it.
             </p>
           </div>
         </ScrollAnimation>

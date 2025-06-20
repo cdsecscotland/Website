@@ -42,7 +42,7 @@ const offices = [
     country: "United Kingdom",
     location: "Outer Hebrides, Scotland",
     phone: "+44131 460 4180",
-    email: "uk@cdsec.co.uk",
+    email: "info@cdsec.co.uk",
     hours: "9:00 AM - 5:00 PM GMT",
     flag: "🇬🇧",
     timezone: "GMT"
@@ -51,7 +51,7 @@ const offices = [
     country: "United States",
     location: "Des Moines, IA",
     phone: "+1 (515) 123-4567",
-    email: "usa@cdsec.co.uk",
+    email: "info@cdsecus.com",
     hours: "9:00 AM - 5:00 PM CST",
     flag: "🇺🇸",
     timezone: "CST"
@@ -60,7 +60,7 @@ const offices = [
     country: "United Arab Emirates",
     location: "Dubai, UAE",
     phone: "+971 4 123 4567",
-    email: "uae@cdsec.co.uk",
+    email: "info@cdsec.ae",
     hours: "9:00 AM - 5:00 PM GST",
     flag: "🇦🇪",
     timezone: "GST"

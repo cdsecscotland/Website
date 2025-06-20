@@ -110,7 +110,7 @@ export default function AboutPage() {
                   Our Story
                 </h2>
                 <p className="text-lg text-charcoal/70 dark:text-white/70 mb-6">
-                  Established in Edinburgh, Scotland, Closed Door Security was founded with a simple mission: to provide world-class cybersecurity services that genuinely protect businesses from evolving digital threats.
+                  Established in Stornoway, Scotland, Closed Door Security was founded with a simple mission: to provide world-class cybersecurity services that genuinely protect businesses from evolving digital threats.
                 </p>
                 <p className="text-lg text-charcoal/70 dark:text-white/70 mb-6">
                   Our team of certified security professionals brings decades of combined experience from government, financial services, and enterprise sectors. We've grown from a small Scottish consultancy to an internationally recognised security firm with offices across three continents.
@@ -127,7 +127,7 @@ export default function AboutPage() {
                   src="/images/office-uk.jpg"
                   width={600}
                   height={400}
-                  alt="Closed Door Security Edinburgh Office"
+                  alt="Closed Door Security Stornoway Office"
                   className="rounded-lg shadow-lg"
                 />
               </div>

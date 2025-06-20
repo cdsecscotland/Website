@@ -38,7 +38,7 @@ const testingTypes = [
     icon: Globe,
     title: "Web Application Penetration Testing",
     description: "Comprehensive security testing of web applications using OWASP methodology to identify vulnerabilities before attackers do.",
-    methodology: "OWASP Testing Guide, ASVS verification, automated scanning combined with manual testing techniques including authentication bypass, session management flaws, injection attacks, and business logic vulnerabilities.",
+    methodology: "OWASP Testing Guide, ASVS verification, comprehensive security analysis combined with manual testing techniques including authentication bypass, session management flaws, injection attacks, and business logic vulnerabilities.",
     features: ["SQL Injection & NoSQL Testing", "Cross-Site Scripting (XSS)", "Authentication & Session Management", "Business Logic Flaw Assessment", "API Security Testing"],
   },
   {

@@ -17,8 +17,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-white/70 mb-4">
-              Global cyber security consultancy providing expert penetration testing and security services across the
-              UK, USA, and UAE.
+              Global cyber security consultancy providing expert penetration testing, compliance, and security assessment services worldwide.
             </p>
             <div className="flex space-x-4">
               <Link href="#" className="text-white/70 hover:text-paleyellow transition-colors">
