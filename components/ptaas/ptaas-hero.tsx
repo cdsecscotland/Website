@@ -26,7 +26,7 @@ export default function PTaaSHero() {
  {/* Main Content - Side by Side */}
  <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
  {/* Left Side - Text Content */}
- <div className="lg:text-left text-center">
+ <div className="text-center">
  <ScrollAnimation animation="slide-right" delay={0.6}>
  <p className="text-responsive-xl md:text-responsive-2xl mb-8 text-charcoal/80 leading-relaxed">
  Throughout the project, you'll have the chance to use our Penetration Testing As A Service platform,
@@ -37,7 +37,7 @@ export default function PTaaSHero() {
  </ScrollAnimation>
 
  <ScrollAnimation animation="slide-right" delay={0.8}>
- <div className="flex flex-col sm:flex-row gap-4 lg:justify-start justify-center">
+ <div className="flex flex-col sm:flex-row gap-4 justify-center">
  <Button
  asChild
  size="lg"

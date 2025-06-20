@@ -44,7 +44,7 @@ export default function HeadlessHero() {
  <div className="container relative z-10">
  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
  <ScrollAnimation animation="slide-right">
- <div className="text-center lg:text-left">
+ <div className="text-center">
 
  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
  <span className="block text-charcoal ">
@@ -62,7 +62,7 @@ export default function HeadlessHero() {
  Professional cyber security services that protect your business from evolving threats with comprehensive penetration testing and security assessments.
  </p>
 
- <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+ <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
  <Button
  asChild
  size="lg"
@@ -92,7 +92,7 @@ export default function HeadlessHero() {
  </div>
 
  {/* Animated Stats */}
- <div className="grid grid-cols-3 gap-4 sm:gap-8 text-center lg:text-left">
+ <div className="grid grid-cols-3 gap-4 sm:gap-8 text-center">
  {[
  { value: "550+", label: "Projects Delivered", delay: 0 },
  { value: "160+", label: "Customers", delay: 0.1 },
