@@ -329,8 +329,19 @@ export default function PenetrationTestingPage() {
  Security Operations Centre (SOC), or Extended Detection and Response (XDR) services through controlled attack simulations.
  </p>
  <p className="text-charcoal/70">
- We test whether your security team can detect, analyze, and respond to realistic threats in your environment, 
- ensuring you're getting value from your security investment and identifying gaps before real attackers exploit them.
+ Unlike traditional penetration testing which focuses on finding vulnerabilities, validation testing specifically targets 
+ your security operations capability by using known attack methods to stress test detection and response systems. 
+ We simulate real threat actor behaviour to evaluate whether your SOC can identify, analyse, and respond to threats effectively.
+ </p>
+ <p className="text-charcoal/70">
+ This targeted approach tests the human and technological elements of your security operations, validating alert quality, 
+ investigation procedures, escalation processes, and incident response capabilities. We measure detection coverage, 
+ response times, and the accuracy of threat classification to ensure your security investment delivers real protection.
+ </p>
+ <p className="text-charcoal/70">
+ The testing methodology focuses on realistic attack scenarios that mirror current threat landscapes, 
+ ensuring your security team can handle sophisticated adversaries who use legitimate tools and living-off-the-land techniques 
+ to evade traditional security controls.
  </p>
  </CardContent>
  </Card>
@@ -486,7 +497,7 @@ export default function PenetrationTestingPage() {
  <Shield className="w-12 h-12 text-brandyellow mx-auto mb-4" />
  <h3 className="font-semibold mb-2">Validate Investment</h3>
  <p className="text-sm text-charcoal/70">
- Ensure your security solution provides the protection you're paying for
+ Ensure your security solution provides the protection you're paying for. This is particularly critical for third-party SOC services where you're trusting external teams with your security monitoring. Validation testing provides independent verification that your SOC provider delivers on their service level agreements and can effectively protect your organisation.
  </p>
  </CardContent>
  </Card>
