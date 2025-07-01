@@ -16,9 +16,16 @@ const teamMembers = [
  certifications: [],
  },
  {
- name: "Cassius Conor Agnew",
+ name: "Cassius Edison",
  role: "Chief Operating Officer",
  description: "Internationally recognised cyber expert specialising in advanced persistent threats",
+ image: "/images/team-member-2.jpg",
+ certifications: [],
+ },
+ {
+ name: "Conor Agnew",
+ role: "Head of Compliance",
+ description: "Expert in regulatory compliance and risk management frameworks",
  image: "/images/team-member-3.png",
  certifications: [],
  },
