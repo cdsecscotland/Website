@@ -30,6 +30,11 @@ export const metadata: Metadata = {
  creator: "Closed Door Security",
  publisher: "Closed Door Security",
  robots: "index, follow",
+ icons: {
+ icon: "/favicon.png",
+ shortcut: "/favicon.png",
+ apple: "/favicon.png",
+ },
  openGraph: {
  type: "website",
  locale: "en_GB",

@@ -57,10 +57,14 @@ export default function HeadlessHeader() {
  <Link href="/" className="flex items-center">
  <div className="relative h-12 w-48">
  <Image
- src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Logo-rebrand-pto4kn1IFh8Nq1WA7oBBqHqI4YoLxJ.png"
+ src="/logo-local.png"
  alt="Closed Door Security Logo"
  fill
- className="object-contain "
+ className="object-contain"
+ style={{
+ maskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)',
+ WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)'
+ }}
  />
  </div>
  </Link>

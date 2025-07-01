@@ -10,10 +10,14 @@ export default function Footer() {
  <div>
  <div className="relative h-12 w-48 mb-4">
  <Image
- src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Logo-rebrand-pto4kn1IFh8Nq1WA7oBBqHqI4YoLxJ.png"
+ src="/logo-local.png"
  alt="Closed Door Security Logo"
  fill
  className="object-contain brightness-200 contrast-200 invert"
+ style={{
+ maskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)',
+ WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)'
+ }}
  />
  </div>
  <p className="text-white/70 mb-4">
