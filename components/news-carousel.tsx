@@ -140,12 +140,11 @@ export default function NewsCarousel() {
  >
  {Array.from({ length: totalSlides }).map((_, slideIndex) => (
  <div key={slideIndex} className="w-full flex-shrink-0">
- <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6`}>
+ <div className={`grid ${itemsPerView === 1 ? 'grid-cols-1' : itemsPerView === 2 ? 'grid-cols-2' : itemsPerView === 3 ? 'grid-cols-3' : 'grid-cols-4'} gap-6`}>
  {newsOutlets
  .slice(slideIndex * itemsPerView, (slideIndex + 1) * itemsPerView)
  .map((outlet, index) => (
- <ScrollAnimation key={outlet.name} animation="slide-up" delay={index * 0.1}>
- <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white/90 backdrop-blur-sm border-0 shadow-lg">
+ <Card key={`${slideIndex}-${outlet.name}-${index}`} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white/90 backdrop-blur-sm border-0 shadow-lg">
  <CardContent className="p-6 text-center">
  <div className="h-16 flex items-center justify-center mb-4">
  <img
@@ -173,7 +172,6 @@ export default function NewsCarousel() {
  </Button>
  </CardContent>
  </Card>
- </ScrollAnimation>
  ))}
  </div>
  </div>
