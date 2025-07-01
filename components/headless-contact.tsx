@@ -1,10 +1,7 @@
 "use client"
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Calendar, Mail, Phone, MapPin, Clock, Shield } from "lucide-react"
-import { Tab } from "@headlessui/react"
+import { Calendar, Mail, Phone, MapPin, Clock } from "lucide-react"
 import { cn } from "@/lib/utils"
 import HubSpotForm from "./hubspot-form"
 import ScrollAnimation from "./scroll-animation"
@@ -67,13 +64,7 @@ const offices = [
  },
 ]
 
-const contactTabs = [
- { name: "General Inquiry", icon: Mail },
- { name: "Emergency Response", icon: Shield },
-]
-
 export default function HeadlessContact() {
- const [selectedTab, setSelectedTab] = useState(0)
 
  return (
  <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 ">
@@ -94,67 +85,14 @@ export default function HeadlessContact() {
  <ScrollAnimation animation="slide-right">
  <Card className="shadow-2xl border-0 bg-white/90 backdrop-blur-sm overflow-hidden">
  <CardHeader className="bg-gradient-to-r from-brandyellow/10 to-brandyellow/5 border-b border-brandyellow/20">
- <Tab.Group selectedIndex={selectedTab} onChange={setSelectedTab}>
- <Tab.List className="flex space-x-1 rounded-lg bg-brandyellow/10 p-1">
- {contactTabs.map((tab, index) => (
- <Tab
- key={tab.name}
- className={({ selected }) =>
- cn(
- "w-full rounded-md py-2.5 px-3 text-sm font-medium leading-5 transition-all duration-200",
- "ring-white ring-opacity-60 ring-offset-2 ring-offset-transparent focus:outline-none focus:ring-2",
- selected
- ? "bg-white text-charcoal shadow transform scale-105"
- : "text-charcoal/70 hover:bg-white/50 "
- )
- }
- >
- <div className="flex items-center justify-center space-x-2">
- <tab.icon className="w-4 h-4" />
- <span className="hidden sm:inline">{tab.name}</span>
- </div>
- </Tab>
- ))}
- </Tab.List>
-
- <Tab.Panels className="mt-4">
- <Tab.Panel>
  <CardTitle className="text-2xl text-charcoal ">
- General Inquiry
+ Contact Us
  </CardTitle>
  <p className="text-charcoal/70 mt-2">
- Get in touch for general questions about our services
+ Get in touch for questions about our services
  </p>
- </Tab.Panel>
- <Tab.Panel>
- <CardTitle className="text-2xl text-charcoal flex items-center">
- <Shield className="w-6 h-6 text-red-500 mr-2" />
- Emergency Response
- </CardTitle>
- <p className="text-charcoal/70 mt-2">
- 24/7 incident response for active security breaches
- </p>
- </Tab.Panel>
- </Tab.Panels>
- </Tab.Group>
  </CardHeader>
  <CardContent className="p-6">
- {selectedTab === 1 ? (
- <div className="text-center py-8">
- <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
- <Shield className="w-8 h-8 text-red-500" />
- </div>
- <h3 className="text-xl font-bold text-charcoal mb-2">
- Security Incident in Progress?
- </h3>
- <p className="text-charcoal/70 mb-6">
- Call our emergency hotline immediately for 24/7 incident response support.
- </p>
- <Button className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-4 text-lg transition-all duration-200 hover:shadow-lg">
- Emergency Hotline: +44131 460 4180
- </Button>
- </div>
- ) : (
  <div className="transition-all duration-300">
  <HubSpotForm 
  portalId="144330761" 
@@ -162,7 +100,6 @@ export default function HeadlessContact() {
  className="hubspot-contact-form" 
  />
  </div>
- )}
  </CardContent>
  </Card>
  </ScrollAnimation>

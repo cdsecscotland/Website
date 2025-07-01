@@ -3,8 +3,8 @@ import HeadlessContact from "@/components/headless-contact"
 
 export const metadata: Metadata = {
  title: "Contact Closed Door Security | Expert Cyber Security Consultants",
- description: "Get in touch with our cybersecurity experts. 24/7 emergency response, free consultations, and global offices in UK, USA, and UAE. Contact us today for professional penetration testing services.",
- keywords: "contact cyber security experts, penetration testing consultation, cybersecurity emergency response, closed door security contact",
+ description: "Get in touch with our cybersecurity experts. Free consultations and global offices in UK, USA, and UAE. Contact us today for professional penetration testing services.",
+ keywords: "contact cyber security experts, penetration testing consultation, cybersecurity consultation, closed door security contact",
  alternates: {
  canonical: "https://www.cdsec.co.uk/contact",
  },
