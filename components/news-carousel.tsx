@@ -133,9 +133,9 @@ export default function NewsCarousel() {
  }
 
  return (
- <section className="py-6 bg-gradient-to-br from-cream/50 to-white relative">
- <div className="container">
- <div className="text-center mb-10">
+   <section className="py-6 bg-gradient-to-br from-cream/50 to-white relative">
+     <div className="container">
+       <div className="text-center mb-10">
  <h2 className="text-responsive-4xl md:text-responsive-5xl font-bold text-charcoal mb-4">
  Featured In Leading Publications
  </h2>
@@ -186,7 +186,6 @@ export default function NewsCarousel() {
  </Card>
  </div>
  </div>
- )
  ) : (
  // Desktop: Show slides with multiple items
  Array.from({ length: Math.ceil(newsOutlets.length / itemsPerView) }).map((_, slideIndex) => (
