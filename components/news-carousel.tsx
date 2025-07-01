@@ -74,6 +74,18 @@ const newsOutlets = [
 export default function NewsCarousel() {
  const [currentIndex, setCurrentIndex] = useState(0)
  const [itemsPerView, setItemsPerView] = useState(4)
+ 
+ // Debug logging for mobile
+ useEffect(() => {
+ if (typeof window !== 'undefined' && window.innerWidth < 640) {
+ console.log('Mobile carousel state:', {
+ currentIndex,
+ itemsPerView,
+ totalOutlets: newsOutlets.length,
+ currentOutlet: newsOutlets[currentIndex]?.name
+ })
+ }
+ }, [currentIndex, itemsPerView])
 
  useEffect(() => {
  const handleResize = () => {
@@ -143,6 +155,12 @@ export default function NewsCarousel() {
  Our cybersecurity expertise and thought leadership have been recognised by major news outlets and industry
  publications worldwide
  </p>
+ {/* Debug info - remove after testing */}
+ {itemsPerView === 1 && (
+ <div className="mt-4 p-2 bg-red-100 text-sm">
+ Mobile Debug: Index {currentIndex} of {newsOutlets.length} - {newsOutlets[currentIndex]?.name}
+ </div>
+ )}
  </div>
 
  <div className="relative max-w-6xl mx-auto">
