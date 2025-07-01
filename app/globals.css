@@ -223,6 +223,23 @@
   transform: none !important;
 }
 
+/* Exception: Keep carousel animations enabled on mobile */
+.mobile-performance-mode .carousel-animation-enabled {
+  transition: transform 500ms ease-in-out !important;
+}
+
+.mobile-performance-mode .carousel-animation-enabled * {
+  transition: all 300ms ease !important;
+}
+
+/* Force carousel animations to work on mobile even with global performance mode */
+@media (max-width: 767px) {
+  .carousel-animation-enabled {
+    transition: transform 500ms ease-in-out !important;
+    animation-duration: 0.5s !important;
+  }
+}
+
 .mobile-performance-mode img,
 .mobile-performance-mode video {
   /* Optimize image and video rendering on mobile */
