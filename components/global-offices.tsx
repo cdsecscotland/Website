@@ -11,7 +11,7 @@ const offices = [
  location: "Stornoway, Scotland",
  flag: "🇬🇧",
  timezone: "GMT",
- image: "/images/office-uk.jpg",
+ image: "/download.jpg",
  },
  {
  country: "United States",

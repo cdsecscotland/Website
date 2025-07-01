@@ -124,7 +124,7 @@ export default function AboutPage() {
  <ScrollAnimation animation="slide-left" delay={0.2}>
  <div className="relative">
  <Image
- src="/images/office-uk.jpg"
+ src="/download.jpg"
  width={600}
  height={400}
  alt="Closed Door Security Stornoway Office"

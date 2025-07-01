@@ -42,8 +42,10 @@ export default function Header() {
  <Image
  src="/logo-local.png"
  alt="Closed Door Security Logo"
- fill
- className="object-contain"
+ width={192}
+ height={48}
+ priority
+ className="object-contain w-full h-full"
  style={{
  maskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)',
  WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)'
