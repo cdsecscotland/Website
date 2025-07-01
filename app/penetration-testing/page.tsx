@@ -239,7 +239,7 @@ export default function PenetrationTestingPage() {
  <Button asChild size="lg" className="bg-brandyellow hover:bg-brightyellow text-charcoal font-semibold px-8 py-4">
  <Link href="/build-pentest">Get a Quote</Link>
  </Button>
- <Button asChild size="lg" variant="outline" className="border-white hover:border-brandyellow text-white hover:bg-brandyellow hover:text-charcoal font-semibold">
+ <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-charcoal font-semibold">
  <Link href="/contact">Speak to an Expert</Link>
  </Button>
  </div>
