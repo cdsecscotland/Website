@@ -74,18 +74,6 @@ const newsOutlets = [
 export default function NewsCarousel() {
  const [currentIndex, setCurrentIndex] = useState(0)
  const [itemsPerView, setItemsPerView] = useState(4)
- 
- // Debug logging for mobile
- useEffect(() => {
- if (typeof window !== 'undefined' && window.innerWidth < 640) {
- console.log('Mobile carousel state:', {
- currentIndex,
- itemsPerView,
- totalOutlets: newsOutlets.length,
- currentOutlet: newsOutlets[currentIndex]?.name
- })
- }
- }, [currentIndex, itemsPerView])
 
  useEffect(() => {
  const handleResize = () => {
@@ -155,45 +143,38 @@ export default function NewsCarousel() {
  Our cybersecurity expertise and thought leadership have been recognised by major news outlets and industry
  publications worldwide
  </p>
- {/* Debug info - remove after testing */}
- {itemsPerView === 1 && (
- <div className="mt-4 p-2 bg-red-100 text-sm">
- Mobile Debug: Index {currentIndex} of {newsOutlets.length} - {newsOutlets[currentIndex]?.name}
- </div>
- )}
  </div>
 
  <div className="relative max-w-6xl mx-auto">
  <div className="overflow-hidden">
  <div
  className="flex transition-transform duration-500 ease-in-out carousel-animation-enabled"
- style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+ style={{ transform: itemsPerView === 1 ? 'none' : `translateX(-${currentIndex * 100}%)` }}
  >
  {itemsPerView === 1 ? (
- // Mobile: Show individual items
- newsOutlets.map((outlet, index) => (
- <div key={index} className="w-full flex-shrink-0">
+ // Mobile: Show only the current item
+ <div className="w-full">
  <div className="grid grid-cols-1 gap-6 max-w-sm mx-auto">
  <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white/90 backdrop-blur-sm border-0 shadow-lg">
  <CardContent className="p-6 text-center">
  <div className="h-16 flex items-center justify-center mb-4">
  <img
- src={outlet.logo || "/placeholder.svg"}
- alt={`${outlet.name} logo`}
+ src={newsOutlets[currentIndex]?.logo || "/placeholder.svg"}
+ alt={`${newsOutlets[currentIndex]?.name} logo`}
  className="max-h-full max-w-full object-contain"
  />
  </div>
  <h3 className="font-semibold text-charcoal mb-2 group-hover:text-brandyellow transition-colors">
- {outlet.name}
+ {newsOutlets[currentIndex]?.name}
  </h3>
- <p className="text-sm text-charcoal/70 mb-4">{outlet.description}</p>
+ <p className="text-sm text-charcoal/70 mb-4">{newsOutlets[currentIndex]?.description}</p>
  <Button
  variant="outline"
  size="sm"
  className="group-hover:bg-brandyellow group-hover:text-charcoal group-hover:border-brandyellow transition-all duration-300"
  onClick={() => {
  if (typeof window !== 'undefined') {
- window.open(outlet.url, "_blank")
+ window.open(newsOutlets[currentIndex]?.url, "_blank")
  }
  }}
  >
@@ -204,7 +185,7 @@ export default function NewsCarousel() {
  </Card>
  </div>
  </div>
- ))
+ )
  ) : (
  // Desktop: Show slides with multiple items
  Array.from({ length: Math.ceil(newsOutlets.length / itemsPerView) }).map((_, slideIndex) => (
