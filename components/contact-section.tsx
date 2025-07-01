@@ -93,17 +93,6 @@ export default function ContactSection() {
  </CardContent>
  </Card>
 
- <Card className="shadow-xl border-0 bg-white ">
- <CardContent className="p-6">
- <h3 className="text-xl font-bold text-gray-900 mb-6">Emergency Response</h3>
- <p className="text-gray-600 mb-4">
- 24/7 incident response hotline for existing clients experiencing active security incidents.
- </p>
- <Button className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold">
- Emergency Hotline: +44131 460 4180
- </Button>
- </CardContent>
- </Card>
  </div>
  </div>
 

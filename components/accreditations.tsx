@@ -27,11 +27,6 @@ const certificationBadges = [
  category: "Standards",
  },
  {
- name: "Cyber Advisor",
- description: "Certified cybersecurity advisory services",
- category: "Advisory",
- },
- {
  name: "CREST - Penetration Testing",
  description: "Prestegious Penetration Testing Accreditation",
  category: "Professional",

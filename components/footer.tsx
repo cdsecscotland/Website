@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
+import { Linkedin } from "lucide-react"
 
 export default function Footer() {
  return (
@@ -20,21 +20,9 @@ export default function Footer() {
  Global cyber security consultancy providing expert penetration testing, compliance, and security assessment services worldwide.
  </p>
  <div className="flex space-x-4">
- <Link href="#" className="text-white/70 hover:text-paleyellow transition-colors">
- <Facebook className="w-5 h-5" />
- <span className="sr-only">Facebook</span>
- </Link>
- <Link href="#" className="text-white/70 hover:text-paleyellow transition-colors">
- <Twitter className="w-5 h-5" />
- <span className="sr-only">Twitter</span>
- </Link>
- <Link href="#" className="text-white/70 hover:text-paleyellow transition-colors">
+ <Link href="https://www.linkedin.com/company/cdsec" className="text-white/70 hover:text-paleyellow transition-colors">
  <Linkedin className="w-5 h-5" />
  <span className="sr-only">LinkedIn</span>
- </Link>
- <Link href="#" className="text-white/70 hover:text-paleyellow transition-colors">
- <Instagram className="w-5 h-5" />
- <span className="sr-only">Instagram</span>
  </Link>
  </div>
  </div>
