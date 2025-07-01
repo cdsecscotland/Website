@@ -94,22 +94,27 @@ export default function NewsCarousel() {
  return () => window.removeEventListener("resize", handleResize)
  }, [])
 
+ // Reset currentIndex when itemsPerView changes to prevent being on invalid slide
+ useEffect(() => {
+ setCurrentIndex(0)
+ }, [itemsPerView])
+
  useEffect(() => {
  const interval = setInterval(() => {
- setCurrentIndex((prev) => (prev + 1) % Math.ceil(newsOutlets.length / itemsPerView))
+ const totalSlides = Math.ceil(newsOutlets.length / itemsPerView)
+ setCurrentIndex((prev) => (prev + 1) % totalSlides)
  }, 5000)
  return () => clearInterval(interval)
  }, [itemsPerView])
 
+ const totalSlides = Math.ceil(newsOutlets.length / itemsPerView)
+
  const nextSlide = () => {
- setCurrentIndex((prev) => (prev + 1) % Math.ceil(newsOutlets.length / itemsPerView))
+ setCurrentIndex((prev) => (prev + 1) % totalSlides)
  }
 
  const prevSlide = () => {
- setCurrentIndex(
- (prev) =>
- (prev - 1 + Math.ceil(newsOutlets.length / itemsPerView)) % Math.ceil(newsOutlets.length / itemsPerView),
- )
+ setCurrentIndex((prev) => (prev - 1 + totalSlides) % totalSlides)
  }
 
  return (
@@ -133,7 +138,7 @@ export default function NewsCarousel() {
  className="flex transition-transform duration-500 ease-in-out"
  style={{ transform: `translateX(-${currentIndex * 100}%)` }}
  >
- {Array.from({ length: Math.ceil(newsOutlets.length / itemsPerView) }).map((_, slideIndex) => (
+ {Array.from({ length: totalSlides }).map((_, slideIndex) => (
  <div key={slideIndex} className="w-full flex-shrink-0">
  <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6`}>
  {newsOutlets
@@ -198,7 +203,7 @@ export default function NewsCarousel() {
 
  {/* Dots Indicator */}
  <div className="flex justify-center gap-2 mt-6">
- {Array.from({ length: Math.ceil(newsOutlets.length / itemsPerView) }).map((_, index) => (
+ {Array.from({ length: totalSlides }).map((_, index) => (
  <button
  key={index}
  className={`w-2 h-2 rounded-full transition-all duration-300 ${
