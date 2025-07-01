@@ -10,21 +10,21 @@ const teamMembers = [
  name: "William Wright",
  role: "Chief Executive Officer",
  bio: "Over 15 years of experience in cybersecurity with expertise in penetration testing, threat intelligence, and enterprise security architecture.",
- image: "/images/team-member-1.jpg",
+ image: "/images/team-member-1.png",
  certifications: []
  },
  {
  name: "Cassius Edison",
  role: "Chief Operating Officer",
  bio: "Internationally recognised cyber expert specialising in advanced persistent threats and security operations.",
- image: "/images/team-member-2.jpg",
+ image: "/images/team-member-cassius.png",
  certifications: []
  },
  {
  name: "Conor Agnew",
  role: "Head of Compliance",
  bio: "Expert in regulatory compliance, risk management frameworks, and enterprise security governance.",
- image: "/images/team-member-3.jpg",
+ image: "/images/team-member-conor.png",
  certifications: []
  }
 ]
