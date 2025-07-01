@@ -4,7 +4,6 @@ import { useState, useEffect } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react"
-import ScrollAnimation from "./scroll-animation"
 
 const newsOutlets = [
  // First slide (positions 0-3)
@@ -136,7 +135,6 @@ export default function NewsCarousel() {
  return (
  <section className="py-6 bg-gradient-to-br from-cream/50 to-white relative">
  <div className="container">
- <ScrollAnimation animation="fade">
  <div className="text-center mb-10">
  <h2 className="text-responsive-4xl md:text-responsive-5xl font-bold text-charcoal mb-4">
  Featured In Leading Publications
@@ -146,7 +144,6 @@ export default function NewsCarousel() {
  publications worldwide
  </p>
  </div>
- </ScrollAnimation>
 
  <div className="relative max-w-6xl mx-auto">
  <div className="overflow-hidden">
