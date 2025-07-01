@@ -152,22 +152,23 @@ export default function NewsCarousel() {
  style={{ transform: itemsPerView === 1 ? 'none' : `translateX(-${currentIndex * 100}%)` }}
  >
  {itemsPerView === 1 ? (
- // Mobile: Show only the current item
+ // Mobile: Show only the current item - FIXED VERSION
  <div className="w-full">
  <div className="grid grid-cols-1 gap-6 max-w-sm mx-auto">
- <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white/90 backdrop-blur-sm border-0 shadow-lg">
+ <Card key={`mobile-${currentIndex}-${newsOutlets[currentIndex]?.name}`} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white/90 backdrop-blur-sm border-0 shadow-lg">
  <CardContent className="p-6 text-center">
  <div className="h-16 flex items-center justify-center mb-4">
  <img
  src={newsOutlets[currentIndex]?.logo || "/placeholder.svg"}
  alt={`${newsOutlets[currentIndex]?.name} logo`}
  className="max-h-full max-w-full object-contain"
+ key={`img-${currentIndex}`}
  />
  </div>
  <h3 className="font-semibold text-charcoal mb-2 group-hover:text-brandyellow transition-colors">
- {newsOutlets[currentIndex]?.name}
+ {newsOutlets[currentIndex]?.name || 'Loading...'}
  </h3>
- <p className="text-sm text-charcoal/70 mb-4">{newsOutlets[currentIndex]?.description}</p>
+ <p className="text-sm text-charcoal/70 mb-4">{newsOutlets[currentIndex]?.description || 'Loading...'}</p>
  <Button
  variant="outline"
  size="sm"
