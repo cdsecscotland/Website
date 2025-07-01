@@ -176,6 +176,15 @@ export default function HeadlessHeader() {
  <Link href="/build-pentest">Build a Pentest</Link>
  </Button>
 
+ {/* Mobile CTA Button */}
+ <Button
+ asChild
+ size="sm"
+ className="md:hidden bg-brandyellow hover:bg-brightyellow text-charcoal font-semibold px-4 py-2 text-sm"
+ >
+ <Link href="/build-pentest">Get Quote</Link>
+ </Button>
+
  {/* Mobile Menu Button */}
  <button
  className="lg:hidden text-charcoal p-2 rounded-md hover:bg-brandyellow/10 transition-colors"

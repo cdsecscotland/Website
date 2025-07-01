@@ -65,6 +65,9 @@ export default function RootLayout({
  return (
  <html lang="en" suppressHydrationWarning>
  <head>
+ <link rel="preload" href="/logo-local.png" as="image" />
+ <link rel="preload" href="/favicon.png" as="image" />
+ <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2Y57B5BNBN"></script>
  <script
  dangerouslySetInnerHTML={{

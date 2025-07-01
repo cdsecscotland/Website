@@ -20,11 +20,19 @@ export default function MobilePerformanceOptimizer() {
  
  // Add CSS custom property to indicate mobile mode
  document.documentElement.style.setProperty('--mobile-animations', 'disabled')
+ 
+ // Reduce transform complexity on mobile
+ document.documentElement.style.setProperty('--mobile-transforms', 'scale(1)')
+ 
+ // Disable expensive CSS filters on mobile
+ document.documentElement.style.setProperty('--mobile-filters', 'none')
  } else {
  // Remove mobile performance mode when not needed
  document.body.classList.remove('mobile-performance-mode')
  document.documentElement.style.removeProperty('scroll-behavior')
  document.documentElement.style.removeProperty('--mobile-animations')
+ document.documentElement.style.removeProperty('--mobile-transforms')
+ document.documentElement.style.removeProperty('--mobile-filters')
  }
 
  return () => {
@@ -32,8 +40,31 @@ export default function MobilePerformanceOptimizer() {
  document.body.classList.remove('mobile-performance-mode')
  document.documentElement.style.removeProperty('scroll-behavior')
  document.documentElement.style.removeProperty('--mobile-animations')
+ document.documentElement.style.removeProperty('--mobile-transforms')
+ document.documentElement.style.removeProperty('--mobile-filters')
  }
  }, [disableAnimations])
+
+ // Additional first load optimizations
+ useEffect(() => {
+ // Preload critical resources
+ const link = document.createElement('link')
+ link.rel = 'preload'
+ link.href = '/logo-local.png'
+ link.as = 'image'
+ document.head.appendChild(link)
+
+ // Optimize font loading
+ if ('fonts' in document) {
+ document.fonts.load('16px Inter').catch(() => {})
+ }
+
+ return () => {
+ if (link.parentNode) {
+ link.parentNode.removeChild(link)
+ }
+ }
+ }, [])
 
  // This component doesn't render anything visible
  return null
