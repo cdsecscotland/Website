@@ -101,20 +101,36 @@ export default function NewsCarousel() {
 
  useEffect(() => {
  const interval = setInterval(() => {
+ if (itemsPerView === 1) {
+ // For mobile (1 item per view), cycle through individual items
+ setCurrentIndex((prev) => (prev + 1) % newsOutlets.length)
+ } else {
+ // For desktop, cycle through slides
  const totalSlides = Math.ceil(newsOutlets.length / itemsPerView)
  setCurrentIndex((prev) => (prev + 1) % totalSlides)
+ }
  }, 5000)
  return () => clearInterval(interval)
  }, [itemsPerView])
 
- const totalSlides = Math.ceil(newsOutlets.length / itemsPerView)
+ const totalSlides = itemsPerView === 1 ? newsOutlets.length : Math.ceil(newsOutlets.length / itemsPerView)
 
  const nextSlide = () => {
- setCurrentIndex((prev) => (prev + 1) % totalSlides)
+ if (itemsPerView === 1) {
+ setCurrentIndex((prev) => (prev + 1) % newsOutlets.length)
+ } else {
+ const slides = Math.ceil(newsOutlets.length / itemsPerView)
+ setCurrentIndex((prev) => (prev + 1) % slides)
+ }
  }
 
  const prevSlide = () => {
- setCurrentIndex((prev) => (prev - 1 + totalSlides) % totalSlides)
+ if (itemsPerView === 1) {
+ setCurrentIndex((prev) => (prev - 1 + newsOutlets.length) % newsOutlets.length)
+ } else {
+ const slides = Math.ceil(newsOutlets.length / itemsPerView)
+ setCurrentIndex((prev) => (prev - 1 + slides) % slides)
+ }
  }
 
  return (
@@ -135,12 +151,50 @@ export default function NewsCarousel() {
  <div className="relative max-w-6xl mx-auto">
  <div className="overflow-hidden">
  <div
- className="flex transition-transform duration-500 ease-in-out"
+ className="flex transition-transform duration-500 ease-in-out carousel-animation-enabled"
  style={{ transform: `translateX(-${currentIndex * 100}%)` }}
  >
- {Array.from({ length: totalSlides }).map((_, slideIndex) => (
+ {itemsPerView === 1 ? (
+ // Mobile: Show individual items
+ newsOutlets.map((outlet, index) => (
+ <div key={index} className="w-full flex-shrink-0">
+ <div className="grid grid-cols-1 gap-6 max-w-sm mx-auto">
+ <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white/90 backdrop-blur-sm border-0 shadow-lg">
+ <CardContent className="p-6 text-center">
+ <div className="h-16 flex items-center justify-center mb-4">
+ <img
+ src={outlet.logo || "/placeholder.svg"}
+ alt={`${outlet.name} logo`}
+ className="max-h-full max-w-full object-contain"
+ />
+ </div>
+ <h3 className="font-semibold text-charcoal mb-2 group-hover:text-brandyellow transition-colors">
+ {outlet.name}
+ </h3>
+ <p className="text-sm text-charcoal/70 mb-4">{outlet.description}</p>
+ <Button
+ variant="outline"
+ size="sm"
+ className="group-hover:bg-brandyellow group-hover:text-charcoal group-hover:border-brandyellow transition-all duration-300"
+ onClick={() => {
+ if (typeof window !== 'undefined') {
+ window.open(outlet.url, "_blank")
+ }
+ }}
+ >
+ Read Article
+ <ExternalLink className="ml-2 h-3 w-3" />
+ </Button>
+ </CardContent>
+ </Card>
+ </div>
+ </div>
+ ))
+ ) : (
+ // Desktop: Show slides with multiple items
+ Array.from({ length: Math.ceil(newsOutlets.length / itemsPerView) }).map((_, slideIndex) => (
  <div key={slideIndex} className="w-full flex-shrink-0">
- <div className={`grid ${itemsPerView === 1 ? 'grid-cols-1' : itemsPerView === 2 ? 'grid-cols-2' : itemsPerView === 3 ? 'grid-cols-3' : 'grid-cols-4'} gap-6`}>
+ <div className={`grid ${itemsPerView === 2 ? 'grid-cols-2' : itemsPerView === 3 ? 'grid-cols-3' : 'grid-cols-4'} gap-6`}>
  {newsOutlets
  .slice(slideIndex * itemsPerView, (slideIndex + 1) * itemsPerView)
  .map((outlet, index) => (
@@ -175,7 +229,8 @@ export default function NewsCarousel() {
  ))}
  </div>
  </div>
- ))}
+ ))
+ )}
  </div>
  </div>
 
