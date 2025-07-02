@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { ArrowRight, Play, Monitor, BarChart3, Shield } from "lucide-react"
+import { ArrowRight, Monitor, BarChart3, Shield } from "lucide-react"
 import ScrollAnimation from "./scroll-animation"
 
 export default function InsightsPlatform() {
@@ -90,7 +90,7 @@ export default function InsightsPlatform() {
  </div>
  </div>
 
- <div className="flex flex-col sm:flex-row gap-4">
+ <div className="flex">
  <Button
  asChild
  size="lg"
@@ -100,14 +100,6 @@ export default function InsightsPlatform() {
  Explore Insights Platform
  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
  </Link>
- </Button>
- <Button
- size="lg"
- variant="outline"
- className="border-2 border-charcoal text-charcoal hover:bg-charcoal hover:text-white font-semibold group"
- >
- <Play className="mr-2 h-5 w-5" />
- Watch Demo
  </Button>
  </div>
  </div>
