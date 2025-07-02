@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Play, ChevronRight } from "lucide-react"
+import { ArrowRight, ChevronRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 import ScrollAnimation from "./scroll-animation"
 
@@ -62,7 +62,7 @@ export default function HeadlessHero() {
  Professional cyber security services that protect your business from evolving threats with comprehensive penetration testing and security assessments.
  </p>
 
- <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+ <div className="flex justify-center mb-6">
  <Button
  asChild
  size="lg"
@@ -74,19 +74,6 @@ export default function HeadlessHero() {
  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
  </span>
  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
- </Link>
- </Button>
- <Button
- asChild
- size="lg"
- variant="outline"
- className="group border-2 border-charcoal text-charcoal hover:bg-charcoal hover:text-white font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
- >
- <Link href="#services">
- <span className="flex items-center">
- View Services
- <Play className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
- </span>
  </Link>
  </Button>
  </div>
